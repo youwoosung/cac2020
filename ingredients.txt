@@ -1,5 +1,14 @@
 ------------ matthew
-flour
+1/2teaspoongroundcinnamon
+1package(3ounce)sugar-freestrawberrygelatin
+1package(8ounce)sugar-freecook-and-servevanillapuddingmix
+1packagefudgebrowniemix(13x9-inchpansize)
+1reduced-fatgrahamcrackercrust(8inches)
+2snack-sizecupsvanillapudding
+2tablespoonssugar
+additionalchoppednuts
+all-purposeflour
+all-purposeflour,sifted
 almondmilk
 almonds
 apples
@@ -9,25 +18,36 @@ bacon
 bakingcocoa
 bakingpowder
 bakingsoda
+banana
 bananas
 barbecuesauce
 basil
 beans
 beefbroth
+beerorunsweetenedapplejuice
 bellpepper
+bingsutteokorminimochiricecake
 blackbeans
 blackberry
 blackpepper
 blueberries
+blueberry
 bourbon
 bread
 breadcrumbs
 brownsugar
+brownsugar(cansubstitutewhite)
 butter
+butter,cubed
+buttermelted
+butter,softened
 canolaoil
+caramelsauce,optional
+carrot
 carrots
-caesarsaladdressing
+ceasarsaladdressing
 cheddarcheese
+cheese
 cheesecake
 cherrytomatoes
 chickenbreast
@@ -38,9 +58,10 @@ chilipowder
 chocolate
 chocolatechips
 chocolatewafercrumbs
-clams
-cinnamon
-walnuts
+choppedclams
+choppedmacadamianuts
+choppednuts
+choppedwalnuts
 cilantro
 cinnamon
 cinnamonpowder
@@ -52,11 +73,15 @@ coconutoil
 coconutwater
 coconutyogurt
 condensedmilk
-sugar
+confectioners'sugar
+confectioners’sugar
+cookingspray
 cornflour
 cornstarch
 creamcheese
-pineapple
+creamcheesefrosting:
+creamcheese,softened
+crushedpineapple
 cucumber
 cumin
 cupsugar
@@ -64,17 +89,29 @@ darkbrownsugar
 darkchocolatechips
 darkcornsyrup
 deliham
-tomatoes
+dicedtomatoes
 dijonmustard
+dough
 driedbasil
 driedcherries
+
+
+
+
 ------- luke
 driedoregano
 dryyeast
 egg
+eggs
+eggwhites
+espressopowder(optionalbutrecommended)*
 fetacheese
+filling:
 flour
+forcoating
+forstuffing
 fortheras[syrup]
+freshstrawberries,sliced
 frosting
 frozenmango
 frozenmangochunks
@@ -104,13 +141,23 @@ groundnutmeg
 half-and-halfcream
 ham
 heavycream
-wholemilk
+heavycreamorheavywhippingcream*
+heavycreamorwholemilk
+heavywhippingcream
 honey
 hotdogs
+hotwater
+ice
+iceshavermachineandice
+icing:
+instantcoffeegranules
+italianseasoning
 jalapeno
 ketchup
-kidneybeans
+kidneybeens
 kimchi
+kimchijuice
+largeegg
 lemonjuice
 limejuice
 linguine
@@ -118,84 +165,85 @@ macaronipasta
 maplesyrup
 mashedavocadospread
 milk
+milks
 mirin
-misugaru
+misugaru(미수가루)orroastedgrainspowder
+mochi
 mozzarellaballs
 mustard
 nori
 nutbutter
 nutella
 oats
+oil
+oilfordeep-fatfrying
+oilormeltedbutter
 oliveoil
 olives
+onion
 onions
 orangejuice
 oregano
+others
+packedbrownsugar
 paprika
 parmesan
+parmesancheese
+parsley
 parsleyleaves
 pastanoodles
+pastryfordouble-crustpie
 peas
+
+
+
 ----- Emily
-pecansorwalnuts
+pecans
+walnuts
 pepitas
-pepper
 peppers
-piecrust
+pie crust
 pineapple
-pineapplejuice
-pineapples
+pineapple juice
 pistachios
-popsiclesticks
 potato
-potatoes
-potatostarch/cornstarch
-pumpkinpiespice
-purepumpkin
-ramennoodles
-redapples
-redbellpepper
-redonion
-redpepperflakes
-redpepperpowder
-reduced-fatwhippedtopping
-redwinevinegar
+cornstarch
+pumpkin spice
+pumpkin
+ramen noodles
+red apples
+red bell pepper
+onion
+red pepper flakes
+red pepper powder
+red wine vinegar
 rice
-ricecereal
+rice cereal
 rolledoats
 romaine
 rosemary
-rotinipasta
-rotisseriechicken
+rotini pasta
+rotisserie chicken
 saffron
 salami
 salt
-salt/peppers
 scallion
-scallions
 seasalt
-selfraisingflour
-self-risingflour
-semisweetchocolatechips
+self-rising flour
 sesame
-sesameoil
-shiratamako(glutinousriceflour/sweetriceflour)
-shitakemushrooms
-slicedandfrozenbanana
-slicedfreshstrawberries
-sourcream
+sesame oil
+shiratamako 
+shitake mushrooms
+sour cream
 soybeans
 soysauce
 spaghetti
 spam
 spinach
 strawberries
-strawberriesandwhitechocolateshavings,optional
 stuffing
 sugar
-sugar(brownsugarisalsogood)
-sugar,divided
-sunflowerseeds
+sunflower seeds
 sweetredbeanpasteorsweetredbeans
 sweetredbeansoradzukibeans
 sweetriceflour
