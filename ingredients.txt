@@ -1,9 +1,9 @@
 ------------ matthew
-flour
 almondmilk
 almonds
 apples
 applesauce
+avocado
 babybellamushrooms
 bacon
 bakingcocoa
@@ -82,8 +82,6 @@ ginger
 gochujang
 grahamcrackercrumbs
 grahamcrackercrust
-granulatedsugar
-grapetomatoes
 gratedparmesan
 greencardamompods
 greenonions
@@ -94,7 +92,6 @@ groundnutmeg
 half-and-halfcream
 ham
 heavycream
-wholemilk
 honey
 hotdogs
 jalapeno
@@ -107,7 +104,6 @@ linguine
 macaronipasta
 maplesyrup
 mango
-mashedavocadospread
 milk
 mirin
 misugaru
@@ -141,13 +137,11 @@ cornstarch
 pumpkin spice
 pumpkin
 ramen noodles
-red bell pepper
 onion
-red pepper flakes
-red pepper powder
-red wine vinegar
+redpepperflakes
+redpepperpowder
 rice
-rice cereal
+ricecereal
 rolledoats
 romaine
 rosemary
@@ -197,7 +191,6 @@ whitewine
 wholemilk
 wholewheatflour
 yeastsolution
-yellowbellpepper
 yellowcornmeal
 yellowonion
 yellowsquash
