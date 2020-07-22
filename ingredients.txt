@@ -141,7 +141,6 @@ cornstarch
 pumpkin spice
 pumpkin
 ramen noodles
-red apples
 red bell pepper
 onion
 red pepper flakes
@@ -171,11 +170,9 @@ spaghetti
 spam
 spinach
 strawberries
-stuffing
 sugar
 sunflower seeds
-sweetredbeanpasteorsweetredbeans
-sweetredbeansoradzukibeans
+sweetredbeanpaste
 sweetriceflour
 tartapples
 thyme
