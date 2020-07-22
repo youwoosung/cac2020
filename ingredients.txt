@@ -74,20 +74,11 @@ dryyeast
 egg
 fetacheese
 flour
-fortheras[syrup]
-frosting
-frozenmango
-frozenmangochunks
+fortheras
 frozenpeaches
-frozenpineapplechunks
-frozenpuffpastry
-frying
-fryingoil
 garlic
 garlicpowder
-ginge
 ginger
-glaze
 gochujang
 grahamcrackercrumbs
 grahamcrackercrust
@@ -98,7 +89,6 @@ greencardamompods
 greenonions
 groundanchochilipepper
 groundbeef
-groundcinnamon
 groundmeat
 groundnutmeg
 half-and-halfcream
@@ -116,6 +106,7 @@ limejuice
 linguine
 macaronipasta
 maplesyrup
+mango
 mashedavocadospread
 milk
 mirin
@@ -170,10 +161,10 @@ scallion
 seasalt
 self-rising flour
 sesame
-sesame oil
+sesameoil
 shiratamako 
-shitake mushrooms
-sour cream
+shitakemushrooms
+sourcream
 soybeans
 soysauce
 spaghetti
@@ -188,25 +179,19 @@ sweetredbeansoradzukibeans
 sweetriceflour
 tartapples
 thyme
-toastbread
-toastedpecanhalves
 tofu
 tomatillos
 tomatoes
 tomatopaste
 tomatosauce
-tortilla
 tortillas
 turkey
 unsaltedbutter
 vanillaextract
-vanillaextract*
 vanillawafers
 vegetableoil
 vegetablestock
 walnuts
-warm
-water
 wheatflour
 whippedtopping
 whitecheddar
