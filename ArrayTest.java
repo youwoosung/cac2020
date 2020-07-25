@@ -7,7 +7,7 @@ public class ArrayTest {
 				"Onion", "Ground beef", "Black pepper", "Olive oil"};
 		
 		String[] alfredo = {"Pasta noodles", "Butter", "Heavy cream", 
-				"Garlic", "Parmesan cheese", "", "", "", "", ""};
+				"Garlic", "Parmesan cheese"};
 		
 		String[][] dishes = new String[2][10];
 		dishes[0] = spaghetti;
