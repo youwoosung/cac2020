@@ -1,9 +1,30 @@
 
 <html>
 
-<header>
+<head>
 	<title> CAC !!!</title>
-</header>
+	
+<script>
+function collectSelection() {
+	var spaghetti = ["Spaghetti", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground beef", "Black pepper", "Olive oil"];
+	
+	
+	var array = []
+	var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+
+	for (var i = 0; i < checkboxes.length; i++) {
+	  array.push(checkboxes[i].value)
+	}
+	
+	alert(array);
+	
+	var percentage = 0;
+	//do your calculation here
+	alert(percentage);
+}
+</script>
+
+</head>
 
 <body>
 
@@ -186,9 +207,10 @@
 	</table>
 
 	<p>
-		<input id="edit" type="submit" name="edit" value="Give me button name" />
+		<input onclick="collectSelection();" id="edit" type="button" name="edit" value="Give me button name" />
 	</p>
 
 </body>
 
 </html>
+
