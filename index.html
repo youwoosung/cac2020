@@ -29,7 +29,7 @@ function caculatePercentage(dish, keywords) {
 	
 	for (var i = 0; i < dish.length; i++) {
 		for (var a = 0; a < keywords.length; a++) {
-			if (dish[i].equals(keywords[a])) {
+			if (dish[i] == keywords[a]) {
 				count = count + 1;
 			}
 		}
