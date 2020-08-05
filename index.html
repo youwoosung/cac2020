@@ -9,19 +9,37 @@ function collectSelection() {
 	var spaghetti = ["Spaghetti", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground beef", "Black pepper", "Olive oil"];
 	
 	
-	var array = []
-	var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+	var array = [];
+	var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
 
 	for (var i = 0; i < checkboxes.length; i++) {
-	  array.push(checkboxes[i].value)
+	  array.push(checkboxes[i].value);
 	}
 	
 	alert(array);
 	
 	var percentage = 0;
-	//do your calculation here
+	percentage = caculatePercentage(spaghetti, array);
 	alert(percentage);
 }
+	
+function caculatePercentage(dish, keywords) {
+        var count = 0;
+  	var percentage = 0;
+	
+	for (var i = 0; i < dish.length; i++) {
+		for (var a = 0; a < keywords.length; a++) {
+			if (dish[i].equals(keywords[a])) {
+				count = count + 1;
+			}
+		}
+	}
+	
+	percentage = count / spaghetti.length * 100;
+	
+	return percentage;
+}
+
 </script>
 
 </head>
