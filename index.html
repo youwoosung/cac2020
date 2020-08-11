@@ -26,9 +26,9 @@
 			array.push(checkboxes[i].value)
 		}
 
-		alert(array);
+		addRow(array);
 		for (var i = 0; i < dishes.length; i++) {
-			 alert(percentage(dishes[i], array));
+			addRow(percentage(dishes[i], array)) 
 		}
        
 	}
@@ -49,7 +49,12 @@
 		return percentage;
 	}
 	
-	
+	function addRow(info) {
+		var infoTable = document.getElementById("info-table");
+		var infoRow = infoTable.insertRow(-1);
+		var infoCell = infoRow.insertCell();
+		infoCell.innerHTML = info;
+	}
 	
 
 	
@@ -310,7 +315,10 @@
 		<input onclick="collectSelection();" id="edit" type="submit"
 			name="edit" value="Give me button name" />
 	</p>
-
+   
+   <table border=1 id="info-table">
+   
+   </table>
 </body>
 
 </html>
