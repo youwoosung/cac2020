@@ -5,11 +5,11 @@
 
 <script>
 	function collectSelection() {
-		var alfredo = ["Alfredo", "Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese" ];
-		var spaghetti = ["Spaghetti", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground beef", "Black pepper", "Olive oil"];
-		var friedrice = ["Fried Rice", "Egg", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil"];
-		var cheesesandwich = ["Cheese Sandwich", "Cheese", "Bread", "Butter"];
-		var omelette = ["Omelette", "Cheese", "Butter", "Onion", "Black Pepper", "Ham", "Milk"];
+		var alfredo = ["Alfredo", "", "Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese" ];
+		var spaghetti = ["Spaghetti", "", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground beef", "Black pepper", "Olive oil"];
+		var friedrice = ["Fried Rice", "", "Egg", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil"];
+		var cheesesandwich = ["Cheese Sandwich", "", "Cheese", "Bread", "Butter"];
+		var omelette = ["Omelette", "", "Cheese", "Butter", "Onion", "Black Pepper", "Ham", "Milk"];
 		
 		var dishes = [];
 		dishes[0] = alfredo;
@@ -25,9 +25,10 @@
 		for (var i = 0; i < checkboxes.length; i++) {
 			array.push(checkboxes[i].value)
 		}
+		
 		addRow(array);
 		for (var i = 0; i < dishes.length; i++) {
-			var x = dishes[i][0] + ": " + percentage(dishes[i], array)
+			var x = dishes[i][0] + ": " + percentage(dishes[i], array) + "%"
 			addRow(x)
 			
 		}
@@ -38,7 +39,7 @@
 		var count = 0;
 		var percentage = 0;
 		//do your calculation here
-		for (var i = 0; i < dish.length; i++) {
+		for (var i = 2; i < dish.length; i++) {
 			for (var a = 0; a < array.length; a++) {
 				if (dish[i] == array[a]) {
 					count = count + 1;
@@ -46,7 +47,7 @@
 			}
 		}
 		
-		percentage = count / dish.length * 100;
+		percentage = (count / (dish.length - 2)) * 100;
 
 		return percentage;
 	}
