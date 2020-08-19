@@ -5,31 +5,19 @@
 
 <script>
 	function collectSelection() {
-		var alfredo = [ "Pasta noodles", "Butter", "Heavy Cream", "Garlic",
-				"Parmesan Cheese" ];
-		var spaghetti = [ "Spaghetti", "Pasta noodles", "Tomatoes",
-				"Tomato sauce", "Cheese", "Garlic", "Basil", "Onion",
-				"Ground beef", "Black pepper", "Olive oil" ];
-		var friedrice = [ "Egg", "Garlic", "Rice", "Scallion", "Onion",
-				"Carrot", "Soy sauce", "Peas", "Sesame oil" ];
-		var cheesesandwich = [ "Cheese", "Bread", "Butter" ];
-		var omelette = [ "Cheese", "Butter", "Onion", "Black Pepper", "Ham",
-				"Milk" ];
-
+		var alfredo = ["Alfredo", "Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese" ];
+		var spaghetti = ["Spaghetti", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground beef", "Black pepper", "Olive oil"];
+		var friedrice = ["Fried Rice", "Egg", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil"];
+		var cheesesandwich = ["Cheese Sandwich", "Cheese", "Bread", "Butter"];
+		var omelette = ["Omelette", "Cheese", "Butter", "Onion", "Black Pepper", "Ham", "Milk"];
+		
 		var dishes = [];
 		dishes[0] = alfredo;
 		dishes[1] = spaghetti;
 		dishes[2] = friedrice;
 		dishes[3] = cheesesandwich;
 		dishes[4] = omelette;
-
-		var dish = [];
-		dish[0] = "Alfredo: ";
-		dish[1] = "Spaghetti: ";
-		dish[2] = "Fried Rice: ";
-		dish[3] = "Cheese Sandwich: ";
-		dish[4] = "Omelette: ";
-
+		
 		var array = []
 		var checkboxes = document
 				.querySelectorAll('input[type=checkbox]:checked')
@@ -37,36 +25,42 @@
 		for (var i = 0; i < checkboxes.length; i++) {
 			array.push(checkboxes[i].value)
 		}
-
 		addRow(array);
 		for (var i = 0; i < dishes.length; i++) {
-			addRow(dish[i] + percentage(dishes[i], array) + "%")
+			var x = dishes[i][0] + ": " + percentage(dishes[i], array)
+			addRow(x)
+			
 		}
-
+       
 	}
-
-	function percentage(dishes, array) {
+	
+	function percentage(dish, array) {
 		var count = 0;
 		var percentage = 0;
 		//do your calculation here
-		for (var i = 0; i < dishes.length; i++) {
+		for (var i = 0; i < dish.length; i++) {
 			for (var a = 0; a < array.length; a++) {
-				if (dishes[i] == array[a]) {
+				if (dish[i] == array[a]) {
 					count = count + 1;
 				}
 			}
 		}
-		percentage = count / dishes.length * 100;
+		
+		percentage = count / dish.length * 100;
 
 		return percentage;
 	}
-
+	
 	function addRow(info) {
 		var infoTable = document.getElementById("info-table");
 		var infoRow = infoTable.insertRow(-1);
 		var infoCell = infoRow.insertCell();
+		
 		infoCell.innerHTML = info;
 	}
+	
+
+	
 </script>
 </head>
 
@@ -324,10 +318,10 @@
 		<input onclick="collectSelection();" id="edit" type="submit"
 			name="edit" value="Give me button name" />
 	</p>
-
-	<table border=1 id="info-table">
-
-	</table>
+   
+   <table border=1 id="info-table">
+   
+   </table>
 </body>
 
 </html>
