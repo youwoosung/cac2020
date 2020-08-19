@@ -5,19 +5,31 @@
 
 <script>
 	function collectSelection() {
-		var alfredo = ["Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese" ];
-		var spaghetti = ["Spaghetti", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground beef", "Black pepper", "Olive oil"];
-		var friedrice = ["Egg", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil"];
-		var cheesesandwich = ["Cheese", "Bread", "Butter"];
-		var omelette = ["Cheese", "Butter", "Onion", "Black Pepper", "Ham", "Milk"];
-		
+		var alfredo = [ "Pasta noodles", "Butter", "Heavy Cream", "Garlic",
+				"Parmesan Cheese" ];
+		var spaghetti = [ "Spaghetti", "Pasta noodles", "Tomatoes",
+				"Tomato sauce", "Cheese", "Garlic", "Basil", "Onion",
+				"Ground beef", "Black pepper", "Olive oil" ];
+		var friedrice = [ "Egg", "Garlic", "Rice", "Scallion", "Onion",
+				"Carrot", "Soy sauce", "Peas", "Sesame oil" ];
+		var cheesesandwich = [ "Cheese", "Bread", "Butter" ];
+		var omelette = [ "Cheese", "Butter", "Onion", "Black Pepper", "Ham",
+				"Milk" ];
+
 		var dishes = [];
 		dishes[0] = alfredo;
 		dishes[1] = spaghetti;
 		dishes[2] = friedrice;
 		dishes[3] = cheesesandwich;
 		dishes[4] = omelette;
-		
+
+		var dish = [];
+		dish[0] = "Alfredo: ";
+		dish[1] = "Spaghetti: ";
+		dish[2] = "Fried Rice: ";
+		dish[3] = "Cheese Sandwich: ";
+		dish[4] = "Omelette: ";
+
 		var array = []
 		var checkboxes = document
 				.querySelectorAll('input[type=checkbox]:checked')
@@ -28,11 +40,11 @@
 
 		addRow(array);
 		for (var i = 0; i < dishes.length; i++) {
-			addRow(percentage(dishes[i], array)) 
+			addRow(dish[i] + percentage(dishes[i], array) + "%")
 		}
-       
+
 	}
-	
+
 	function percentage(dishes, array) {
 		var count = 0;
 		var percentage = 0;
@@ -48,16 +60,13 @@
 
 		return percentage;
 	}
-	
+
 	function addRow(info) {
 		var infoTable = document.getElementById("info-table");
 		var infoRow = infoTable.insertRow(-1);
 		var infoCell = infoRow.insertCell();
 		infoCell.innerHTML = info;
 	}
-	
-
-	
 </script>
 </head>
 
@@ -315,10 +324,10 @@
 		<input onclick="collectSelection();" id="edit" type="submit"
 			name="edit" value="Give me button name" />
 	</p>
-   
-   <table border=1 id="info-table">
-   
-   </table>
+
+	<table border=1 id="info-table">
+
+	</table>
 </body>
 
 </html>
