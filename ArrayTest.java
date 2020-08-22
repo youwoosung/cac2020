@@ -32,6 +32,12 @@ public class ArrayTest {
 		for (int i = 0; i < dishes.length; i++) {
 			printArray(dishes[i]);
 		}
+		
+		bubbleSort();
+		
+		for (int i = 0; i < dishes.length; i++) {
+			printArray(dishes[i]);
+		}
 	}
 	
 
@@ -72,5 +78,9 @@ public class ArrayTest {
 		}
 
 		System.out.println("");
+	}
+	
+	private static void bubbleSort() {
+		
 	}
 }
