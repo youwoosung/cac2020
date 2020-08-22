@@ -80,7 +80,7 @@ public class ArrayTest {
 		System.out.println("");
 	}
 	
-	private static void bubbleSort(String[] dishes) {
+	private static void bubbleSort(String[][] dishes) {
 		
 	}
 }
