@@ -33,7 +33,7 @@ public class ArrayTest {
 			printArray(dishes[i]);
 		}
 		
-		bubbleSort();
+		bubbleSort(dishes);
 		
 		for (int i = 0; i < dishes.length; i++) {
 			printArray(dishes[i]);
@@ -80,7 +80,7 @@ public class ArrayTest {
 		System.out.println("");
 	}
 	
-	private static void bubbleSort() {
+	private static void bubbleSort(String[] dishes) {
 		
 	}
 }
