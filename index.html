@@ -28,9 +28,10 @@
 		
 		addRow(array);
 		for (var i = 0; i < dishes.length; i++) {
-			var x = dishes[i][0] + ": " + percentage(dishes[i], array) + "%"
-			addRow(x)
-			
+			var per = percentage(dishes[i], array);
+			dishes[i][1] = per;
+			var x = dishes[i][0] + ": " + per + "%";
+			addRow(x);
 		}
        
 	}
