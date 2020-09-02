@@ -13,15 +13,14 @@ public class SortTest2 {
 		dishes[2] = friedrice;
 		dishes[3] = cheesesandwich;
 		dishes[4] = omelette;
-		
+
 		printStringArray(dishes);
-		
+
 		bubbleSortStringArray(dishes);
-		
-		System.out.println("after sorting !!!!!!!!!!!!!!!!");
+
+		System.out.println("after sorting !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		printStringArray(dishes);
-		
-		
+
 	}
 
 	private static void printStringArray(String[][] twoDeArray) {
@@ -34,6 +33,18 @@ public class SortTest2 {
 	}
 
 	private static void bubbleSortStringArray(String[][] twoDeArray) {
-		
+		int leng = twoDeArray.length;
+		for (int i = 0; i < leng - 1; i++) {
+			for (int j = 0; j < leng - i - 1; j++) {
+				float x = Float.parseFloat(twoDeArray[j][1]);
+				float y = Float.parseFloat(twoDeArray[j+1][1]);
+				if (x > y) {
+					String[] temp = twoDeArray[j];
+					twoDeArray[j] = twoDeArray[j+1];
+					twoDeArray[j+1] = temp;
+				}
+			}
+		}
 	}
+
 }
