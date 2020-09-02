@@ -5,26 +5,30 @@
 
 <script>
 	function collectSelection() {
-		var input = [35, 5, 12, 10, 93, 1, 4, 34, 11, 3, 2, 99, 7, 6];
+		var input = [["Spaghetti", "100.0"],
+		             ["Alfredo", "12.23"],
+		             ["Fried Rice", "50.0"],
+		             ["Cheese Sandwich", "2.4"],
+		             ["Omelette", "99.9"]];
 
 		addRow("Before sorting ...");
 		
-		for (var i = 0; i < input.length-1; i++){
+		for (var i = 0; i < input.length; i++){
 			addRow(input[i]);
 		}
 		
-               sort(input);
+        sort(input);
         
-               addRow("After sorting ...");
+        addRow("After sorting ...");
         
-                for (var i = 0; i < input.length-1; i++){
+        for (var i = 0; i < input.length; i++){
 			addRow(input[i]);
 		}
        
 	}
 	
 	function sort(aArray) {
-		//code to be completed
+		
 	}
 	
 	function addRow(aArray) {
