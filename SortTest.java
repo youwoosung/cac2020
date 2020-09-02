@@ -1,4 +1,3 @@
-
 public class SortTest {
 
 	public static void main(String[] args) {
@@ -30,11 +29,32 @@ public class SortTest {
 	}
 	
 	private static void bubbleSortFloatArray(float[] percentages) {
-		//code to be added
+		float leng = percentages.length;
+		for (int i = 0; i < leng - 1; i++) {
+			for (int j = 0; j < leng - i - 1; j++) {
+				if (percentages[j] > percentages[j + 1]) {
+					float temp = percentages[j];
+					percentages[j] = percentages[j + 1];
+					percentages[j + 1] = temp;
+				}
+			}
+		}
+		
 	}
 	
 	private static void bubbleSortStringArray(String[] percentages) {
-		//code to be added
-	}
+		int leng = percentages.length;
+		for (int i = 0; i < leng - 1; i++) {
+			for (int j = 0; j < leng - i - 1; j++) {
+				float x = Float.parseFloat(percentages[j]);
+				float y = Float.parseFloat(percentages[j + 1]);
+				if (x > y) {
+					String temp = percentages[j];
+					percentages[j] = percentages[j + 1];
+					percentages[j + 1] = temp;
+				}
+			}
+		}
+}
 
 }
