@@ -5,18 +5,13 @@
 
 <script>
 	function collectSelection() {
-		var alfredo = ["Alfredo", "", "Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese" ];
-		var spaghetti = ["Spaghetti", "", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground beef", "Black pepper", "Olive oil"];
-		var friedrice = ["Fried Rice", "", "Egg", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil"];
-		var cheesesandwich = ["Cheese Sandwich", "", "Cheese", "Bread", "Butter"];
-		var omelette = ["Omelette", "", "Cheese", "Butter", "Onion", "Black Pepper", "Ham", "Milk"];
+		var dishes = [["Alfredo", "", "Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese" ],
+			      ["Spaghetti", "", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground beef", "Black pepper", "Olive oil"],
+			      ["Fried Rice", "", "Egg", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil"],
+			      ["Cheese Sandwich", "", "Cheese", "Bread", "Butter"],
+			      ["Omelette", "", "Cheese", "Butter", "Onion", "Black Pepper", "Ham", "Milk"]
+			     ];
 		
-		var dishes = [];
-		dishes[0] = alfredo;
-		dishes[1] = spaghetti;
-		dishes[2] = friedrice;
-		dishes[3] = cheesesandwich;
-		dishes[4] = omelette;
 		
 		var array = []
 		var checkboxes = document
