@@ -28,7 +28,18 @@
 	}
 	
 	function sort(aArray) {
-		
+		var leng = aArray.length;
+		for (var i = 0; i < leng - 1; i++) {
+			for (var j = 0; j < leng - i - 1; j++) {
+				var x = parseFloat(aArray[j][1])
+				var y = parseFloat(aArray[j+1][1])
+				if (x > y) {
+					var temp = aArray[j];
+					aArray[j] = aArray[j+1];
+					aArray[j+1] = temp;
+				}
+			}
+		}
 	}
 	
 	function addRow(aArray) {
