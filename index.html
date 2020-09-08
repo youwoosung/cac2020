@@ -5,11 +5,34 @@
 
 <script>
 	function collectSelection() {
-		var dishes = [["Alfredo", "", "Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese" ],
-			      ["Spaghetti", "", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground beef", "Black pepper", "Olive oil"],
-			      ["Fried Rice", "", "Egg", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil"],
-			      ["Cheese Sandwich", "", "Cheese", "Bread", "Butter"],
-			      ["Omelette", "", "Cheese", "Butter", "Onion", "Black Pepper", "Ham", "Milk"]
+		var dishes = [["Alfredo", "", "Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese" ], 
+["Spaghetti", "", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground beef", "Black pepper", "Olive oil"], 
+["Fried Rice", "", "Egg", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil"], 
+["Cheese Sandwich", "", "Cheese", "Bread", "Butter"], 
+["Omelette", "", "Cheese", "Butter", "Onion", "Black Pepper", "Ham", "Milk"], 
+["Meatloaf", "", "Ground meat", "Egg", "Bread Crumbs", "Onion", "Ketchup", "Sugar", "Milk", "Mustard", "Salt", "Pepper"], 
+["Macaroni And Cheese", "", "Cheese", "Macaroni Pasta", "Milk", "Butter", "Bread Crumbs"], 
+["Japanese Ramen Noodles", "", "Chicken Breast", "Black Pepper", "Unsalted Butter", "Vegetable Oil", "Sesame Oil", "Ginger", "Soy Sauce", "Mirin", "Chicken Stock", "Shitake Mushrooms", "Salt", "Egg", "Scallions", "Ramen Noodles"], 
+["Greek Salad", "", "Red Bell Pepper",
+ "Yellow Bell Pepper", "Cucumber", "Tomatoes", "Red Onion", "Feta Cheese", "Olives", "Garlic", "Dried Oregano", "Dijon Mustard", "Vinegar", "Salt", "Black Pepper", "Olive Oil"], 
+["Pasta Salad", "", "Olive Oil", "Vinegar", "Italian Seasoning", "Granulated Sugar", "Garlic", "Salt", "Black Pepper", "Onion", "Rotini Pasta", "Cherry Tomatoes", "Cucumber", "Mozzarella Balls", "Salami", "Olives", "Parsley Leaves"], 
+["Kimchi Fried Rice", "", "Butter", "Onion", "Kimchi", "Spam",
+ "Soy Sauce", "Sesame Oil", "Vegetable Oil", "Eggs", "Salt", "Nori"], 
+["Chili", "", "Olive Oil", "Onion", "Ground Beef", "Chili Powder", "Sugar", "Tomato Paste", "Garlic Powder", "Salt", "Black Pepper", "Beef Broth", "Diced Tomatoes", "Kidney Beans", "Tomato Sauce"], 
+["Clam Chowder", "", "Bacon", "Onion", "Garlic", "Potato", "Clam Juice", "Butter", "Thyme", "Flour", "Milk", "Vegetable Stock", "Chopped Clams", "Black Pepper", "Parsley Leaves"], ["Chicken Fajitas", "", 
+"Olive Oil", "Lime Juice", "Cumin", "Red Pepper Flakes", "Chicken Breast", "Salt", "Black Pepper", "Bell Pepper", "Onion", "Tortilla"], 
+["Turkey Tetrazzini", "", "Cooking Spray", "Spaghetti", "Butter", "Garlic", "Baby Bella Mushrooms", "White Wine", "All-purpose Flour", "Chicken Broth", "Heavy Cream", "Salt", "Black Pepper", "Turkey", "White Cheddar", "Peas", "Oregano", "Bread Crumbs", "Parmesan", "Olive Oil"], 
+["Chicken Tenders", "", "Egg", "Garlic", "Mustard", "Bread Crumbs", 
+"Dried Basil", "Paprika", "Salt", "Pepper", "Chicken Tenderloins"], 
+["Prosciutto Pasta", "", "Linguine", "Peas", "Garlic", "Italian Seasoning", "Black Pepper", "Olive Oil", "Deli Ham", "Parmesan"], 
+["Rosemary Lime Chicken", "", "Chicken Breast", "Canola Oil", "White Wine", "Chicken Broth", "Lime Juice", "Rosemary", "Salt", "Black Pepper"], 
+["Corn Dogs", "", "Hot Dogs", "Frying Oil", "Milk", "Egg", "Yellow Cornmeal", "Self-rising Flour"], 
+["Applesauce Barbecue Chicken", "", "Chicken Breast", "Black Pepper", "Olive Oil", "Applesauce", "Barbecue Sauce", "Sugar", "Chili Powder"],
+["Chicken Pasta Caesar Salad", "", "Pasta Noodles", "Romaine", "Rotisserie Chicken", "Tomatoes", "Parmesan", "Caesar Salad Dressing", "Almonds"],
+["Chocolate Cookies", "", "Butter", "Sugar", "Eggs", "Vanilla Extract", "All-Purpose Flour", "Salt", "Baking Soda", "Chocolate Chips", "Chopped Walnuts"],
+["Tiramisu", "", "Vanilla Wafers", "Instant Coffee Granules", "Water", "Pudding", "Cocoa"],
+["Apple Fritter", "", "All-purpose Flour", "Sugar", "Cinnamon", "Baking Powder", "Salt", "Apples", "Apple Juice", "Butter"],
+["Mexican Brownies", "", "Brownie Mix", "Cinnamon", "Chili Pepper", "Chocolate Chips", "Eggs", "Conola Oil", "Water"]
 			     ];
 		
 		
