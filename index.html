@@ -56,6 +56,21 @@
 		}
 		
 		addRow(array);
+		function sort(dish) {
+			var leng = dish.length;
+			for (var i = 0; i < leng - 1; i++) {
+				for (var j = 0; j < leng - i - 1; j++) {
+					var x = parseFloat(dish[j][1])
+					var y = parseFloat(dish[j + 1][1])
+					if (x > y) {
+						var temp = dish[j];
+						dish[j] = dish[j + 1];
+						dish[j + 1] = temp;
+					}
+				}
+			}
+		}
+		sort(dishes);
 		for (var i = 0; i < dishes.length; i++) {
 			var per = percentage(dishes[i], array);
 			dishes[i][1] = per;
