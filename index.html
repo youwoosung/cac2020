@@ -5,44 +5,44 @@
 
 <script>
 	function collectSelection() {
-		var dishes = [["Alfredo", "", "Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese" ], 
-["Spaghetti", "", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground beef", "Black pepper", "Olive oil"], 
-["Fried Rice", "", "Egg", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil"], 
-["Cheese Sandwich", "", "Cheese", "Bread", "Butter"], 
-["Omelette", "", "Cheese", "Butter", "Onion", "Black Pepper", "Ham", "Milk"], 
-["Meatloaf", "", "Ground meat", "Egg", "Bread Crumbs", "Onion", "Ketchup", "Sugar", "Milk", "Mustard", "Salt", "Pepper"], 
-["Macaroni And Cheese", "", "Cheese", "Macaroni Pasta", "Milk", "Butter", "Bread Crumbs"], 
-["Japanese Ramen Noodles", "", "Chicken Breast", "Black Pepper", "Unsalted Butter", "Vegetable Oil", "Sesame Oil", "Ginger", "Soy Sauce", "Mirin", "Chicken Stock", "Shitake Mushrooms", "Salt", "Egg", "Scallions", "Ramen Noodles"], 
-["Greek Salad", "", "Red Bell Pepper",
+		var dishes = [["Alfredo", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese" ], 
+["Spaghetti", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground beef", "Black pepper", "Olive oil"], 
+["Fried Rice", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Egg", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil"], 
+["Cheese Sandwich", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Cheese", "Bread", "Butter"], 
+["Omelette", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Cheese", "Butter", "Onion", "Black Pepper", "Ham", "Milk"], 
+["Meatloaf", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Ground meat", "Egg", "Bread Crumbs", "Onion", "Ketchup", "Sugar", "Milk", "Mustard", "Salt", "Pepper"], 
+["Macaroni And Cheese", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Cheese", "Macaroni Pasta", "Milk", "Butter", "Bread Crumbs"], 
+["Japanese Ramen Noodles", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Chicken Breast", "Black Pepper", "Unsalted Butter", "Vegetable Oil", "Sesame Oil", "Ginger", "Soy Sauce", "Mirin", "Chicken Stock", "Shitake Mushrooms", "Salt", "Egg", "Scallions", "Ramen Noodles"], 
+["Greek Salad", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Red Bell Pepper",
  "Yellow Bell Pepper", "Cucumber", "Tomatoes", "Red Onion", "Feta Cheese", "Olives", "Garlic", "Dried Oregano", "Dijon Mustard", "Vinegar", "Salt", "Black Pepper", "Olive Oil"], 
-["Pasta Salad", "", "Olive Oil", "Vinegar", "Italian Seasoning", "Granulated Sugar", "Garlic", "Salt", "Black Pepper", "Onion", "Rotini Pasta", "Cherry Tomatoes", "Cucumber", "Mozzarella Balls", "Salami", "Olives", "Parsley Leaves"], 
-["Kimchi Fried Rice", "", "Butter", "Onion", "Kimchi", "Spam",
+["Pasta Salad", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Olive Oil", "Vinegar", "Italian Seasoning", "Granulated Sugar", "Garlic", "Salt", "Black Pepper", "Onion", "Rotini Pasta", "Cherry Tomatoes", "Cucumber", "Mozzarella Balls", "Salami", "Olives", "Parsley Leaves"], 
+["Kimchi Fried Rice", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Butter", "Onion", "Kimchi", "Spam",
  "Soy Sauce", "Sesame Oil", "Vegetable Oil", "Eggs", "Salt", "Nori"], 
-["Chili", "", "Olive Oil", "Onion", "Ground Beef", "Chili Powder", "Sugar", "Tomato Paste", "Garlic Powder", "Salt", "Black Pepper", "Beef Broth", "Diced Tomatoes", "Kidney Beans", "Tomato Sauce"], 
-["Clam Chowder", "", "Bacon", "Onion", "Garlic", "Potato", "Clam Juice", "Butter", "Thyme", "Flour", "Milk", "Vegetable Stock", "Chopped Clams", "Black Pepper", "Parsley Leaves"], ["Chicken Fajitas", "", 
+["Chili", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Olive Oil", "Onion", "Ground Beef", "Chili Powder", "Sugar", "Tomato Paste", "Garlic Powder", "Salt", "Black Pepper", "Beef Broth", "Diced Tomatoes", "Kidney Beans", "Tomato Sauce"], 
+["Clam Chowder", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Bacon", "Onion", "Garlic", "Potato", "Clam Juice", "Butter", "Thyme", "Flour", "Milk", "Vegetable Stock", "Chopped Clams", "Black Pepper", "Parsley Leaves"], ["Chicken Fajitas", "", 
 "Olive Oil", "Lime Juice", "Cumin", "Red Pepper Flakes", "Chicken Breast", "Salt", "Black Pepper", "Bell Pepper", "Onion", "Tortilla"], 
-["Turkey Tetrazzini", "", "Cooking Spray", "Spaghetti", "Butter", "Garlic", "Baby Bella Mushrooms", "White Wine", "All-purpose Flour", "Chicken Broth", "Heavy Cream", "Salt", "Black Pepper", "Turkey", "White Cheddar", "Peas", "Oregano", "Bread Crumbs", "Parmesan", "Olive Oil"], 
-["Chicken Tenders", "", "Egg", "Garlic", "Mustard", "Bread Crumbs", 
+["Turkey Tetrazzini", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Cooking Spray", "Spaghetti", "Butter", "Garlic", "Baby Bella Mushrooms", "White Wine", "All-purpose Flour", "Chicken Broth", "Heavy Cream", "Salt", "Black Pepper", "Turkey", "White Cheddar", "Peas", "Oregano", "Bread Crumbs", "Parmesan", "Olive Oil"], 
+["Chicken Tenders", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Egg", "Garlic", "Mustard", "Bread Crumbs", 
 "Dried Basil", "Paprika", "Salt", "Pepper", "Chicken Tenderloins"], 
-["Prosciutto Pasta", "", "Linguine", "Peas", "Garlic", "Italian Seasoning", "Black Pepper", "Olive Oil", "Deli Ham", "Parmesan"], 
-["Rosemary Lime Chicken", "", "Chicken Breast", "Canola Oil", "White Wine", "Chicken Broth", "Lime Juice", "Rosemary", "Salt", "Black Pepper"], 
-["Corn Dogs", "", "Hot Dogs", "Frying Oil", "Milk", "Egg", "Yellow Cornmeal", "Self-rising Flour"], 
-["Applesauce Barbecue Chicken", "", "Chicken Breast", "Black Pepper", "Olive Oil", "Applesauce", "Barbecue Sauce", "Sugar", "Chili Powder"],
-["Chicken Pasta Caesar Salad", "", "Pasta Noodles", "Romaine", "Rotisserie Chicken", "Tomatoes", "Parmesan", "Caesar Salad Dressing", "Almonds"],
-["Chocolate Cookies", "", "Butter", "Sugar", "Eggs", "Vanilla Extract", "All-Purpose Flour", "Salt", "Baking Soda", "Chocolate Chips", "Chopped Walnuts"],
-["Tiramisu", "", "Vanilla Wafers", "Instant Coffee Granules", "Water", "Pudding", "Cocoa"],
-["Apple Fritter", "", "All-purpose Flour", "Sugar", "Cinnamon", "Baking Powder", "Salt", "Apples", "Apple Juice", "Butter"],
-["Mexican Brownies", "", "Brownie Mix", "Cinnamon", "Chili Pepper", "Chocolate Chips", "Eggs", "Conola Oil", "Water"],
-[“Pecan Pie”, “”, "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", “Toasted Pecan Halves”, “Eggs”, “Dark Brown Sugar”, “Sugar”, “Corn Syrup”, “Unsalted Butter”, “Bourbon”, “Vanilla Extract”, “Salt”, “Pie Crust”],
-[“Strawberry Pie”, “”, "https://www.tasteofhome.com/recipes/light-strawberry-pie/", “Crushed Pineapple”, “Vanilla Pudding Mix”, “Strawberry Gelatin”, “Strawberries”, “Graham Crackers”, “Whipped Cream”],
-[“Fried Apples”, “”, "https://www.tasteofhome.com/recipes/mom-s-fried-apples/", “Butter”, “Red Apples”, “Sugar”, “Ground Cinnamon”],
-[“Strawberry Shortcake”, “”, "https://www.tasteofhome.com/recipes/best-strawberry-shortcake/", “All-purpose Flour”, “Sugar”, “Baking Powder”, “Salt”, “Butter”, “Eggs”, “Half-and-half Cream”, “Heavy Whipping Cream”, “Sugar”, “Vanilla Extract”, “Strawberries”, “Confectioners’ Sugar”], 
-[“Carrot Cake”, “”, "https://www.tasteofhome.com/recipes/carrot-cake/", “All-purpose Flour”, “Sugar”, “Ground Cinnamon”, “Baking Soda”, “Salt”, “Eggs”, “Canola Oil”, “Carrots”, “Vanilla Extract”, “Pineapple”, “Nuts”, “Cream Cheese”, “Butter”, “Sugar”, “Vanilla Extract”],
-[“Homemade Chocolate Pudding”, “”, "https://www.tasteofhome.com/recipes/homemade-chocolate-pudding/", “Sugar”, “Baking Cocoa”, “Cornstarch”, “Salt”, “Milk”, “Butter”, “Vanilla Extract”],
-[“Apple Pie”, “”, "https://www.tasteofhome.com/recipes/apple-pie/", “Sugar”, “Brown Sugar”, “All-purpose Flour”, “Cinnamon”, “Ginger”, “Apples”, “Lemon Juice”, “Butter”, “Eggs”, “Confectioners’ Sugar”],
-[“Funnel Cake”, “”, "https://www.tasteofhome.com/recipes/funnel-cakes/", “Eggs”, “Milk”, “Vanilla Extract”, “All-purpose Flour”, “Sugar”, “Baking Powder”, “Salt”, “Oil”, “Confectioners’ Sugar”],
-[“Cinnamon Rolls”, “”, "https://www.tasteofhome.com/recipes/best-cinnamon-rolls/", “Dry Yeast”, “Milk”, “Sugar”, “Butter”, “Eggs”, “Salt”, “All-purpose Flour”, “Brown Sugar”, “Ground Cinnamon”, “Butter”, “Cream Cheese”, “Vanilla Extract”, “Salt”, “Confectioners’ Sugar”],
-[“Nutella Brownies”, “”, "https://www.handletheheat.com/nutella-brownie/", “Chocolate Chips”, “Unsalted Butter”, “Chocolate”, “Granulated Sugar”, “Nutella”, “Eggs”, “Vanilla Extract”, “All-purpose Flour”, “Cocoa Powder”, “Salt”],
+["Prosciutto Pasta", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Linguine", "Peas", "Garlic", "Italian Seasoning", "Black Pepper", "Olive Oil", "Deli Ham", "Parmesan"], 
+["Rosemary Lime Chicken", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Chicken Breast", "Canola Oil", "White Wine", "Chicken Broth", "Lime Juice", "Rosemary", "Salt", "Black Pepper"], 
+["Corn Dogs", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Hot Dogs", "Frying Oil", "Milk", "Egg", "Yellow Cornmeal", "Self-rising Flour"], 
+["Applesauce Barbecue Chicken", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Chicken Breast", "Black Pepper", "Olive Oil", "Applesauce", "Barbecue Sauce", "Sugar", "Chili Powder"],
+["Chicken Pasta Caesar Salad", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Pasta Noodles", "Romaine", "Rotisserie Chicken", "Tomatoes", "Parmesan", "Caesar Salad Dressing", "Almonds"],
+["Chocolate Cookies", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Butter", "Sugar", "Eggs", "Vanilla Extract", "All-Purpose Flour", "Salt", "Baking Soda", "Chocolate Chips", "Chopped Walnuts"],
+["Tiramisu", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Vanilla Wafers", "Instant Coffee Granules", "Water", "Pudding", "Cocoa"],
+["Apple Fritter", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "All-purpose Flour", "Sugar", "Cinnamon", "Baking Powder", "Salt", "Apples", "Apple Juice", "Butter"],
+["Mexican Brownies", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Brownie Mix", "Cinnamon", "Chili Pepper", "Chocolate Chips", "Eggs", "Conola Oil", "Water"],
+["Pecan Pie", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Toasted Pecan Halves", "Eggs", "Dark Brown Sugar", "Sugar", "Corn Syrup", "Unsalted Butter", "Bourbon", "Vanilla Extract", "Salt", "Pie Crust"],
+["Strawberry Pie", "", "https://www.tasteofhome.com/recipes/light-strawberry-pie/", "Crushed Pineapple", "Vanilla Pudding Mix", "Strawberry Gelatin", "Strawberries", "Graham Crackers", "Whipped Cream"],
+["Fried Apples", "", "https://www.tasteofhome.com/recipes/mom-s-fried-apples/", "Butter", "Red Apples", "Sugar", "Ground Cinnamon"],
+["Strawberry Shortcake", "", "https://www.tasteofhome.com/recipes/best-strawberry-shortcake/", "All-purpose Flour", "Sugar", "Baking Powder", "Salt", "Butter", "Eggs", "Half-and-half Cream", "Heavy Whipping Cream", "Sugar", "Vanilla Extract", "Strawberries", "Confectioners’ Sugar"], 
+["Carrot Cake", "", "https://www.tasteofhome.com/recipes/carrot-cake/", "All-purpose Flour", "Sugar", "Ground Cinnamon", "Baking Soda", "Salt", "Eggs", "Canola Oil", "Carrots", "Vanilla Extract", "Pineapple", "Nuts", "Cream Cheese", "Butter", "Sugar", "Vanilla Extract"],
+["Homemade Chocolate Pudding", "", "https://www.tasteofhome.com/recipes/homemade-chocolate-pudding/", "Sugar", "Baking Cocoa", "Cornstarch", "Salt", "Milk", "Butter", "Vanilla Extract"],
+["Apple Pie", "", "https://www.tasteofhome.com/recipes/apple-pie/", "Sugar", "Brown Sugar", "All-purpose Flour", "Cinnamon", "Ginger", "Apples", "Lemon Juice", "Butter", "Eggs", "Confectioners’ Sugar"],
+["Funnel Cake", "", "https://www.tasteofhome.com/recipes/funnel-cakes/", "Eggs", "Milk", "Vanilla Extract", "All-purpose Flour", "Sugar", "Baking Powder", "Salt", "Oil", "Confectioners’ Sugar"],
+["Cinnamon Rolls", "", "https://www.tasteofhome.com/recipes/best-cinnamon-rolls/", "Dry Yeast", "Milk", "Sugar", "Butter", "Eggs", "Salt", "All-purpose Flour", "Brown Sugar", "Ground Cinnamon", "Butter", "Cream Cheese", "Vanilla Extract", "Salt", "Confectioners’ Sugar"],
+["Nutella Brownies", "", "https://www.handletheheat.com/nutella-brownie/", "Chocolate Chips", "Unsalted Butter", "Chocolate", "Granulated Sugar", "Nutella", "Eggs", "Vanilla Extract", "All-purpose Flour", "Cocoa Powder", "Salt"],
 
 			     ];
 		
@@ -56,20 +56,7 @@
 		}
 		
 		addRow(array);
-		function sort(dish) {
-			var leng = dish.length;
-			for (var i = 0; i < leng - 1; i++) {
-				for (var j = 0; j < leng - i - 1; j++) {
-					var x = parseFloat(dish[j][1])
-					var y = parseFloat(dish[j + 1][1])
-					if (x > y) {
-						var temp = dish[j];
-						dish[j] = dish[j + 1];
-						dish[j + 1] = temp;
-					}
-				}
-			}
-		}
+		
 		sort(dishes);
 		for (var i = 0; i < dishes.length; i++) {
 			var per = percentage(dishes[i], array);
@@ -105,6 +92,20 @@
 		infoCell.innerHTML = info;
 	}
 	
+	function sort(dish) {
+		var leng = dish.length;
+		for (var i = 0; i < leng - 1; i++) {
+			for (var j = 0; j < leng - i - 1; j++) {
+				var x = parseFloat(dish[j][1])
+				var y = parseFloat(dish[j + 1][1])
+				if (x > y) {
+					var temp = dish[j];
+					dish[j] = dish[j + 1];
+					dish[j + 1] = temp;
+				}
+			}
+		}
+	}
 
 	
 </script>
