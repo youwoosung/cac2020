@@ -71,7 +71,7 @@
 		var count = 0;
 		var percentage = 0;
 		//do your calculation here
-		for (var i = 2; i < dish.length; i++) {
+		for (var i = 3; i < dish.length; i++) {
 			for (var a = 0; a < array.length; a++) {
 				if (dish[i] == array[a]) {
 					count = count + 1;
@@ -79,7 +79,7 @@
 			}
 		}
 		
-		percentage = (count / (dish.length - 2)) * 100;
+		percentage = (count / (dish.length - 3)) * 100;
 
 		return percentage;
 	}
