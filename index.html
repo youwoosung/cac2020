@@ -42,7 +42,7 @@
 ["Apple Pie", "", "https://www.tasteofhome.com/recipes/apple-pie/", "Sugar", "Brown Sugar", "All-purpose Flour", "Cinnamon", "Ginger", "Apples", "Lemon Juice", "Butter", "Eggs", "Confectioners’ Sugar"],
 ["Funnel Cake", "", "https://www.tasteofhome.com/recipes/funnel-cakes/", "Eggs", "Milk", "Vanilla Extract", "All-purpose Flour", "Sugar", "Baking Powder", "Salt", "Oil", "Confectioners’ Sugar"],
 ["Cinnamon Rolls", "", "https://www.tasteofhome.com/recipes/best-cinnamon-rolls/", "Dry Yeast", "Milk", "Sugar", "Butter", "Eggs", "Salt", "All-purpose Flour", "Brown Sugar", "Ground Cinnamon", "Butter", "Cream Cheese", "Vanilla Extract", "Salt", "Confectioners’ Sugar"],
-["Nutella Brownies", "", "https://www.handletheheat.com/nutella-brownie/", "Chocolate Chips", "Unsalted Butter", "Chocolate", "Granulated Sugar", "Nutella", "Eggs", "Vanilla Extract", "All-purpose Flour", "Cocoa Powder", "Salt"],
+["Nutella Brownies", "", "https://www.handletheheat.com/nutella-brownie/", "Chocolate Chips", "Unsalted Butter", "Chocolate", "Granulated Sugar", "Nutella", "Eggs", "Vanilla Extract", "All-purpose Flour", "Cocoa Powder", "Salt"]
 
 			     ];
 		
@@ -57,11 +57,15 @@
 		
 		addRow(array);
 		
-		sort(dishes);
 		for (var i = 0; i < dishes.length; i++) {
 			var per = percentage(dishes[i], array);
 			dishes[i][1] = per;
-			var x = dishes[i][0] + ": " + per + "%";
+		}
+		
+		sort(dishes);
+		
+		for (var i = 0; i < dishes.length; i++) {
+			var x = dishes[i][0] + ": " + dishes[i][1] + "%";
 			addRow(x);
 		}
        
@@ -98,7 +102,7 @@
 			for (var j = 0; j < leng - i - 1; j++) {
 				var x = parseFloat(dish[j][1])
 				var y = parseFloat(dish[j + 1][1])
-				if (x > y) {
+				if (x < y) {
 					var temp = dish[j];
 					dish[j] = dish[j + 1];
 					dish[j + 1] = temp;
