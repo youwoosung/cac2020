@@ -118,12 +118,15 @@
 		return percentage;
 	}
 	
-	function addRow(info) {
+	function addRow(info1, info2) {
 		var infoTable = document.getElementById("info-table");
 		var infoRow = infoTable.insertRow(-1);
-		var infoCell = infoRow.insertCell();
+		var infoCellOne = infoRow.insertCell();
 		
-		infoCell.innerHTML = info;
+		var infoCellTwo = infoRow.insertCell();
+		
+		infoCellOne.innerHTML = info1;
+		infoCellTwo.innerHTML = info2;
 	}
 	
 	function sort(dish) {
