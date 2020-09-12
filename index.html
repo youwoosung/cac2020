@@ -85,7 +85,7 @@
 			array.push(checkboxes[i].value)
 		}
 		
-		addRow("Your Selection", array);
+		addSelection("Your Selection", array);
 		
 		for (var i = 0; i < 15; i++) {
 			var per = percentage(dishes[i], array);
@@ -96,7 +96,7 @@
 		
 		for (var i = 0; i < 15; i++) {
 			var x = dishes[i][1] + "%";
-			addRow(dishes[i][0] , x);
+			addRow(dishes[i][0] , x, dishes[i][2]);
 		}
        
 	}
@@ -118,15 +118,26 @@
 		return percentage;
 	}
 	
-	function addRow(info1, info2) {
+	function addSelection(heading, selection) {
+		var infoTable = document.getElementById("selection-table");
+		var infoRow = infoTable.insertRow(-1);
+		var infoCellOne = infoRow.insertCell();
+		var infoCellTwo = infoRow.insertCell();
+		
+		infoCellOne.innerHTML = heading;
+		infoCellTwo.innerHTML = selection;
+	}
+	
+	function addRow(info1, info2, info3) {
 		var infoTable = document.getElementById("info-table");
 		var infoRow = infoTable.insertRow(-1);
 		var infoCellOne = infoRow.insertCell();
-		
 		var infoCellTwo = infoRow.insertCell();
+		var infoCellThree = infoRow.insertCell();
 		
 		infoCellOne.innerHTML = info1;
 		infoCellTwo.innerHTML = info2;
+		infoCellThree.innerHTML = info3;
 	}
 	
 	function sort(dish) {
@@ -403,8 +414,10 @@
 			name="edit" value="Give me button name" />
 	</p>
    
+   <table border=1 id="selection-table">
+   </table>
+   <br>
    <table border=1 id="info-table">
-   
    </table>
 </body>
 
