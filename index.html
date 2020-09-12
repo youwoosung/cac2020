@@ -85,7 +85,7 @@
 			array.push(checkboxes[i].value)
 		}
 		
-		addRow(array);
+		addRow("Your Selection", array);
 		
 		for (var i = 0; i < 15; i++) {
 			var per = percentage(dishes[i], array);
@@ -95,8 +95,8 @@
 		sort(dishes);
 		
 		for (var i = 0; i < 15; i++) {
-			var x = dishes[i][0] + ": " + dishes[i][1] + "%";
-			addRow(x);
+			var x = dishes[i][1] + "%";
+			addRow(dishes[i][0] , x);
 		}
        
 	}
