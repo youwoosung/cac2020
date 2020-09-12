@@ -87,14 +87,14 @@
 		
 		addRow(array);
 		
-		for (var i = 0; i < dishes.length; i++) {
+		for (var i = 0; i < 15; i++) {
 			var per = percentage(dishes[i], array);
 			dishes[i][1] = per;
 		}
 		
 		sort(dishes);
 		
-		for (var i = 0; i < dishes.length; i++) {
+		for (var i = 0; i < 15; i++) {
 			var x = dishes[i][0] + ": " + dishes[i][1] + "%";
 			addRow(x);
 		}
@@ -114,7 +114,7 @@
 		}
 		
 		percentage = (count / (dish.length - 3)) * 100;
-
+                percentage = parseInt(percentage)
 		return percentage;
 	}
 	
@@ -130,8 +130,8 @@
 		var leng = dish.length;
 		for (var i = 0; i < leng - 1; i++) {
 			for (var j = 0; j < leng - i - 1; j++) {
-				var x = parseFloat(dish[j][1])
-				var y = parseFloat(dish[j + 1][1])
+				var x = parseInt(dish[j][1])
+				var y = parseInt(dish[j + 1][1])
 				if (x < y) {
 					var temp = dish[j];
 					dish[j] = dish[j + 1];
