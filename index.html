@@ -1,7 +1,7 @@
 <html>
 
 <head>
-<title>CAC !!!</title>
+<title>Fridge App</title>
 
 <script>
 	function collectSelection() {
@@ -95,8 +95,12 @@
 		sort(dishes);
 		
 		for (var i = 0; i < 15; i++) {
-			var x = dishes[i][1] + "%";
-			addRow(dishes[i][0] , x, dishes[i][2]);
+			if(parseInt(dishes[i][1]) > 0) {
+				var x = dishes[i][1] + "%";
+				var link = "<a href=\"" + dishes[i][2] + "\">" + dishes[i][2] + "</a>"
+				
+				addRow(dishes[i][0] , x, link);	
+			}
 		}
        
 	}
@@ -161,10 +165,10 @@
 
 <body>
 
-	<h3>Test for CAC</h3>
+	<h2 style="text-align:center">Fridge App</h2>
 
 	<table border=1>
-		<h2>Produce and Fruit</h2>
+		<h3>Produce and Fruit</h3>
 		<tr>
 			<td><input type="checkbox" value="Apples"> Apples</td>
 			<td><input type="checkbox" value="Avocados"> Avocados</td>
@@ -212,7 +216,7 @@
 				Vegetable Stock</td>
 		</tr>
 	</table>
-	<h2>Meat and Seafood</h2>
+	<h3>Meat and Seafood</h3>
 	<table border=1>
 		<tr>
 			<td><input type="checkbox" value="Bacon"> Bacon</td>
@@ -232,7 +236,7 @@
 
 		</tr>
 	</table>
-	<h2>Dairy</h2>
+	<h3>Dairy</h3>
 	<table border=1>
 		<tr>
 			<td><input type="checkbox" value="Butter"> Butter</td>
@@ -249,7 +253,7 @@
 				Whipped Cream</td>
 		</tr>
 	</table>
-	<h2>Pasta and Grains</h2>
+	<h3>Pasta and Grains</h3>
 	<table border=1>
 		<tr>
 			<td><input type="checkbox" value="Bread"> Bread</td>
@@ -282,7 +286,7 @@
 	</table>
 	</tr>
 	<table border=1>
-		<h2>Solid Ingredients</h2>
+		<h3>Solid Ingredients</h3>
 		<tr>
 			<td><input type="checkbox" value="Almonds"> Almonds</td>
 			<td><input type="checkbox" value="Baking Cocoa"> Baking
@@ -359,7 +363,7 @@
 			<td><input type="checkbox" value="Rice"> Rice</td>
 		</tr>
 	</table>
-	<h2>Liquid Ingredients</h2>
+	<h3>Liquid Ingredients</h3>
 	<table border=1>
 		<tr>
 			<td><input type="checkbox" value="Apple Sauce"> Apple
@@ -411,13 +415,18 @@
 
 	<p>
 		<input onclick="collectSelection();" id="edit" type="submit"
-			name="edit" value="Give me button name" />
+			name="edit" value="Calculate" />
 	</p>
    
    <table border=1 id="selection-table">
    </table>
    <br>
    <table border=1 id="info-table">
+     <tr>
+       <td>Dishes:</td>
+       <td>Match Rates:</td>
+       <td>Recipe Links:</td>
+     </tr>
    </table>
 </body>
 
