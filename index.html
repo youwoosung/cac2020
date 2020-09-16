@@ -5,44 +5,40 @@
 
 <script>
 	function collectSelection() {
-		var dishes = [["Alfredo", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese" ], 
-["Spaghetti", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground beef", "Black pepper", "Olive oil"], 
-["Fried Rice", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Egg", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil"], 
-["Cheese Sandwich", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Cheese", "Bread", "Butter"], 
-["Omelette", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Cheese", "Butter", "Onion", "Black Pepper", "Ham", "Milk"], 
-["Meatloaf", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Ground meat", "Egg", "Bread Crumbs", "Onion", "Ketchup", "Sugar", "Milk", "Mustard", "Salt", "Pepper"], 
-["Macaroni And Cheese", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Cheese", "Macaroni Pasta", "Milk", "Butter", "Bread Crumbs"], 
-["Japanese Ramen Noodles", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Chicken Breast", "Black Pepper", "Unsalted Butter", "Vegetable Oil", "Sesame Oil", "Ginger", "Soy Sauce", "Mirin", "Chicken Stock", "Shitake Mushrooms", "Salt", "Egg", "Scallions", "Ramen Noodles"], 
-["Greek Salad", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Red Bell Pepper",
- "Yellow Bell Pepper", "Cucumber", "Tomatoes", "Red Onion", "Feta Cheese", "Olives", "Garlic", "Dried Oregano", "Dijon Mustard", "Vinegar", "Salt", "Black Pepper", "Olive Oil"], 
-["Pasta Salad", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Olive Oil", "Vinegar", "Italian Seasoning", "Granulated Sugar", "Garlic", "Salt", "Black Pepper", "Onion", "Rotini Pasta", "Cherry Tomatoes", "Cucumber", "Mozzarella Balls", "Salami", "Olives", "Parsley Leaves"], 
-["Kimchi Fried Rice", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Butter", "Onion", "Kimchi", "Spam",
- "Soy Sauce", "Sesame Oil", "Vegetable Oil", "Eggs", "Salt", "Nori"], 
-["Chili", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Olive Oil", "Onion", "Ground Beef", "Chili Powder", "Sugar", "Tomato Paste", "Garlic Powder", "Salt", "Black Pepper", "Beef Broth", "Diced Tomatoes", "Kidney Beans", "Tomato Sauce"], 
-["Clam Chowder", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Bacon", "Onion", "Garlic", "Potato", "Clam Juice", "Butter", "Thyme", "Flour", "Milk", "Vegetable Stock", "Chopped Clams", "Black Pepper", "Parsley Leaves"], 
-["Chicken Fajitas", "", "https://www.delish.com/cooking/recipe-ideas/a19665622/easy-chicken-fajitas-recipe/", "Olive Oil", "Lime Juice", "Cumin", "Red Pepper Flakes", "Chicken Breast", "Salt", "Black Pepper", "Bell Pepper", "Onion", "Tortilla"], 
-["Turkey Tetrazzini", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Cooking Spray", "Spaghetti", "Butter", "Garlic", "Baby Bella Mushrooms", "White Wine", "All-purpose Flour", "Chicken Broth", "Heavy Cream", "Salt", "Black Pepper", "Turkey", "White Cheddar", "Peas", "Oregano", "Bread Crumbs", "Parmesan", "Olive Oil"], 
-["Chicken Tenders", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Egg", "Garlic", "Mustard", "Bread Crumbs", 
-"Dried Basil", "Paprika", "Salt", "Pepper", "Chicken Tenderloins"], 
-["Prosciutto Pasta", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Linguine", "Peas", "Garlic", "Italian Seasoning", "Black Pepper", "Olive Oil", "Deli Ham", "Parmesan"], 
-["Rosemary Lime Chicken", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Chicken Breast", "Canola Oil", "White Wine", "Chicken Broth", "Lime Juice", "Rosemary", "Salt", "Black Pepper"], 
-["Corn Dogs", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Hot Dogs", "Frying Oil", "Milk", "Egg", "Yellow Cornmeal", "Self-rising Flour"], 
-["Applesauce Barbecue Chicken", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Chicken Breast", "Black Pepper", "Olive Oil", "Applesauce", "Barbecue Sauce", "Sugar", "Chili Powder"],
-["Chicken Pasta Caesar Salad", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Pasta Noodles", "Romaine", "Rotisserie Chicken", "Tomatoes", "Parmesan", "Caesar Salad Dressing", "Almonds"],
-["Chocolate Cookies", "", "https://www.tasteofhome.com/article/how-to-make-easy-chocolate-chip-cookies/", "Butter", "Sugar", "Eggs", "Vanilla Extract", "All-Purpose Flour", "Salt", "Baking Soda", "Chocolate Chips", "Chopped Walnuts"],
-["Tiramisu", "", "https://www.tasteofhome.com/recipes/contest-winning-easy-tiramisu/", "Vanilla Wafers", "Instant Coffee Granules", "Water", "Pudding", "Cocoa"],
-["Apple Fritter", "", "https://www.tasteofhome.com/recipes/apple-fritter-cake/", "All-purpose Flour", "Sugar", "Cinnamon", "Baking Powder", "Salt", "Apples", "Apple Juice", "Butter"],
-["Mexican Brownies", "", "https://www.tasteofhome.com/recipes/easy-mexican-brownies/", "Brownie Mix", "Cinnamon", "Chili Pepper", "Chocolate Chips", "Eggs", "Conola Oil", "Water"],
+		var dishes = [["Alfredo", "", "https://www.modernhoney.com/fettuccine-alfredo/", "Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese", "Black Pepper"],
+["Spaghetti", "", "https://www.foodnetwork.com/recipes/food-network-kitchen/simple-spaghetti-with-tomato-sauce-3362665", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground beef", "Black pepper", "Olive oil", "Salt"],
+["Fried Rice", "", "https://www.allrecipes.com/recipe/79543/fried-rice-restaurant-style/", "Eggs", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil", "Vegetable Oil"],
+["Grilled Cheese Sandwich", "", "https://www.allrecipes.com/recipe/23891/grilled-cheese-sandwich/", "Cheese", "Bread", "Butter"],
+["Omelette", "", "https://www.delish.com/cooking/recipe-ideas/a24892843/how-to-make-omelet/", "Cheese", "Butter", "Black Pepper", "Ham", "Milk", "Eggs", "Salt"],
+["Meatloaf", "", "https://www.thewholesomedish.com/the-best-classic-meatloaf/", "Ground beef", "Eggs", "Bread Crumbs", "Onion", "Ketchup", "Brown Sugar", "Milk", "Mustard", "Salt", "Pepper", "Parsley", "Garlic", "Red Wine Vinegar", "Black pepper"],
+["Macaroni and Cheese", "", "https://www.allrecipes.com/recipe/11679/homemade-mac-and-cheese/", "Cheese", "Macaroni Pasta", "Milk", "Butter", "Bread Crumbs", "All-purpose flour", "Paprika"],
+["Japanese Ramen Noodles", "", "https://www.forkknifeswoon.com/simple-homemade-chicken-ramen/", "Chicken Breast", "Black Pepper", "Unsalted Butter", "Vegetable Oil", "Sesame Oil", "Ginger", "Garlic", "Soy Sauce", "Mirin", "Chicken Stock", "Shitake Mushrooms", "Salt", "Eggs", "Scallions", "Ramen Noodles"],
+["Greek Salad", "", "https://www.foodnetwork.com/recipes/ina-garten/greek-salad-recipe-1948517", "Bell Pepper", "Cucumber", "Grape Tomatoes", "Red Onion", "Feta Cheese", "Olives", "Garlic", "Dried Oregano", "Dijon Mustard", "Red Wine Vinegar", "Salt", "Black Pepper", "Olive Oil"],
+["Pasta Salad", "", "https://www.thekitchn.com/easy-pasta-salad-recipe-258379", "Olive Oil", "Red Wine Vinegar", "Italian Seasoning", "Granulated Sugar", "Garlic", "Salt", "Black Pepper", "Onion", "Rotini Pasta", "Cherry Tomatoes", "Cucumber", "Mozzarella Balls", "Salami", "Olives", "Parsley Leaves"],
+["Kimchi Fried Rice", "", "https://cooking.nytimes.com/recipes/1018097-kimchi-fried-rice", "Butter", "Onion", "Kimchi", "Kimchi Juice", "Spam", "Soy Sauce", "Sesame Oil", "Vegetable Oil", "Eggs", "Salt", "Nori"],
+["Chili", "", "https://www.thewholesomedish.com/the-best-classic-chili/", "Olive Oil", "Onion", "Ground Beef", "Chili Powder", "Granulated Sugar", "Tomato Paste", "Garlic Powder", "Salt", "Black Pepper", "Beef Broth", "Tomatoes", "Kidney Beens", "Tomato Sauce"],
+["Clam Chowder", "", "https://damndelicious.net/2015/04/25/easy-clam-chowder/", "Bacon", "Onion", "Garlic", "Potato", "Clam Juice", "Butter", "Thyme", "All-purpose Flour", "Milk", "Vegetable Stock", "Chopped Clams", "Black Pepper", "Parsley Leaves", "All-purpose Flour"],
+["Chicken Fajitas", "", "https://www.delish.com/cooking/recipe-ideas/a19665622/easy-chicken-fajitas-recipe/", "Olive Oil", "Lime Juice", "Cumin", "Red Pepper Flakes", "Chicken Breast", "Salt", "Black Pepper", "Bell Pepper", "Onion", " Tortilla"],
+["Turkey Tetrazzini", "", "https://www.delish.com/cooking/recipe-ideas/a25239697/easy-turkey-tetrazzini-recipe/", "Cooking Spray", "Spaghetti", "Butter", "Garlic", "Baby Bella Mushrooms", "White Wine", "All-purpose Flour", "Chicken Broth", "Heavy Cream", "Salt", "Black Pepper", "Turkey", "White Cheddar", "Peas", "Oregano", "Bread Crumbs", "Parmesan", "Olive Oil"],
+["Chicken Tenders", "", "https://cafedelites.com/crispy-chicken-tenders/", "Eggs", "Olive Oil", "Lemon juice", "Parsley", "Garlic", "Salt", "Black Pepper", "Chicken Tenderloins", "Breadcrumbs", "Paprika", "Garlic Powder", "Parmesan"],
+["Prosciutto Pasta", "", "https://www.tasteofhome.com/recipes/prosciutto-pasta-toss/", "Linguine", "Peas", "Garlic", "Italian Seasoning", "Black Pepper", "Olive Oil", "Deli Ham", "Parmesan"],
+["Rosemary Lime Chicken", "", "https://www.tasteofhome.com/recipes/rosemary-lime-chicken/", "Chicken Breast", "Canola Oil", "White Wine", "Chicken Broth", "Lime Juice", "Rosemary", "Salt", "Black Pepper"],
+["Corn Dogs", "", "https://www.delish.com/cooking/recipe-ideas/a27470888/classic-corn-dog-recipe/", "Hot Dogs", "All-purpose Flour", "Granulated Sugar", "Baking Powder", "Salt", "Baking Soda", "Black Pepper", "Milk", "Eggs", "Vegetable Oil"],
+["Applesauce Barbecue Chicken", "", "https://www.tasteofhome.com/recipes/applesauce-barbecue-chicken/", "Chicken Breast", "Black Pepper", "Olive Oil", "Applesauce", "Barbecue Sauce", "Brown Sugar", "Chili Powder"], 
+["Chicken Pasta Ceasar Salad", "", "https://www.justataste.com/chicken-caesar-pasta-salad-recipe/", "Dijon Mustard", "Lemon Juice", "Garlic", "Parmesan", "Pasta Noodles", "Chicken Breast"],
+["Chocolate Cookies", "", "https://www.tasteofhome.com/article/how-to-make-easy-chocolate-chip-cookies/", "Butter", "Sugar", "Packed Brown Sugar", "Eggs", "Vanilla Extract", "All-purpose Flour", "Salt", "Baking Soda", "Chocolate Chips", "Chopped Walnuts"],
+["Tiramisu", "", "https://www.tasteofhome.com/recipes/contest-winning-easy-tiramisu/", "Vanilla Wafers", "Instant Coffee Granules", "Hot Water", "Vanilla Pudding", "Whipped Topping", "Baking Cocoa"],
+["Apple Fritter", "", "https://www.tasteofhome.com/recipes/apple-fritter-cake/", "All-purpose Flour", "Sugar", "Ground Cinnamon", "Baking Powder", "Salt", "Apples", "Beer", "Apple Juice", "Butter", "Sugar", "Vanilla Extract"],
+["Mexican Brownies", "", "https://www.tasteofhome.com/recipes/easy-mexican-brownies/", "Fudge Brownie Mix", "Ground Cinnamon", "Ground Ancho Chili Pepper", "Dark Chocolate Chips", "Eggs", "Canola Oil", "Water"],
 ["Pecan Pie", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Toasted Pecan Halves", "Eggs", "Dark Brown Sugar", "Sugar", "Corn Syrup", "Unsalted Butter", "Bourbon", "Vanilla Extract", "Salt", "Pie Crust"],
 ["Strawberry Pie", "", "https://www.tasteofhome.com/recipes/light-strawberry-pie/", "Crushed Pineapple", "Vanilla Pudding Mix", "Strawberry Gelatin", "Strawberries", "Graham Crackers", "Whipped Cream"],
 ["Fried Apples", "", "https://www.tasteofhome.com/recipes/mom-s-fried-apples/", "Butter", "Red Apples", "Sugar", "Ground Cinnamon"],
-["Strawberry Shortcake", "", "https://www.tasteofhome.com/recipes/best-strawberry-shortcake/", "All-purpose Flour", "Sugar", "Baking Powder", "Salt", "Butter", "Eggs", "Half-and-half Cream", "Heavy Whipping Cream", "Sugar", "Vanilla Extract", "Strawberries", "Confectioners’ Sugar"], 
+["Strawberry Shortcake", "", "https://www.tasteofhome.com/recipes/best-strawberry-shortcake/", "All-purpose Flour", "Sugar", "Baking Powder", "Salt", "Butter", "Eggs", "Half-and-half Cream", "Heavy Whipping Cream", "Sugar", "Vanilla Extract", "Strawberries", "Confectioners’ Sugar"],
 ["Carrot Cake", "", "https://www.tasteofhome.com/recipes/carrot-cake/", "All-purpose Flour", "Sugar", "Ground Cinnamon", "Baking Soda", "Salt", "Eggs", "Canola Oil", "Carrots", "Vanilla Extract", "Pineapple", "Nuts", "Cream Cheese", "Butter", "Sugar", "Vanilla Extract"],
 ["Homemade Chocolate Pudding", "", "https://www.tasteofhome.com/recipes/homemade-chocolate-pudding/", "Sugar", "Baking Cocoa", "Cornstarch", "Salt", "Milk", "Butter", "Vanilla Extract"],
 ["Apple Pie", "", "https://www.tasteofhome.com/recipes/apple-pie/", "Sugar", "Brown Sugar", "All-purpose Flour", "Cinnamon", "Ginger", "Apples", "Lemon Juice", "Butter", "Eggs", "Confectioners’ Sugar"],
 ["Funnel Cake", "", "https://www.tasteofhome.com/recipes/funnel-cakes/", "Eggs", "Milk", "Vanilla Extract", "All-purpose Flour", "Sugar", "Baking Powder", "Salt", "Oil", "Confectioners’ Sugar"],
 ["Cinnamon Rolls", "", "https://www.tasteofhome.com/recipes/best-cinnamon-rolls/", "Dry Yeast", "Milk", "Sugar", "Butter", "Eggs", "Salt", "All-purpose Flour", "Brown Sugar", "Ground Cinnamon", "Butter", "Cream Cheese", "Vanilla Extract", "Salt", "Confectioners’ Sugar"],
-["Chocolate Pudding", "", "https://www.tasteofhome.com/recipes/homemade-chocolate-pudding/", "Sugar", "Baking Cocoa", "Cornstarch", "Salt", "Milk", "Butter", "Vanilla Extract"],
 ["Nutella Brownies", "", "https://www.handletheheat.com/nutella-brownie/", "Chocolate Chips", "Unsalted Butter", "Chocolate", "Granulated Sugar", "Nutella", "Eggs", "Vanilla Extract", "All-purpose Flour", "Cocoa Powder", "Salt"],
 ["Ice Cream", "", "https://barefeetinthekitchen.com/homemade-ice-cream-recipe/", "Heavy Cream", "Milk", "Sugar", "Salt", "Vanilla Extact"],
 ["Blueberry Muffins", "", "https://www.tasteofhome.com/recipes/aunt-betty-s-blueberry-muffins/", "Orange Juice", "Egg", "Canola Oil", "Sugar", "Flour", "Baking Powder", "Salt", "Baking Soda", "Blueberries", "Ground Cinnamon"],
@@ -73,7 +69,7 @@
 ["Soybean Paste Stew", "", "https://www.carvingajourney.com/doenjang-jjigae-soybean-paste-stew/", "Soybeans", "Tofu", "Yellow Onion", "Zucchini", "Gochujang"],
 ["Egg Fried Rice", "", "https://www.koreanbapsang.com/egg-fried-rice-gyeran-bokkeumbap/", "Egg", "Rice", "Scallions", "Soy Sauce", "Salt", "Pepper", "Sesame"],
 ["Vegetable Pancake", "", "https://brendid.com/korean-vegetable-pancake-jeon/", "Yellow Squash", "Carrots", "Potatoes", "Onions", "Pepper", "Flour", "Egg", "Salt", "Vegetable Oil"],
-["Braised Tofu", "", "https://www.abeautifulplate.com/traditional-korean-braised-tofu/", "Soy Sauce", "Red Pepper Powder", "Sugar", "Vegetable Oil", "Tofu", "Scallions"],
+["Braised Tofu", "", "https://www.abeautifulplate.com/traditional-korean-braised-tofu/", "Soy Sauce", "Red Pepper Powder", "Sugar", "Vegetable Oil", "Tofu", "Scallions"]
 		  ];
 		
 		
@@ -87,7 +83,7 @@
 		
 		addSelection("Your Selection", array);
 		
-		for (var i = 0; i < 15; i++) {
+		for (var i = 0; i < dishes.length; i++) {
 			var per = percentage(dishes[i], array);
 			dishes[i][1] = per;
 		}
@@ -102,14 +98,13 @@
 				addRow(dishes[i][0] , x, link);	
 			}
 		}
-       
 	}
 	
 	function percentage(dish, array) {
 		var count = 0;
 		var percentage = 0;
 		//do your calculation here
-		for (var i = 3; i < dish.length; i++) {
+		for (var i = 2; i < dish.length; i++) {
 			for (var a = 0; a < array.length; a++) {
 				if (dish[i] == array[a]) {
 					count = count + 1;
@@ -117,8 +112,8 @@
 			}
 		}
 		
-		percentage = (count / (dish.length - 3)) * 100;
-                percentage = parseInt(percentage)
+		percentage = (count / (dish.length - 2)) * 100;
+
 		return percentage;
 	}
 	
