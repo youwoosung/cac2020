@@ -5,74 +5,416 @@
 
 <script>
 	function collectSelection() {
-		var dishes = [["Alfredo", "", "https://www.modernhoney.com/fettuccine-alfredo/", "Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese", "Black Pepper"],
-["Spaghetti", "", "https://www.foodnetwork.com/recipes/food-network-kitchen/simple-spaghetti-with-tomato-sauce-3362665", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground Beef", "Black pepper", "Olive oil", "Salt"],
-["Fried Rice", "", "https://www.allrecipes.com/recipe/79543/fried-rice-restaurant-style/", "Eggs", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil", "Vegetable Oil"],
-["Grilled Cheese Sandwich", "", "https://www.allrecipes.com/recipe/23891/grilled-cheese-sandwich/", "Cheese", "Bread", "Butter"],
-["Omelette", "", "https://www.delish.com/cooking/recipe-ideas/a24892843/how-to-make-omelet/", "Cheese", "Butter", "Black Pepper", "Ham", "Milk", "Eggs", "Salt"],
-["Meatloaf", "", "https://www.thewholesomedish.com/the-best-classic-meatloaf/", "Ground Beef", "Eggs", "Bread Crumbs", "Onion", "Ketchup", "Brown Sugar", "Milk", "Mustard", "Salt", "Pepper", "Parsley", "Garlic", "Red Wine Vinegar", "Black pepper"],
-["Macaroni and Cheese", "", "https://www.allrecipes.com/recipe/11679/homemade-mac-and-cheese/", "Cheese", "Macaroni Pasta", "Milk", "Butter", "Bread Crumbs", "All-purpose flour", "Paprika"],
-["Japanese Ramen Noodles", "", "https://www.forkknifeswoon.com/simple-homemade-chicken-ramen/", "Chicken Breast", "Black Pepper", "Unsalted Butter", "Vegetable Oil", "Sesame Oil", "Ginger", "Garlic", "Soy Sauce", "Mirin", "Chicken Stock", "Shitake Mushrooms", "Salt", "Eggs", "Scallions", "Ramen Noodles"],
-["Greek Salad", "", "https://www.foodnetwork.com/recipes/ina-garten/greek-salad-recipe-1948517", "Bell Pepper", "Cucumber", "Grape Tomatoes", "Red Onion", "Feta Cheese", "Olives", "Garlic", "Dried Oregano", "Dijon Mustard", "Red Wine Vinegar", "Salt", "Black Pepper", "Olive Oil"],
-["Pasta Salad", "", "https://www.thekitchn.com/easy-pasta-salad-recipe-258379", "Olive Oil", "Red Wine Vinegar", "Italian Seasoning", "Granulated Sugar", "Garlic", "Salt", "Black Pepper", "Onion", "Rotini Pasta", "Cherry Tomatoes", "Cucumber", "Mozzarella Balls", "Salami", "Olives", "Parsley Leaves"],
-["Kimchi Fried Rice", "", "https://cooking.nytimes.com/recipes/1018097-kimchi-fried-rice", "Butter", "Onion", "Kimchi", "Kimchi Juice", "Spam", "Soy Sauce", "Sesame Oil", "Vegetable Oil", "Eggs", "Salt", "Nori"],
-["Chili", "", "https://www.thewholesomedish.com/the-best-classic-chili/", "Olive Oil", "Onion", "Ground Beef", "Chili Powder", "Granulated Sugar", "Tomato Paste", "Garlic Powder", "Salt", "Black Pepper", "Beef Broth", "Tomatoes", "Kidney Beens", "Tomato Sauce"],
-["Clam Chowder", "", "https://damndelicious.net/2015/04/25/easy-clam-chowder/", "Bacon", "Onion", "Garlic", "Potato", "Clam Juice", "Butter", "Thyme", "All-purpose Flour", "Milk", "Vegetable Stock", "Chopped Clams", "Black Pepper", "Parsley Leaves", "All-purpose Flour"],
-["Chicken Fajitas", "", "https://www.delish.com/cooking/recipe-ideas/a19665622/easy-chicken-fajitas-recipe/", "Olive Oil", "Lime Juice", "Cumin", "Red Pepper Flakes", "Chicken Breast", "Salt", "Black Pepper", "Bell Pepper", "Onion", " Tortilla"],
-["Turkey Tetrazzini", "", "https://www.delish.com/cooking/recipe-ideas/a25239697/easy-turkey-tetrazzini-recipe/", "Cooking Spray", "Spaghetti", "Butter", "Garlic", "Baby Bella Mushrooms", "White Wine", "All-purpose Flour", "Chicken Broth", "Heavy Cream", "Salt", "Black Pepper", "Turkey", "White Cheddar", "Peas", "Oregano", "Bread Crumbs", "Parmesan", "Olive Oil"],
-["Chicken Tenders", "", "https://cafedelites.com/crispy-chicken-tenders/", "Eggs", "Olive Oil", "Lemon juice", "Parsley", "Garlic", "Salt", "Black Pepper", "Chicken Tenderloins", "Breadcrumbs", "Paprika", "Garlic Powder", "Parmesan"],
-["Prosciutto Pasta", "", "https://www.tasteofhome.com/recipes/prosciutto-pasta-toss/", "Linguine", "Peas", "Garlic", "Italian Seasoning", "Black Pepper", "Olive Oil", "Deli Ham", "Parmesan"],
-["Rosemary Lime Chicken", "", "https://www.tasteofhome.com/recipes/rosemary-lime-chicken/", "Chicken Breast", "Canola Oil", "White Wine", "Chicken Broth", "Lime Juice", "Rosemary", "Salt", "Black Pepper"],
-["Corn Dogs", "", "https://www.delish.com/cooking/recipe-ideas/a27470888/classic-corn-dog-recipe/", "Hot Dogs", "All-purpose Flour", "Granulated Sugar", "Baking Powder", "Salt", "Baking Soda", "Black Pepper", "Milk", "Eggs", "Vegetable Oil"],
-["Applesauce Barbecue Chicken", "", "https://www.tasteofhome.com/recipes/applesauce-barbecue-chicken/", "Chicken Breast", "Black Pepper", "Olive Oil", "Applesauce", "Barbecue Sauce", "Brown Sugar", "Chili Powder"], 
-["Chicken Pasta Ceasar Salad", "", "https://www.justataste.com/chicken-caesar-pasta-salad-recipe/", "Dijon Mustard", "Lemon Juice", "Garlic", "Parmesan", "Pasta Noodles", "Chicken Breast"],
-["Chocolate Cookies", "", "https://www.tasteofhome.com/article/how-to-make-easy-chocolate-chip-cookies/", "Butter", "Sugar", "Packed Brown Sugar", "Eggs", "Vanilla Extract", "All-purpose Flour", "Salt", "Baking Soda", "Chocolate Chips", "Chopped Walnuts"],
-["Tiramisu", "", "https://www.tasteofhome.com/recipes/contest-winning-easy-tiramisu/", "Vanilla Wafers", "Instant Coffee Granules", "Hot Water", "Vanilla Pudding", "Whipped Topping", "Baking Cocoa"],
-["Apple Fritter", "", "https://www.tasteofhome.com/recipes/apple-fritter-cake/", "All-purpose Flour", "Sugar", "Ground Cinnamon", "Baking Powder", "Salt", "Apples", "Beer", "Apple Juice", "Butter", "Sugar", "Vanilla Extract"],
-["Mexican Brownies", "", "https://www.tasteofhome.com/recipes/easy-mexican-brownies/", "Fudge Brownie Mix", "Ground Cinnamon", "Ground Ancho Chili Pepper", "Dark Chocolate Chips", "Eggs", "Canola Oil", "Water"],
-["Pecan Pie", "", "https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/", "Toasted Pecan Halves", "Eggs", "Dark Brown Sugar", "Sugar", "Corn Syrup", "Unsalted Butter", "Bourbon", "Vanilla Extract", "Salt", "Pie Crust"],
-["Strawberry Pie", "", "https://www.tasteofhome.com/recipes/light-strawberry-pie/", "Crushed Pineapple", "Vanilla Pudding Mix", "Strawberry Gelatin", "Strawberries", "Graham Crackers", "Whipped Cream"],
-["Fried Apples", "", "https://www.tasteofhome.com/recipes/mom-s-fried-apples/", "Butter", "Red Apples", "Sugar", "Ground Cinnamon"],
-["Strawberry Shortcake", "", "https://www.tasteofhome.com/recipes/best-strawberry-shortcake/", "All-purpose Flour", "Sugar", "Baking Powder", "Salt", "Butter", "Eggs", "Half-and-half Cream", "Heavy Whipping Cream", "Sugar", "Vanilla Extract", "Strawberries", "Confectioners’ Sugar"],
-["Carrot Cake", "", "https://www.tasteofhome.com/recipes/carrot-cake/", "All-purpose Flour", "Sugar", "Ground Cinnamon", "Baking Soda", "Salt", "Eggs", "Canola Oil", "Carrots", "Vanilla Extract", "Pineapple", "Nuts", "Cream Cheese", "Butter", "Sugar", "Vanilla Extract"],
-["Homemade Chocolate Pudding", "", "https://www.tasteofhome.com/recipes/homemade-chocolate-pudding/", "Sugar", "Baking Cocoa", "Cornstarch", "Salt", "Milk", "Butter", "Vanilla Extract"],
-["Apple Pie", "", "https://www.tasteofhome.com/recipes/apple-pie/", "Sugar", "Brown Sugar", "All-purpose Flour", "Cinnamon", "Ginger", "Apples", "Lemon Juice", "Butter", "Eggs", "Confectioners’ Sugar"],
-["Funnel Cake", "", "https://www.tasteofhome.com/recipes/funnel-cakes/", "Eggs", "Milk", "Vanilla Extract", "All-purpose Flour", "Sugar", "Baking Powder", "Salt", "Oil", "Confectioners’ Sugar"],
-["Cinnamon Rolls", "", "https://www.tasteofhome.com/recipes/best-cinnamon-rolls/", "Dry Yeast", "Milk", "Sugar", "Butter", "Eggs", "Salt", "All-purpose Flour", "Brown Sugar", "Ground Cinnamon", "Butter", "Cream Cheese", "Vanilla Extract", "Salt", "Confectioners’ Sugar"],
-["Nutella Brownies", "", "https://www.handletheheat.com/nutella-brownie/", "Chocolate Chips", "Unsalted Butter", "Chocolate", "Granulated Sugar", "Nutella", "Eggs", "Vanilla Extract", "All-purpose Flour", "Cocoa Powder", "Salt"],
-["Ice Cream", "", "https://barefeetinthekitchen.com/homemade-ice-cream-recipe/", "Heavy Cream", "Milk", "Sugar", "Salt", "Vanilla Extact"],
-["Blueberry Muffins", "", "https://www.tasteofhome.com/recipes/aunt-betty-s-blueberry-muffins/", "Orange Juice", "Eggs", "Canola Oil", "Sugar", "Flour", "Baking Powder", "Salt", "Baking Soda", "Blueberries", "Ground Cinnamon"],
-["Churros", "", "https://www.cookingclassy.com/churros/", "Unsalted Butter", "Sugar", "Salt", "Flour", "Eggs", "Vanilla Extract", "Vegetable Oil", "Ground Cinnamon"],
-["Sugar Cookies", "", "https://www.allrecipes.com/recipe/9870/easy-sugar-cookies/", "Sugar", "Flour", "Baking Soda", "Baking Powder", "Butter", "Sugar", "Eggs", "Vanilla Extract"],
-["Creme Brulee", "", "https://sallysbakingaddiction.com/creme-brulee/", "Eggs", "Sugar", "Heavy Cream", "Salt", "Vanilla Extract"],
-["Doughnuts and Doughnut Holes", "", "https://sallysbakingaddiction.com/how-to-make-homemade-glazed-doughnuts/", "Milk", "Dry Yeast", "Sugar", "Eggs", "Unsalted Butter", "Vanilla Extract", "Ground Nutmeg", "Salt","Flour", "Vegetable Oil"],
-["Cheesecake", "", "https://sugarspunrun.com/best-cheesecake-recipe/", "Pie Crust", "Sugar", "Butter", "Vanilla Extract", "Eggs", "Cream Cheese"],
-["Ras Malai", "", "cookwithmanali.com/make-soft-rasmalai-home/", "Milk", "Lemon Juice", "Cornflour", "Sugar", "Cardamom Pods", "Pistachios"],
-["French Toast", "", "https://www.chefannfoundation.org/knowledge-center/home-recipes/french-toast", "Eggs Milk", "Vanilla Extract", "Bread", "Cinnamon", "Butter"],
-["German Oven Pancakes", "", "https://www.chefannfoundation.org/knowledge-center/home-recipes/german-oven-pancakes", "Bananas", "Strawberries", "Blueberries", "Flour", "Eggs", "Milk", "Salt", "Cinnamon", "Pecans"],
-["Oatmeal With Fruit", "", "https://www.aicr.org/cancer-prevention/recipes/oatmeal-with-fresh-fruit/", "Rolled Oats", "Almond Milk", "Cinnamon", "Pineapples", "Strawberries", "Walnuts", "Honey"],
-["Herbed Spanish Omelet", "", "https://www.aicr.org/cancer-prevention/recipes/herbed-spanish-omelet/", "Potatoes", "Olive Oil", "Onion", "Garlic", "Eggs", "Parsley", "Salt"],
-["Mango Smoothie", "", "https://www.goodhousekeeping.com/food-recipes/healthy/a21946699/summer-smoothies-recipe/", "Orange Juice", "Coconut Yogurt", "Frozen Mango"],
-["Strawberry Smoothie", "", "https://www.goodhousekeeping.com/food-recipes/healthy/a21946699/summer-smoothies-recipe/", "Coconut Water", "Coconut Yogurt", "Strawberries", "Frozen Peaches"],
-["Granola", "", "https://www.goodhousekeeping.com/food-recipes/a22749958/best-ever-granola-recipe/", "Olive Oil", "Maple Syrup", "Sugar", "Salt", "Oats", "Coconut Flakes", "Sunflower Seeds"],
-["Eggs and Cheese Sandwich", "", "https://www.goodhousekeeping.com/food-recipes/easy/a28639047/make-ahead-Eggs-and-cheese-sandwich-recipe/", "Eggs", "Pepper", "Olive Oil", "Cheddar Cheese", "Spinach", "Ham", "Bread"],
-["Breakfast Burrito", "", "https://www.goodhousekeeping.com/food-recipes/easy/a21603870/breakfast-burritos-recipe/", "Tomatillos", "Jalapeno", "Lime Juice", "Cilantro", "Eggs", "Salt", "Tortillas", "Olive Oil", "Cheddar Cheese", "Beans"],
-["Scrambled Eggs Tacos", "", "https://www.womansday.com/food-recipes/food-drinks/a16764124/scrambled-Eggs-tacos-recipe/", "Olive Oil", "Black Beans", "Salt", "Garlic", "Pepper", "Spinach", "Lemon Juice", "Eggs"],
-["Avocado Eggs Toast", "", "https://www.goodhousekeeping.com/food-recipes/a43249/curry-avocado-crispy-Eggs-toast/", "Bread", "Eggs", "Avocado", "Olive Oil", "Salt"],
-["Green Eggs and Ham Sandwich", "", "https://www.tasteofhome.com/recipes/green-Eggs-and-ham-sandwiches/", "Bread", "Eggs", "Ham", "Olive Oil", "Pepper", "Cheddar Cheese", "Salt"],
-["Granola Bars", "", "https://www.goodhousekeeping.com/food-recipes/easy/a34115/paprika-parmesan-granola-bars/", "Rolled Oats", "Rice Cereal", "Grated Parmesan", "Eggs Whites", "Salt", "Peppers", "Nut Butter"],
-["Tropical Smoothie Bowl", "", "https://www.goodhousekeeping.com/food-recipes/a38877/tropical-smoothie-bowl-recipe/", "Banana", "Mango", "Pineapple", "Almond Milk"],
-["Pumpkin Cherry Cookies", "", "https://www.goodhousekeeping.com/food-recipes/dessert/a35274/pumpkin-cherry-breakfast-cookies/", "Flour", "Oats", "Baking Soda", "Pumpkin Pie Spice", "Salt", "Pumpkin", "Coconut Oil", "Sugar", "Eggs", "Cherries", "Pepitas"],
-["Banana-Berry Smoothie", "", "https://www.goodhousekeeping.com/food-recipes/a14554/banana-berry-smoothie-recipe-ghk0713/", "Banana", "Pineapple Juice", "Blueberry", "Blackberry", "Honey", "Ginger"],
-["Blueberry Waffle", "", "https://barefeetinthekitchen.com/blueberry-waffle-recipe/", "Flour", "Blueberries", "Eggs", "Butter", "Sugar", "Baking Powder", "Strawberries"],
-["Eggs Rolls", "", "https://www.thehungrytravelerblog.com/korean-Eggs-roll/", "Eggs", "Green Onion", "Onion", "Carrots"],
-["Soybean Paste Stew", "", "https://www.carvingajourney.com/doenjang-jjigae-soybean-paste-stew/", "Soybeans", "Tofu", "Yellow Onion", "Zucchini", "Gochujang"],
-["Eggs Fried Rice", "", "https://www.koreanbapsang.com/Eggs-fried-rice-gyeran-bokkeumbap/", "Eggs", "Rice", "Scallions", "Soy Sauce", "Salt", "Pepper", "Sesame"],
-["Vegetable Pancake", "", "https://brendid.com/korean-vegetable-pancake-jeon/", "Yellow Squash", "Carrots", "Potatoes", "Onions", "Pepper", "Flour", "Eggs", "Salt", "Vegetable Oil"],
-["Braised Tofu", "", "https://www.abeautifulplate.com/traditional-korean-braised-tofu/", "Soy Sauce", "Red Pepper Powder", "Sugar", "Vegetable Oil", "Tofu", "Scallions"]
-		  ];
-		
-		
+		var dishes = [
+				[ "Alfredo", "",
+						"https://www.modernhoney.com/fettuccine-alfredo/",
+						"Pasta noodles", "Butter", "Heavy Cream", "Garlic",
+						"Parmesan Cheese", "Black Pepper" ],
+				[
+						"Spaghetti",
+						"",
+						"https://www.foodnetwork.com/recipes/food-network-kitchen/simple-spaghetti-with-tomato-sauce-3362665",
+						"Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese",
+						"Garlic", "Basil", "Onion", "Ground Beef",
+						"Black pepper", "Olive oil", "Salt" ],
+				[
+						"Fried Rice",
+						"",
+						"https://www.allrecipes.com/recipe/79543/fried-rice-restaurant-style/",
+						"Eggs", "Garlic", "Rice", "Scallion", "Onion",
+						"Carrot", "Soy sauce", "Peas", "Sesame oil",
+						"Vegetable Oil" ],
+				[
+						"Grilled Cheese Sandwich",
+						"",
+						"https://www.allrecipes.com/recipe/23891/grilled-cheese-sandwich/",
+						"Cheese", "Bread", "Butter" ],
+				[
+						"Omelette",
+						"",
+						"https://www.delish.com/cooking/recipe-ideas/a24892843/how-to-make-omelet/",
+						"Cheese", "Butter", "Black Pepper", "Ham", "Milk",
+						"Eggs", "Salt" ],
+				[
+						"Meatloaf",
+						"",
+						"https://www.thewholesomedish.com/the-best-classic-meatloaf/",
+						"Ground Beef", "Eggs", "Bread Crumbs", "Onion",
+						"Ketchup", "Brown Sugar", "Milk", "Mustard", "Salt",
+						"Pepper", "Parsley", "Garlic", "Red Wine Vinegar",
+						"Black pepper" ],
+				[
+						"Macaroni and Cheese",
+						"",
+						"https://www.allrecipes.com/recipe/11679/homemade-mac-and-cheese/",
+						"Cheese", "Macaroni Pasta", "Milk", "Butter",
+						"Bread Crumbs", "All-purpose flour", "Paprika" ],
+				[
+						"Japanese Ramen Noodles",
+						"",
+						"https://www.forkknifeswoon.com/simple-homemade-chicken-ramen/",
+						"Chicken Breast", "Black Pepper", "Unsalted Butter",
+						"Vegetable Oil", "Sesame Oil", "Ginger", "Garlic",
+						"Soy Sauce", "Mirin", "Chicken Stock",
+						"Shitake Mushrooms", "Salt", "Eggs", "Scallions",
+						"Ramen Noodles" ],
+				[
+						"Greek Salad",
+						"",
+						"https://www.foodnetwork.com/recipes/ina-garten/greek-salad-recipe-1948517",
+						"Bell Pepper", "Cucumber", "Grape Tomatoes",
+						"Red Onion", "Feta Cheese", "Olives", "Garlic",
+						"Dried Oregano", "Dijon Mustard", "Red Wine Vinegar",
+						"Salt", "Black Pepper", "Olive Oil" ],
+				[
+						"Pasta Salad",
+						"",
+						"https://www.thekitchn.com/easy-pasta-salad-recipe-258379",
+						"Olive Oil", "Red Wine Vinegar", "Italian Seasoning",
+						"Granulated Sugar", "Garlic", "Salt", "Black Pepper",
+						"Onion", "Rotini Pasta", "Cherry Tomatoes", "Cucumber",
+						"Mozzarella Balls", "Salami", "Olives",
+						"Parsley Leaves" ],
+				[
+						"Kimchi Fried Rice",
+						"",
+						"https://cooking.nytimes.com/recipes/1018097-kimchi-fried-rice",
+						"Butter", "Onion", "Kimchi", "Kimchi Juice", "Spam",
+						"Soy Sauce", "Sesame Oil", "Vegetable Oil", "Eggs",
+						"Salt", "Nori" ],
+				[
+						"Chili",
+						"",
+						"https://www.thewholesomedish.com/the-best-classic-chili/",
+						"Olive Oil", "Onion", "Ground Beef", "Chili Powder",
+						"Granulated Sugar", "Tomato Paste", "Garlic Powder",
+						"Salt", "Black Pepper", "Beef Broth", "Tomatoes",
+						"Kidney Beens", "Tomato Sauce" ],
+				[
+						"Clam Chowder",
+						"",
+						"https://damndelicious.net/2015/04/25/easy-clam-chowder/",
+						"Bacon", "Onion", "Garlic", "Potato", "Clam Juice",
+						"Butter", "Thyme", "All-purpose Flour", "Milk",
+						"Vegetable Stock", "Chopped Clams", "Black Pepper",
+						"Parsley Leaves", "All-purpose Flour" ],
+				[
+						"Chicken Fajitas",
+						"",
+						"https://www.delish.com/cooking/recipe-ideas/a19665622/easy-chicken-fajitas-recipe/",
+						"Olive Oil", "Lime Juice", "Cumin",
+						"Red Pepper Flakes", "Chicken Breast", "Salt",
+						"Black Pepper", "Bell Pepper", "Onion", " Tortilla" ],
+				[
+						"Turkey Tetrazzini",
+						"",
+						"https://www.delish.com/cooking/recipe-ideas/a25239697/easy-turkey-tetrazzini-recipe/",
+						"Cooking Spray", "Spaghetti", "Butter", "Garlic",
+						"Baby Bella Mushrooms", "White Wine",
+						"All-purpose Flour", "Chicken Broth", "Heavy Cream",
+						"Salt", "Black Pepper", "Turkey", "White Cheddar",
+						"Peas", "Oregano", "Bread Crumbs", "Parmesan",
+						"Olive Oil" ],
+				[ "Chicken Tenders", "",
+						"https://cafedelites.com/crispy-chicken-tenders/",
+						"Eggs", "Olive Oil", "Lemon juice", "Parsley",
+						"Garlic", "Salt", "Black Pepper",
+						"Chicken Tenderloins", "Breadcrumbs", "Paprika",
+						"Garlic Powder", "Parmesan" ],
+				[
+						"Prosciutto Pasta",
+						"",
+						"https://www.tasteofhome.com/recipes/prosciutto-pasta-toss/",
+						"Linguine", "Peas", "Garlic", "Italian Seasoning",
+						"Black Pepper", "Olive Oil", "Deli Ham", "Parmesan" ],
+				[
+						"Rosemary Lime Chicken",
+						"",
+						"https://www.tasteofhome.com/recipes/rosemary-lime-chicken/",
+						"Chicken Breast", "Canola Oil", "White Wine",
+						"Chicken Broth", "Lime Juice", "Rosemary", "Salt",
+						"Black Pepper" ],
+				[
+						"Corn Dogs",
+						"",
+						"https://www.delish.com/cooking/recipe-ideas/a27470888/classic-corn-dog-recipe/",
+						"Hot Dogs", "All-purpose Flour", "Granulated Sugar",
+						"Baking Powder", "Salt", "Baking Soda", "Black Pepper",
+						"Milk", "Eggs", "Vegetable Oil" ],
+				[
+						"Applesauce Barbecue Chicken",
+						"",
+						"https://www.tasteofhome.com/recipes/applesauce-barbecue-chicken/",
+						"Chicken Breast", "Black Pepper", "Olive Oil",
+						"Applesauce", "Barbecue Sauce", "Brown Sugar",
+						"Chili Powder" ],
+				[
+						"Chicken Pasta Ceasar Salad",
+						"",
+						"https://www.justataste.com/chicken-caesar-pasta-salad-recipe/",
+						"Dijon Mustard", "Lemon Juice", "Garlic", "Parmesan",
+						"Pasta Noodles", "Chicken Breast" ],
+				[
+						"Chocolate Cookies",
+						"",
+						"https://www.tasteofhome.com/article/how-to-make-easy-chocolate-chip-cookies/",
+						"Butter", "Sugar", "Packed Brown Sugar", "Eggs",
+						"Vanilla Extract", "All-purpose Flour", "Salt",
+						"Baking Soda", "Chocolate Chips", "Chopped Walnuts" ],
+				[
+						"Tiramisu",
+						"",
+						"https://www.tasteofhome.com/recipes/contest-winning-easy-tiramisu/",
+						"Vanilla Wafers", "Instant Coffee Granules",
+						"Hot Water", "Vanilla Pudding", "Whipped Topping",
+						"Baking Cocoa" ],
+				[
+						"Apple Fritter",
+						"",
+						"https://www.tasteofhome.com/recipes/apple-fritter-cake/",
+						"All-purpose Flour", "Sugar", "Ground Cinnamon",
+						"Baking Powder", "Salt", "Apples", "Beer",
+						"Apple Juice", "Butter", "Sugar", "Vanilla Extract" ],
+				[
+						"Mexican Brownies",
+						"",
+						"https://www.tasteofhome.com/recipes/easy-mexican-brownies/",
+						"Fudge Brownie Mix", "Ground Cinnamon",
+						"Ground Ancho Chili Pepper", "Dark Chocolate Chips",
+						"Eggs", "Canola Oil", "Water" ],
+				[
+						"Pecan Pie",
+						"",
+						"https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/",
+						"Toasted Pecan Halves", "Eggs", "Dark Brown Sugar",
+						"Sugar", "Corn Syrup", "Unsalted Butter", "Bourbon",
+						"Vanilla Extract", "Salt", "Pie Crust" ],
+				[
+						"Strawberry Pie",
+						"",
+						"https://www.tasteofhome.com/recipes/light-strawberry-pie/",
+						"Crushed Pineapple", "Vanilla Pudding Mix",
+						"Strawberry Gelatin", "Strawberries",
+						"Graham Crackers", "Whipped Cream" ],
+				[
+						"Fried Apples",
+						"",
+						"https://www.tasteofhome.com/recipes/mom-s-fried-apples/",
+						"Butter", "Red Apples", "Sugar", "Ground Cinnamon" ],
+				[
+						"Strawberry Shortcake",
+						"",
+						"https://www.tasteofhome.com/recipes/best-strawberry-shortcake/",
+						"All-purpose Flour", "Sugar", "Baking Powder", "Salt",
+						"Butter", "Eggs", "Half-and-half Cream",
+						"Heavy Whipping Cream", "Sugar", "Vanilla Extract",
+						"Strawberries", "Confectioners’ Sugar" ],
+				[ "Carrot Cake", "",
+						"https://www.tasteofhome.com/recipes/carrot-cake/",
+						"All-purpose Flour", "Sugar", "Ground Cinnamon",
+						"Baking Soda", "Salt", "Eggs", "Canola Oil", "Carrots",
+						"Vanilla Extract", "Pineapple", "Nuts", "Cream Cheese",
+						"Butter", "Sugar", "Vanilla Extract" ],
+				[
+						"Homemade Chocolate Pudding",
+						"",
+						"https://www.tasteofhome.com/recipes/homemade-chocolate-pudding/",
+						"Sugar", "Baking Cocoa", "Cornstarch", "Salt", "Milk",
+						"Butter", "Vanilla Extract" ],
+				[ "Apple Pie", "",
+						"https://www.tasteofhome.com/recipes/apple-pie/",
+						"Sugar", "Brown Sugar", "All-purpose Flour",
+						"Cinnamon", "Ginger", "Apples", "Lemon Juice",
+						"Butter", "Eggs", "Confectioners’ Sugar" ],
+				[ "Funnel Cake", "",
+						"https://www.tasteofhome.com/recipes/funnel-cakes/",
+						"Eggs", "Milk", "Vanilla Extract", "All-purpose Flour",
+						"Sugar", "Baking Powder", "Salt", "Oil",
+						"Confectioners’ Sugar" ],
+				[
+						"Cinnamon Rolls",
+						"",
+						"https://www.tasteofhome.com/recipes/best-cinnamon-rolls/",
+						"Dry Yeast", "Milk", "Sugar", "Butter", "Eggs", "Salt",
+						"All-purpose Flour", "Brown Sugar", "Ground Cinnamon",
+						"Butter", "Cream Cheese", "Vanilla Extract", "Salt",
+						"Confectioners’ Sugar" ],
+				[ "Nutella Brownies", "",
+						"https://www.handletheheat.com/nutella-brownie/",
+						"Chocolate Chips", "Unsalted Butter", "Chocolate",
+						"Granulated Sugar", "Nutella", "Eggs",
+						"Vanilla Extract", "All-purpose Flour", "Cocoa Powder",
+						"Salt" ],
+				[
+						"Ice Cream",
+						"",
+						"https://barefeetinthekitchen.com/homemade-ice-cream-recipe/",
+						"Heavy Cream", "Milk", "Sugar", "Salt",
+						"Vanilla Extact" ],
+				[
+						"Blueberry Muffins",
+						"",
+						"https://www.tasteofhome.com/recipes/aunt-betty-s-blueberry-muffins/",
+						"Orange Juice", "Eggs", "Canola Oil", "Sugar", "Flour",
+						"Baking Powder", "Salt", "Baking Soda", "Blueberries",
+						"Ground Cinnamon" ],
+				[ "Churros", "", "https://www.cookingclassy.com/churros/",
+						"Unsalted Butter", "Sugar", "Salt", "Flour", "Eggs",
+						"Vanilla Extract", "Vegetable Oil", "Ground Cinnamon" ],
+				[
+						"Sugar Cookies",
+						"",
+						"https://www.allrecipes.com/recipe/9870/easy-sugar-cookies/",
+						"Sugar", "Flour", "Baking Soda", "Baking Powder",
+						"Butter", "Sugar", "Eggs", "Vanilla Extract" ],
+				[ "Creme Brulee", "",
+						"https://sallysbakingaddiction.com/creme-brulee/",
+						"Eggs", "Sugar", "Heavy Cream", "Salt",
+						"Vanilla Extract" ],
+				[
+						"Doughnuts and Doughnut Holes",
+						"",
+						"https://sallysbakingaddiction.com/how-to-make-homemade-glazed-doughnuts/",
+						"Milk", "Dry Yeast", "Sugar", "Eggs",
+						"Unsalted Butter", "Vanilla Extract", "Ground Nutmeg",
+						"Salt", "Flour", "Vegetable Oil" ],
+				[ "Cheesecake", "",
+						"https://sugarspunrun.com/best-cheesecake-recipe/",
+						"Pie Crust", "Sugar", "Butter", "Vanilla Extract",
+						"Eggs", "Cream Cheese" ],
+				[ "Ras Malai", "",
+						"cookwithmanali.com/make-soft-rasmalai-home/", "Milk",
+						"Lemon Juice", "Cornflour", "Sugar", "Cardamom Pods",
+						"Pistachios" ],
+				[
+						"French Toast",
+						"",
+						"https://www.chefannfoundation.org/knowledge-center/home-recipes/french-toast",
+						"Eggs Milk", "Vanilla Extract", "Bread", "Cinnamon",
+						"Butter" ],
+				[
+						"German Oven Pancakes",
+						"",
+						"https://www.chefannfoundation.org/knowledge-center/home-recipes/german-oven-pancakes",
+						"Bananas", "Strawberries", "Blueberries", "Flour",
+						"Eggs", "Milk", "Salt", "Cinnamon", "Pecans" ],
+				[
+						"Oatmeal With Fruit",
+						"",
+						"https://www.aicr.org/cancer-prevention/recipes/oatmeal-with-fresh-fruit/",
+						"Rolled Oats", "Almond Milk", "Cinnamon", "Pineapples",
+						"Strawberries", "Walnuts", "Honey" ],
+				[
+						"Herbed Spanish Omelet",
+						"",
+						"https://www.aicr.org/cancer-prevention/recipes/herbed-spanish-omelet/",
+						"Potatoes", "Olive Oil", "Onion", "Garlic", "Eggs",
+						"Parsley", "Salt" ],
+				[
+						"Mango Smoothie",
+						"",
+						"https://www.goodhousekeeping.com/food-recipes/healthy/a21946699/summer-smoothies-recipe/",
+						"Orange Juice", "Coconut Yogurt", "Frozen Mango" ],
+				[
+						"Strawberry Smoothie",
+						"",
+						"https://www.goodhousekeeping.com/food-recipes/healthy/a21946699/summer-smoothies-recipe/",
+						"Coconut Water", "Coconut Yogurt", "Strawberries",
+						"Frozen Peaches" ],
+				[
+						"Granola",
+						"",
+						"https://www.goodhousekeeping.com/food-recipes/a22749958/best-ever-granola-recipe/",
+						"Olive Oil", "Maple Syrup", "Sugar", "Salt", "Oats",
+						"Coconut Flakes", "Sunflower Seeds" ],
+				[
+						"Eggs and Cheese Sandwich",
+						"",
+						"https://www.goodhousekeeping.com/food-recipes/easy/a28639047/make-ahead-Eggs-and-cheese-sandwich-recipe/",
+						"Eggs", "Pepper", "Olive Oil", "Cheddar Cheese",
+						"Spinach", "Ham", "Bread" ],
+				[
+						"Breakfast Burrito",
+						"",
+						"https://www.goodhousekeeping.com/food-recipes/easy/a21603870/breakfast-burritos-recipe/",
+						"Tomatillos", "Jalapeno", "Lime Juice", "Cilantro",
+						"Eggs", "Salt", "Tortillas", "Olive Oil",
+						"Cheddar Cheese", "Beans" ],
+				[
+						"Scrambled Eggs Tacos",
+						"",
+						"https://www.womansday.com/food-recipes/food-drinks/a16764124/scrambled-Eggs-tacos-recipe/",
+						"Olive Oil", "Black Beans", "Salt", "Garlic", "Pepper",
+						"Spinach", "Lemon Juice", "Eggs" ],
+				[
+						"Avocado Eggs Toast",
+						"",
+						"https://www.goodhousekeeping.com/food-recipes/a43249/curry-avocado-crispy-Eggs-toast/",
+						"Bread", "Eggs", "Avocado", "Olive Oil", "Salt" ],
+				[
+						"Green Eggs and Ham Sandwich",
+						"",
+						"https://www.tasteofhome.com/recipes/green-Eggs-and-ham-sandwiches/",
+						"Bread", "Eggs", "Ham", "Olive Oil", "Pepper",
+						"Cheddar Cheese", "Salt" ],
+				[
+						"Granola Bars",
+						"",
+						"https://www.goodhousekeeping.com/food-recipes/easy/a34115/paprika-parmesan-granola-bars/",
+						"Rolled Oats", "Rice Cereal", "Grated Parmesan",
+						"Eggs Whites", "Salt", "Peppers", "Nut Butter" ],
+				[
+						"Tropical Smoothie Bowl",
+						"",
+						"https://www.goodhousekeeping.com/food-recipes/a38877/tropical-smoothie-bowl-recipe/",
+						"Banana", "Mango", "Pineapple", "Almond Milk" ],
+				[
+						"Pumpkin Cherry Cookies",
+						"",
+						"https://www.goodhousekeeping.com/food-recipes/dessert/a35274/pumpkin-cherry-breakfast-cookies/",
+						"Flour", "Oats", "Baking Soda", "Pumpkin Pie Spice",
+						"Salt", "Pumpkin", "Coconut Oil", "Sugar", "Eggs",
+						"Cherries", "Pepitas" ],
+				[
+						"Banana-Berry Smoothie",
+						"",
+						"https://www.goodhousekeeping.com/food-recipes/a14554/banana-berry-smoothie-recipe-ghk0713/",
+						"Banana", "Pineapple Juice", "Blueberry", "Blackberry",
+						"Honey", "Ginger" ],
+				[
+						"Blueberry Waffle",
+						"",
+						"https://barefeetinthekitchen.com/blueberry-waffle-recipe/",
+						"Flour", "Blueberries", "Eggs", "Butter", "Sugar",
+						"Baking Powder", "Strawberries" ],
+				[
+						"Eggs Rolls",
+						"",
+						"https://www.thehungrytravelerblog.com/korean-Eggs-roll/",
+						"Eggs", "Green Onion", "Onion", "Carrots" ],
+				[
+						"Soybean Paste Stew",
+						"",
+						"https://www.carvingajourney.com/doenjang-jjigae-soybean-paste-stew/",
+						"Soybeans", "Tofu", "Yellow Onion", "Zucchini",
+						"Gochujang" ],
+				[
+						"Eggs Fried Rice",
+						"",
+						"https://www.koreanbapsang.com/Eggs-fried-rice-gyeran-bokkeumbap/",
+						"Eggs", "Rice", "Scallions", "Soy Sauce", "Salt",
+						"Pepper", "Sesame" ],
+				[ "Vegetable Pancake", "",
+						"https://brendid.com/korean-vegetable-pancake-jeon/",
+						"Yellow Squash", "Carrots", "Potatoes", "Onions",
+						"Pepper", "Flour", "Eggs", "Salt", "Vegetable Oil" ],
+				[
+						"Braised Tofu",
+						"",
+						"https://www.abeautifulplate.com/traditional-korean-braised-tofu/",
+						"Soy Sauce", "Red Pepper Powder", "Sugar",
+						"Vegetable Oil", "Tofu", "Scallions" ] ];
+
 		var array = []
 		var checkboxes = document
 				.querySelectorAll('input[type=checkbox]:checked')
@@ -80,27 +422,35 @@
 		for (var i = 0; i < checkboxes.length; i++) {
 			array.push(checkboxes[i].value)
 		}
-		
-		clearSelectionTable("Your Selection", array);
-		addSelection("Your Selection", array );
-		
+
+		clearSelectionTable();
+		addSelection("Your Selection", array);
+
 		for (var i = 0; i < dishes.length; i++) {
 			var per = percentage(dishes[i], array);
 			dishes[i][1] = per;
 		}
-		
+
+		clearInfoTable();
+		addRow("Dishes:", "Matchrates:" , "Links: ");
+
+		for (var i = 0; i < dishes.length; i++) {
+			var per = percentage(dishes[i], array);
+			dishes[i][1] = per;
+		}
 		sort(dishes);
-		
+
 		for (var i = 0; i < 15; i++) {
-			if(parseInt(dishes[i][1]) > 0) {
+			if (parseInt(dishes[i][1]) > 0) {
 				var x = dishes[i][1] + "%";
-				var link = "<a href=\"" + dishes[i][2] + "\">" + dishes[i][2] + "</a>"
-				
-				addRow(dishes[i][0] , x, link);	
+				var link = "<a href=\"" + dishes[i][2] + "\">" + dishes[i][2]
+						+ "</a>"
+
+				addRow(dishes[i][0], x, link);
 			}
 		}
 	}
-	
+
 	function percentage(dish, array) {
 		var count = 0;
 		var percentage = 0;
@@ -112,41 +462,44 @@
 				}
 			}
 		}
-		
+
 		percentage = parseInt((count / (dish.length - 2)) * 100);
 
 		return percentage;
 	}
-	
+
 	function clearSelectionTable() {
-		var infoTable = document.getElementById("selection-table");
+		var selectionTable = document.getElementById("selection-table");
+		selectionTable.innerHTML = "";
+	}
+
+	function clearInfoTable() {
+		var infoTable = document.getElementById("info-table");
 		infoTable.innerHTML = "";
-			}
-	
-	
-	
+	}
+
 	function addSelection(heading, selection) {
 		var infoTable = document.getElementById("selection-table");
 		var infoRow = infoTable.insertRow(-1);
 		var infoCellOne = infoRow.insertCell();
 		var infoCellTwo = infoRow.insertCell();
-		
+
 		infoCellOne.innerHTML = heading;
 		infoCellTwo.innerHTML = selection;
 	}
-	
+
 	function addRow(info1, info2, info3) {
 		var infoTable = document.getElementById("info-table");
 		var infoRow = infoTable.insertRow(-1);
 		var infoCellOne = infoRow.insertCell();
 		var infoCellTwo = infoRow.insertCell();
 		var infoCellThree = infoRow.insertCell();
-		
+
 		infoCellOne.innerHTML = info1;
 		infoCellTwo.innerHTML = info2;
 		infoCellThree.innerHTML = info3;
 	}
-	
+
 	function sort(dish) {
 		var leng = dish.length;
 		for (var i = 0; i < leng - 1; i++) {
@@ -161,72 +514,87 @@
 			}
 		}
 	}
-
-	
 </script>
 </head>
 
 <body>
 
-	<h2 style="text-align:center">Fridge App</h2>
+	<h2 style="text-align: center">Fridge App</h2>
 
-	<table style = "table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;" border = 1>
+	<table
+		style="table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;"
+		border=1>
 		<h3>Produce and Fruit</h3>
 		<tr>
-			<td><input type="checkbox" value="Apples">Apples                  </td>
+			<td><input type="checkbox" value="Apples">Apples</td>
 			<td><input type="checkbox" value="Avocados"> Avocados</td>
 			<td><input type="checkbox" value="Bananas"> Bananas</td>
 			<td><input type="checkbox" value="Basil"> Basil</td>
 			<td><input type="checkbox" value="Beans"> Beans</td>
-			<td><input type="checkbox" value="Bell Peppers"> Bell Peppers</td>
+			<td><input type="checkbox" value="Bell Peppers"> Bell
+				Peppers</td>
 			<td><input type="checkbox" value="Blackberries">Blackberries</td>
-			<td><input type="checkbox" value="Black Beans"> Black Beans</td>
-			</tr>
-			<tr>
+			<td><input type="checkbox" value="Black Beans"> Black
+				Beans</td>
+		</tr>
+		<tr>
 			<td><input type="checkbox" value="Blueberries">Blueberries</td>
 			<td><input type="checkbox" value="Carrots"> Carrots</td>
-			<td><input type="checkbox" value="Cherry Tomatoes">Cherry Tomatoes</td>
-			<td><input type="checkbox" value="Dried Cherries"> Dried Cherries</td>
+			<td><input type="checkbox" value="Cherry Tomatoes">Cherry
+				Tomatoes</td>
+			<td><input type="checkbox" value="Dried Cherries"> Dried
+				Cherries</td>
 			<td><input type="checkbox" value="Cucumbers"> Cucumbers</td>
-			<td><input type="checkbox" value="Frozen Peaches">Frozen Peaches</td>
+			<td><input type="checkbox" value="Frozen Peaches">Frozen
+				Peaches</td>
 			<td><input type="checkbox" value="Pineapples">Pineapples</td>
 			<td><input type="checkbox" value="Tomatoes"> Tomatoes</td>
-			</tr>
-			<tr>
+		</tr>
+		<tr>
 			<td><input type="checkbox" value="Olives"> Olives</td>
 			<td><input type="checkbox" value="Onions"> Onions</td>
-			<td><input type="checkbox" value="Parsley Leaves">Parsley Leaves</td>
+			<td><input type="checkbox" value="Parsley Leaves">Parsley
+				Leaves</td>
 			<td><input type="checkbox" value="Jalapenos"> Jalapenos</td>
 			<td><input type="checkbox" value="Peas"> Peas</td>
 			<td><input type="checkbox" value="Potatoes"> Potatoes</td>
 			<td><input type="checkbox" value="Pumpkin"> Pumpkin</td>
 			<td><input type="checkbox" value="Mushrooms"> Mushrooms</td>
-			</tr>
-			<tr>
+		</tr>
+		<tr>
 			<td><input type="checkbox" value="Tofu"> Tofu</td>
 			<td><input type="checkbox" value="Spinach"> Spinach</td>
-			<td><input type="checkbox" value="Shitake Mushrooms">Shitake Mushrooms</td>
+			<td><input type="checkbox" value="Shitake Mushrooms">Shitake
+				Mushrooms</td>
 			<td><input type="checkbox" value="Gochujang"> Gochujang</td>
 			<td><input type="checkbox" value="Strawberries">Strawberries</td>
 			<td><input type="checkbox" value="Squash"> Squash</td>
 			<td><input type="checkbox" value="Zucchini"> Zucchini</td>
-			<td><input type="checkbox" value="Vegetable Stock">Vegetable Stock</td>
+			<td><input type="checkbox" value="Vegetable Stock">Vegetable
+				Stock</td>
 		</tr>
 	</table>
 	<h3>Meat and Seafood</h3>
-	<table style = "table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;" border = 1>
+	<table
+		style="table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;"
+		border=1>
 		<tr>
 			<td><input type="checkbox" value="Bacon"> Bacon</td>
-			<td><input type="checkbox" value="Beef Broth"> Beef Broth</td>
+			<td><input type="checkbox" value="Beef Broth"> Beef
+				Broth</td>
 			<td><input type="checkbox" value="Chicken"> Chicken</td>
-			<td><input type="checkbox" value="Ground Beef"> Ground Beef</td>
-			<td><input type="checkbox" value="Ground Pork"> Ground Pork</td>
-			<td><input type="checkbox" value="Ground Turkey"> Ground Turkey</td>
+			<td><input type="checkbox" value="Ground Beef"> Ground
+				Beef</td>
+			<td><input type="checkbox" value="Ground Pork"> Ground
+				Pork</td>
+			<td><input type="checkbox" value="Ground Turkey"> Ground
+				Turkey</td>
 			<td><input type="checkbox" value="Ham"> Ham</td>
 			<td><input type="checkbox" value="Hotdogs"> Hotdogs</td>
-			</tr>
-			<tr>
-			<td><input type="checkbox" value="Rotisserie Chicken">Rotisserie Chicken</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" value="Rotisserie Chicken">Rotisserie
+				Chicken</td>
 			<td><input type="checkbox" value="Salami"> Salami</td>
 			<td><input type="checkbox" value="Turkey"> Turkey</td>
 			<td><input type="checkbox" value="Scallions"> Scallions</td>
@@ -239,75 +607,108 @@
 		</tr>
 	</table>
 	<h3>Dairy</h3>
-	<table style = "table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;" border = 1>
+	<table
+		style="table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;"
+		border=1>
 		<tr>
 			<td><input type="checkbox" value="Butter"> Butter</td>
 			<td><input type="checkbox" value="Cheese"> Cheese</td>
-			<td><input type="checkbox" value="Cream Cheese"> Cream Cheese</td>
+			<td><input type="checkbox" value="Cream Cheese"> Cream
+				Cheese</td>
 			<td><input type="checkbox" value="Eggs"> Eggs</td>
 			<td><input type="checkbox" value="Cream"> Cream</td>
 			<td><input type="checkbox" value="Milk"> Milk</td>
-			<td><input type="checkbox" value="Mozzarella Balls">Mozzarella Balls</td>
+			<td><input type="checkbox" value="Mozzarella Balls">Mozzarella
+				Balls</td>
 			<td><input type="checkbox" value="Nutella"> Nutella</td>
-			<td><input type="checkbox" value="Whipped Cream">Whipped Cream</td>
+			<td><input type="checkbox" value="Whipped Cream">Whipped
+				Cream</td>
 		</tr>
 	</table>
 	<h3>Pasta and Grains</h3>
-	<table style = "table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;" border = 1>
+	<table
+		style="table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;"
+		border=1>
 		<tr>
 			<td><input type="checkbox" value="Bread"> Bread</td>
-			<td><input type="checkbox" value="Corn Flour"> Corn Flour</td>
-			<td><input type="checkbox" value="Corn Starch"> Corn Starch</td>
-			<td><input type="checkbox" value="Rotini Pasta"> Rotini Pasta</td>
+			<td><input type="checkbox" value="Corn Flour"> Corn
+				Flour</td>
+			<td><input type="checkbox" value="Corn Starch"> Corn
+				Starch</td>
+			<td><input type="checkbox" value="Rotini Pasta"> Rotini
+				Pasta</td>
 			<td><input type="checkbox" value="Pie Crust"> Pie Crust</td>
 			<td><input type="checkbox" value="Tortillas"> Tortillas</td>
-			<td><input type="checkbox" value="Yeast Solution"> Yeast Solution</td>
-			<td><input type="checkbox" value="Yellow Cornmeal">Yellow Cornmeal</td>
-			</tr>
-			<tr>
-			<td><input type="checkbox" value="All Purpose Flour">All Purpose Flour</td>
+			<td><input type="checkbox" value="Yeast Solution"> Yeast
+				Solution</td>
+			<td><input type="checkbox" value="Yellow Cornmeal">Yellow
+				Cornmeal</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" value="All Purpose Flour">All
+				Purpose Flour</td>
 			<td><input type="checkbox" value="Linguine"> Linguine</td>
 			<td><input type="checkbox" value="Dry Yeast"> Dry Yeast</td>
-			<td><input type="checkbox" value="Graham Crackers">Graham Crackers</td>
-			<td><input type="checkbox" value="Macaroni Pasta">Macaroni Pasta</td>
-			<td><input type="checkbox" value="Pasta Noodles *in general">Pasta Noodles</td>
-			<td><input type="checkbox" value="Ramen Noodles"> Ramen Noodles</td>
+			<td><input type="checkbox" value="Graham Crackers">Graham
+				Crackers</td>
+			<td><input type="checkbox" value="Macaroni Pasta">Macaroni
+				Pasta</td>
+			<td><input type="checkbox" value="Pasta Noodles *in general">Pasta
+				Noodles</td>
+			<td><input type="checkbox" value="Ramen Noodles"> Ramen
+				Noodles</td>
 			<td><input type="checkbox" value="Shiratamako">Shiratamako</td>
 	</table>
 	</tr>
-	<table style = "table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;" border = 1>
+	<table
+		style="table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;"
+		border=1>
 		<h3>Solid Ingredients</h3>
 		<tr>
 			<td><input type="checkbox" value="Almonds"> Almonds</td>
-			<td><input type="checkbox" value="Baking Cocoa"> Baking Cocoa</td>
-			<td><input type="checkbox" value="Baking Powder"> Baking Powder</td>
-			<td><input type="checkbox" value="Baking Soda"> Baking Soda</td>
-			<td><input type="checkbox" value="Black Pepper"> Black Pepper</td>
-			<td><input type="checkbox" value="Cheesecake"> Cheesecake</td>
-			<td><input type="checkbox" value="Chili Powder"> Chili Powder</td>
+			<td><input type="checkbox" value="Baking Cocoa"> Baking
+				Cocoa</td>
+			<td><input type="checkbox" value="Baking Powder"> Baking
+				Powder</td>
+			<td><input type="checkbox" value="Baking Soda"> Baking
+				Soda</td>
+			<td><input type="checkbox" value="Black Pepper"> Black
+				Pepper</td>
+			<td><input type="checkbox" value="Cheesecake">
+				Cheesecake</td>
+			<td><input type="checkbox" value="Chili Powder"> Chili
+				Powder</td>
 			<td><input type="checkbox" value="Chocolate"> Chocolate</td>
-			</tr>
-			<tr>
-			<td><input type="checkbox" value="Chocolate Chips">Chocolate Chips</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" value="Chocolate Chips">Chocolate
+				Chips</td>
 			<td><input type="checkbox" value="Cinnamon"> Cinnamon</td>
 			<td><input type="checkbox" value="Cumin"> Cumin</td>
 			<td><input type="checkbox" value="Walnuts"> Walnuts</td>
 			<td><input type="checkbox" value="Cilantro"> Cilantro</td>
-			<td><input type="checkbox" value="Coarse Salt"> Coarse Salt</td>
-			<td><input type="checkbox" value="Cocoa Powder"> Cocoa Powder</td>
-			<td><input type="checkbox" value="Coconut Flakes"> Coconut Flakes</td>
-			</tr>
-			<tr>
-			<td><input type="checkbox" value="Sugar">Sugar                   </td>
+			<td><input type="checkbox" value="Coarse Salt"> Coarse
+				Salt</td>
+			<td><input type="checkbox" value="Cocoa Powder"> Cocoa
+				Powder</td>
+			<td><input type="checkbox" value="Coconut Flakes">
+				Coconut Flakes</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" value="Sugar">Sugar</td>
 			<td><input type="checkbox" value="Garlic">Garlic</td>
 			<td><input type="checkbox" value="Ginger">Ginger</td>
-			<td><input type="checkbox" value="Green Cardamom Pods">Green Cardamom Pods</td>
-			<td><input type="checkbox" value="Ground Anchochili Pepper">Ground Anchochili Pepper</td>
-			<td><input type="checkbox" value="Ground Nutmeg"> Ground Nutmeg</td>
+			<td><input type="checkbox" value="Green Cardamom Pods">Green
+				Cardamom Pods</td>
+			<td><input type="checkbox" value="Ground Anchochili Pepper">Ground
+				Anchochili Pepper</td>
+			<td><input type="checkbox" value="Ground Nutmeg"> Ground
+				Nutmeg</td>
 			<td><input type="checkbox" value="Gochujang"> Gochujang</td>
-			<td><input type="checkbox" value="Kidney Beans"> Kidney Beans</td>
-			</tr>
-			<tr>
+			<td><input type="checkbox" value="Kidney Beans"> Kidney
+				Beans</td>
+		</tr>
+		<tr>
 			<td><input type="checkbox" value="Kimchi"> Kimchi</td>
 			<td><input type="checkbox" value="Mirin"> Mirin</td>
 			<td><input type="checkbox" value="Misugaru"> Misugaru</td>
@@ -316,65 +717,91 @@
 			<td><input type="checkbox" value="Oregano"> Oregano</td>
 			<td><input type="checkbox" value="Paprika"> Paprika</td>
 			<td><input type="checkbox" value="Pecans"> Pecans</td>
-			</tr>
-			<tr>
+		</tr>
+		<tr>
 			<td><input type="checkbox" value="Pepitas"> Pepitas</td>
 			<td><input type="checkbox" value="Pistachios">Pistachios</td>
-			<td><input type="checkbox" value="Pumpkin Spice">Pumpkin Spice</td>
-			<td><input type="checkbox" value="Red Pepper Flakes/Powder">Red Pepper Flakes</td>
+			<td><input type="checkbox" value="Pumpkin Spice">Pumpkin
+				Spice</td>
+			<td><input type="checkbox" value="Red Pepper Flakes/Powder">Red
+				Pepper Flakes</td>
 			<td><input type="checkbox" value="Romaine"> Romaine</td>
 			<td><input type="checkbox" value="Rosemary"> Rosemary</td>
 			<td><input type="checkbox" value="Saffron"> Saffron</td>
 			<td><input type="checkbox" value="Salt"> Salt</td>
-			</tr>
-			<tr>
+		</tr>
+		<tr>
 			<td><input type="checkbox" value="Sesame"> Sesame</td>
 			<td><input type="checkbox" value="Soybeans"> Soybeans</td>
-			<td><input type="checkbox" value="Sunflower Seeds">Sunflower Seeds</td>
-			<td><input type="checkbox" value="Sweet Red Bean Paste">Sweet Red Bean Paste</td>
-			<td><input type="checkbox" value="Sweet Rice Flour">Sweet Rice Flour</td>
+			<td><input type="checkbox" value="Sunflower Seeds">Sunflower
+				Seeds</td>
+			<td><input type="checkbox" value="Sweet Red Bean Paste">Sweet
+				Red Bean Paste</td>
+			<td><input type="checkbox" value="Sweet Rice Flour">Sweet
+				Rice Flour</td>
 			<td><input type="checkbox" value="Thyme"> Thyme</td>
 			<td><input type="checkbox" value="Tomatillos">Tomatillos</td>
 			<td><input type="checkbox" value="Shiratamako">Shiratamako</td>
-			</tr>
-			<tr>
-			<td><input type="checkbox" value="Vanilla Wafers">Vanilla Wafers</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" value="Vanilla Wafers">Vanilla
+				Wafers</td>
 			<td><input type="checkbox" value="Rice"> Rice</td>
 		</tr>
 	</table>
 	<h3>Liquid Ingredients</h3>
-	<table style = "table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;"" border = 1>
+	<table
+		style="table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;"
+		" border=1>
 		<tr>
-			<td><input type="checkbox" value="Apple Sauce"> Apple Sauce</td>
-			<td><input type="checkbox" value="Barbecue Sauce">Barbecue Sauce</td>
-			<td><input type="checkbox" value="Canola Oil"> Canola Oil</td>
-			<td><input type="checkbox" value="Caesar Salad Dressing">Caesar Salad Dressing</td>
-			<td><input type="checkbox" value="Clam Juice"> Clam Juice</td>
-			<td><input type="checkbox" value="Coconut Oil"> Coconut Oil</td>
-			<td><input type="checkbox" value="Coconut Water">Coconut Water</td>
-			<td><input type="checkbox" value="Coconut Yogurt">Coconut Yogurt</td>
-			</tr>
-			<tr>
+			<td><input type="checkbox" value="Apple Sauce"> Apple
+				Sauce</td>
+			<td><input type="checkbox" value="Barbecue Sauce">Barbecue
+				Sauce</td>
+			<td><input type="checkbox" value="Canola Oil"> Canola
+				Oil</td>
+			<td><input type="checkbox" value="Caesar Salad Dressing">Caesar
+				Salad Dressing</td>
+			<td><input type="checkbox" value="Clam Juice"> Clam
+				Juice</td>
+			<td><input type="checkbox" value="Coconut Oil"> Coconut
+				Oil</td>
+			<td><input type="checkbox" value="Coconut Water">Coconut
+				Water</td>
+			<td><input type="checkbox" value="Coconut Yogurt">Coconut
+				Yogurt</td>
+		</tr>
+		<tr>
 			<td><input type="checkbox" value="Syrup"> Syrup</td>
 			<td><input type="checkbox" value="Honey"> Honey</td>
 			<td><input type="checkbox" value="Ketchup"> Ketchup</td>
-			<td><input type="checkbox" value="Lemon Juice"> Lemon Juice</td>
-			<td><input type="checkbox" value="Lime Juice"> Lime Juice</td>
+			<td><input type="checkbox" value="Lemon Juice"> Lemon
+				Juice</td>
+			<td><input type="checkbox" value="Lime Juice"> Lime
+				Juice</td>
 			<td><input type="checkbox" value="Mustard"> Mustard</td>
-			<td><input type="checkbox" value="Orange Juice"> Orange Juice</td>
-			<td><input type="checkbox" value="Pineapple Juice"> Pineapple Juice</td>
-			</tr>
-			<tr>
-			<td><input type="checkbox" value="Sesame Oil"> Sesame Oil</td>
+			<td><input type="checkbox" value="Orange Juice"> Orange
+				Juice</td>
+			<td><input type="checkbox" value="Pineapple Juice">
+				Pineapple Juice</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" value="Sesame Oil"> Sesame
+				Oil</td>
 			<td><input type="checkbox" value="Soy Sauce"> Soy Sauce</td>
-			<td><input type="checkbox" value="Sour Cream"> Sour Cream</td>
+			<td><input type="checkbox" value="Sour Cream"> Sour
+				Cream</td>
 			<td><input type="checkbox" value="Olive Oil"> Olive Oil</td>
-			<td><input type="checkbox" value="Tomato Sauce"> Tomato Sauce</td>
-			<td><input type="checkbox" value="Vanilla Extract">Vanilla Extract</td>
-			<td><input type="checkbox" value="Vegetable Oil"> Vegetable Oil</td>
-			<td><input type="checkbox" value="White Wine"> White Wine</td>
-			</tr>
-			<tr>
+			<td><input type="checkbox" value="Tomato Sauce"> Tomato
+				Sauce</td>
+			<td><input type="checkbox" value="Vanilla Extract">Vanilla
+				Extract</td>
+			<td><input type="checkbox" value="Vegetable Oil">
+				Vegetable Oil</td>
+			<td><input type="checkbox" value="White Wine"> White
+				Wine</td>
+		</tr>
+		<tr>
 			<td><input type="checkbox" value="Bourbon"> Bourbon</td>
 
 		</tr>
@@ -382,19 +809,21 @@
 
 	<p>
 		<input onclick="collectSelection();" id="edit" type="submit"
-			name="edit" value="Calculate" />
+			name="edit" value="Calculate Top 15 Results" />
+		<input onclick="collectSelection();" id="clear" type="submit"
+			name="clear" value="Clear Selection"/>
 	</p>
-   
-   <table style = "table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;" border = 1 id="selection-table">
-   </table>
-   <br>
-   <table style = "table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;" border = 1 id="info-table">
-     <tr>
-       <td>Dishes:</td>
-       <td>Match Rates:</td>
-       <td>Recipe Links:</td>
-     </tr>
-   </table>
+	
+
+	<table
+		style="table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;"
+		border=1 id="selection-table">
+	</table>
+	<br>
+	<table
+		style="table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;"
+		border=1 id="info-table">
+	</table>
 </body>
 
 </html>
