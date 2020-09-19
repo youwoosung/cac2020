@@ -81,6 +81,7 @@
 			array.push(checkboxes[i].value)
 		}
 		
+		clearSelectionTable();
 		addSelection("Your Selection", array );
 		
 		for (var i = 0; i < dishes.length; i++) {
@@ -115,6 +116,11 @@
 		percentage = parseInt((count / (dish.length - 2)) * 100);
 
 		return percentage;
+	}
+	
+	function clearSelectionTable() {
+		var infoTable = document.getElementById("selection-table");
+		// to be added
 	}
 	
 	function addSelection(heading, selection) {
