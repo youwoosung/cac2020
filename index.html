@@ -505,13 +505,10 @@
 	}
 	
 	function clearSelection() {
-		alert("about to clear selection table")
 		clearSelectionTable();
 		
-		alert("about to clear info table")
 		clearInfoTable();
 		
-		alert("about to clear selection")
 		var uncheck=document.getElementsByTagName('input');
 		for(var i=0;i<uncheck.length;i++){
 		    if(uncheck[i].type=='checkbox') {
