@@ -506,13 +506,13 @@
 	}
 	
 	function clearSelection() {
-		alert("about to clear selection table")
+		
 		clearSelectionTable();
 		
-		alert("about to clear info table")
+		
 		clearInfoTable();
 		
-		alert("about to clear selection")
+		
 		var uncheck=document.getElementsByTagName('input');
 		for(var i=0;i<uncheck.length;i++){
 		    if(uncheck[i].type=='checkbox') {
@@ -869,12 +869,12 @@
 	
 
 	<table
-		style="table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;"
+		style="table-layout: auto; width: 1300px; empty-cells: hide; border-spacing: 10px;"
 		border=1 id="selection-table">
 	</table>
 	<br>
 	<table
-		style="table-layout: fixed; width: 1300px; empty-cells: hide; border-spacing: 10px;"
+		style="table-layout: auto; width: 1300px; empty-cells: hide; border-spacing: 10px;"
 		border=1 id="info-table">
 	</table>
 </body>
