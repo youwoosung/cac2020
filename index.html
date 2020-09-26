@@ -458,7 +458,7 @@
 		}
 
 		clearInfoTable();
-		addRow("Dishes:", "Matchrates:" , "Links: ");
+		addRow("Rank:", "Dishes:", "Matchrates:" , "Links: ");
 
 		for (var i = 0; i < dishes.length; i++) {
 			var per = percentage(dishes[i], array);
@@ -471,8 +471,9 @@
 				var x = dishes[i][1] + "%";
 				var link = "<a href=\"" + dishes[i][2] + "\">" + dishes[i][2]
 						+ "</a>"
+						var rank = i + 1 + "."
 
-				addRow(dishes[i][0], x, link);
+				addRow(rank, dishes[i][0], x, link);
 			}
 		}
 	}
@@ -505,10 +506,13 @@
 	}
 	
 	function clearSelection() {
+		alert("about to clear selection table")
 		clearSelectionTable();
 		
+		alert("about to clear info table")
 		clearInfoTable();
 		
+		alert("about to clear selection")
 		var uncheck=document.getElementsByTagName('input');
 		for(var i=0;i<uncheck.length;i++){
 		    if(uncheck[i].type=='checkbox') {
@@ -522,21 +526,24 @@
 		var infoRow = infoTable.insertRow(-1);
 		var infoCellOne = infoRow.insertCell();
 		var infoCellTwo = infoRow.insertCell();
+		
 
 		infoCellOne.innerHTML = heading;
 		infoCellTwo.innerHTML = selection;
 	}
 
-	function addRow(info1, info2, info3) {
+	function addRow(info1, info2, info3, info4) {
 		var infoTable = document.getElementById("info-table");
 		var infoRow = infoTable.insertRow(-1);
 		var infoCellOne = infoRow.insertCell();
 		var infoCellTwo = infoRow.insertCell();
 		var infoCellThree = infoRow.insertCell();
+		var infoCellFour = infoRow.insertCell();
 
 		infoCellOne.innerHTML = info1;
 		infoCellTwo.innerHTML = info2;
 		infoCellThree.innerHTML = info3;
+		infoCellFour.innerHTML = info4;
 	}
 
 	function sort(dish) {
