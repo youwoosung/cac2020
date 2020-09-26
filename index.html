@@ -436,8 +436,9 @@
 				 		"https://mykoreankitchen.com/oven-baked-korean-style-chicken-wings/",
 				 		"Chicken Wings", "Milk", "Salt", "Black Pepper", "Rosemary Leaves",
 				 		"Sesame Seeds", "Green Onions", "Korean Chili Flakes (Gochugaru)", 
-				 		"Korean Chili Paste (Gochujang)", "Honey", "Soy Sauce", "Oyster Sauce"
-				 		"Mirin", "Garlic" ];
+				 		"Korean Chili Paste (Gochujang)", "Honey", "Soy Sauce", "Oyster Sauce",
+				 		"Mirin", "Garlic" ]
+				];
 
 
 		var array = []
@@ -501,6 +502,22 @@
 	function clearInfoTable() {
 		var infoTable = document.getElementById("info-table");
 		infoTable.innerHTML = "";
+	}
+	
+	function clearSelection() {
+		alert("about to clear selection table")
+		clearSelectionTable();
+		
+		alert("about to clear info table")
+		clearInfoTable();
+		
+		alert("about to clear selection")
+		var uncheck=document.getElementsByTagName('input');
+		for(var i=0;i<uncheck.length;i++){
+		    if(uncheck[i].type=='checkbox') {
+		        uncheck[i].checked=false;
+		    }
+		}
 	}
 
 	function addSelection(heading, selection) {
@@ -842,7 +859,7 @@
 	<p>
 		<input onclick="collectSelection();" id="edit" type="submit"
 			name="edit" value="Calculate Top 15 Results" />
-		<input onclick="collectSelection();" id="clear" type="submit"
+		<input onclick="clearSelection();" id="clear" type="submit"
 			name="clear" value="Clear Selection"/>
 	</p>
 	
