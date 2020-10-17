@@ -1,86 +1,79 @@
-public class ArrayTest {
+public class ArrayTest2 {
+
 	public static void main(String[] args) {
+		String[][] dishes = {
+				{ "Alfredo", "", "https://www.modernhoney.com/fettuccine-alfredo/", "Pasta noodles", "Butter",
+						"Heavy Cream", "Garlic", "Parmesan Cheese", "Black Pepper" },
+				{ "Spaghetti", "",
+						"https://www.foodnetwork.com/recipes/food-network-kitchen/simple-spaghetti-with-tomato-sauce-3362665",
+						"Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion",
+						"Ground Beef", "Black pepper", "Olive oil", "Salt" },
+				{ "Fried Rice", "", "https://www.allrecipes.com/recipe/79543/fried-rice-restaurant-style/", "Eggs",
+						"Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil",
+						"Vegetable Oil" },
+				{ "Grilled Cheese Sandwich", "", "https://www.allrecipes.com/recipe/23891/grilled-cheese-sandwich/",
+						"Cheese", "Bread", "Butter" },
+				{ "Omelette", "", "https://www.delish.com/cooking/recipe-ideas/a24892843/how-to-make-omelet/", "Cheese",
+						"Butter", "Black Pepper", "Ham", "Milk", "Eggs", "Salt" },
+				{ "Meatloaf", "", "https://www.thewholesomedish.com/the-best-classic-meatloaf/", "Ground Beef", "Eggs",
+						"Bread Crumbs", "Onion", "Ketchup", "Brown Sugar", "Milk", "Mustard", "Salt", "Pepper",
+						"Parsley", "Garlic", "Red Wine Vinegar", "Black pepper" },
+				{ "Macaroni and Cheese", "", "https://www.allrecipes.com/recipe/11679/homemade-mac-and-cheese/",
+						"Cheese", "Macaroni Pasta", "Milk", "Butter", "Bread Crumbs", "All-purpose flour",
+						"Paprika" } };
 
-		// ingredients
-		String[] spaghetti = { "Spaghetti", "", "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil",
-				"Onion", "Ground beef", "Black pepper", "Olive oil" };
+		String[] keywords = { "Eggs", "Cheese", "Garlic" };
 
-		String[] alfredo = { "Alfredo", "", "Pasta noodles", "Butter", "Heavy cream", "Garlic", "Parmesan cheese" };
-
-		String[] friedrice = { "Fried Rice", "", "Egg", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce",
-				"Peas", "Sesame oil" };
-
-		String[] cheesesandwich = { "Cheese Sandwich", "", "Cheese", "Bread", "Butter" };
-
-		String[] omelette = { "Omelette", "", "Cheese", "Butter", "Onion", "Black Pepper", "Ham", "Milk" };
-
-		String[][] dishes = new String[5][10];
-		dishes[0] = spaghetti;
-		dishes[1] = alfredo;
-		dishes[2] = friedrice;
-		dishes[3] = cheesesandwich;
-		dishes[4] = omelette;
-
-		
-		String[] keywords = { "Pasta noodles", "Garlic", "Basil", "Butter", "Tomatoes" };
-		
 		for (int i = 0; i < dishes.length; i++) {
-			float percentage = caculatePercentage(dishes[i], keywords);
-			dishes[i][1] = String.valueOf(percentage);
+			int per = percentage(dishes[i], keywords);
+			dishes[i][1] = String.valueOf(per);
 		}
-		
-		for (int i = 0; i < dishes.length; i++) {
-			printArray(dishes[i]);
-		}
-		
-		bubbleSort(dishes);
-		
-		for (int i = 0; i < dishes.length; i++) {
-			printArray(dishes[i]);
-		}
+
+		bubbleSortStringArray(dishes);
+
+		System.out.println("after sorting !!!!!!!!!!!!!!!!");
+
+		printStringArray(dishes);
+
 	}
-	
 
-	private static float caculatePercentage(String[] dishes, String[] keywords) {
+	private static void printStringArray(String[][] twoDeArray) {
+		for (int i = 0; i < twoDeArray.length; i++) {
+			System.out.println(i + 1 + "." + twoDeArray[i][0] + ":" + twoDeArray[i][1] + "%");
+		}
+
+		System.out.println("");
+	}
+
+	private static int percentage(String[] dish, String[] keywords) {
 		int count = 0;
 		float percentage = 0;
 
-		for (int i = 2; i < dishes.length; i++) {
+		for (int i = 2; i < dish.length; i++) {
 			for (int a = 0; a < keywords.length; a++) {
-				if (dishes[i].equals(keywords[a])) {
+				if (dish[i].equals(keywords[a])) {
 					count = count + 1;
 				}
 			}
 		}
 
-		percentage = ((float) count / ((float) dishes.length - 2)) * 100;
+		percentage = ((float) count / ((float) dish.length)) * 100;
 
-//		System.out.println(dishes[0] + ": " + percentage + "%" + " - " + dishes[1] + ", " + dishes[2] + ", " + dishes[3]);
-
-		return percentage;
+		return (int) percentage;
 	}
 
-//	private static void printArray(String[] dishes) {		
-//		System.out.print(dishes[0] + ": ");
-//		for (int i = 1; i < dishes.length; i++) {
-//			System.out.print(dishes[i] + ",");
-//		}
-//
-//		System.out.println("");
-//	}
-
-
-	private static void printArray(String[] dishes) {
-		System.out.print(dishes[0] + ": ");
-		System.out.print(dishes[1] + "%, ");
-		for (int i = 2; i < dishes.length; i++) {
-		System.out.print(dishes[i] + ", ");
+	private static void bubbleSortStringArray(String[][] twoDeArray) {
+		float leng = twoDeArray.length;
+		for (int i = 0; i < leng - 1; i++) {
+			for (int j = 0; j < leng - i - 1; j++) {
+				int x = Integer.parseInt(twoDeArray[j][1]);
+				int y = Integer.parseInt(twoDeArray[j + 1][1]);
+				if (x > y) {
+					String[] temp = twoDeArray[j];
+					twoDeArray[j] = twoDeArray[j + 1];
+					twoDeArray[j + 1] = temp;
+				}
+			}
 		}
-
-		System.out.println("");
-	}
-	
-	private static void bubbleSort(String[][] dishes) {
-		
 	}
 }
