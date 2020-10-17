@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<title>CAC !!!</title>
+
+<script>
+	function collectSelection() {
+		var input = [["Spaghetti", "100.0"],
+		             ["Alfredo", "12.23"],
+		             ["Fried Rice", "50.0"],
+		             ["Cheese Sandwich", "2.4"],
+		             ["Omelette", "99.9"]];
+
+		addRow("Before sorting ...");
+		
+		for (var i = 0; i < input.length; i++){
+			addRow(input[i]);
+		}
+		
+                sort(input);
+        
+                addRow("After sorting ...");
+        
+                for (var i = 0; i < input.length; i++){
+			addRow(input[i]);
+		}
+       
+	}
+	
+	function sort(aArray) {
+		var leng = aArray.length;
+		for (var i = 0; i < leng - 1; i++) {
+			for (var j = 0; j < leng - i - 1; j++) {
+				var x = parseFloat(aArray[j][1])
+				var y = parseFloat(aArray[j+1][1])
+				if (x > y) {
+					var temp = aArray[j];
+					aArray[j] = aArray[j+1];
+					aArray[j+1] = temp;
+				}
+			}
+		}
+	}
+	
+	function addRow(aArray) {
+		var infoTable = document.getElementById("info-table");
+		var infoRow = infoTable.insertRow(-1);
+		var infoCell = infoRow.insertCell();
+		
+		infoCell.innerHTML = aArray;
+	}
+	
+
+	
+</script>
+</head>
+
+<body>
+
+	<h3>Test for CAC</h3>
+
+	<p>
+		<input onclick="collectSelection();" id="edit" type="submit"
+			name="edit" value="Sort!!!" />
+	</p>
+   
+   <table border=1 id="info-table">
+   
+   </table>
+</body>
+
+</html>
