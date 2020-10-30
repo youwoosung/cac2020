@@ -1,1 +1,73 @@
+package Dish;
+
+public class Dish {
+	String name;
+	int percentage;
+	String link;
+	String[] ingredients;
+	
+	public Dish(String namePassedIn, 
+			int percentagePassedIn, 
+			String linkPassedIn, 
+			String[] ingredientsPassedIn) {
+		this.name = namePassedIn;
+		this.percentage = percentagePassedIn;
+		this.link = linkPassedIn;
+		this.ingredients = ingredientsPassedIn;
+	}
+
+	public void displayAllInfo() {
+    	System.out.println("Name: " + this.name);
+    	System.out.println("Percentage: " + this.percentage);
+    	System.out.println("Link: " + this.link);
+    	System.out.println("Ingredients: ");
+    	for (int i = 1; i < ingredients.length; i++) {
+    		System.out.print(ingredients[i] + ", ");
+    	}
+    	
+  }
+	
+	public void caculatePercentage(String[] keywords) {
+		int count = 0;
+		float percentage = 0;
+		for (int i = 0; i < keywords.length; i++) {
+			for (int j = 0; j < ingredients.length; j++) {
+			if(keywords[i] == ingredients[j]) {
+				count = count + 1;
+			}
+			}
+		}
+		percentage = ((float) count / ((float) ingredients.length)) * 100;
+        this.percentage = (int) percentage;
+		return;
+
+	}
+}
+
+
+
+
+package Dish;
+
+public class DishTest {
+
+	public static void main(String[] args) {
+		String[] keywords = { "Eggs", "Cheese", "Garlic" };
+		
+		Dish alfredo = new Dish("Alfredo", 
+				0, 
+				"https://www.modernhoney.com/fettuccine-alfredo/",
+				new String[]{ "Pasta noodles", "Butter",
+			           "Heavy Cream", "Garlic", "Parmesan Cheese", "Black Pepper" });
+		alfredo.caculatePercentage(keywords);
+		alfredo.displayAllInfo();
+		
+		Dish spaghetti = new Dish("Spaghetti", 
+				0, 
+				"https://www.foodnetwork.com/recipes/food-network-kitchen/simple-spaghetti-with-tomato-sauce-3362665",
+				new String[]{ "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground Beef", "Black pepper", "Olive oil", "Salt" });
+		spaghetti.caculatePercentage(keywords);
+		spaghetti.displayAllInfo();
+	}
+}
 
