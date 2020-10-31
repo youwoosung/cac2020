@@ -6,11 +6,8 @@ public class Dish {
 	String link;
 	String[] ingredients;
 	
-	public Dish(String namePassedIn, 
-		int percentagePassedIn, 
-		String linkPassedIn, 
-		String[] ingredientsPassedIn) {
-		
+
+	public Dish(String namePassedIn, int percentagePassedIn, String linkPassedIn, String[] ingredientsPassedIn) {
 		this.name = namePassedIn;
 		this.percentage = percentagePassedIn;
 		this.link = linkPassedIn;
@@ -33,15 +30,15 @@ public class Dish {
 	int count = 0;
 	float percentage = 0;
 	for (int i = 0; i < keywords.length; i++) {
-		for (int j = 0; j < ingredients.length; j++) {
-			if(keywords[i] == ingredients[j]) {
+		for (int x = 0; x < ingredients.length; x++) {
+			if(keywords[i] == ingredients[x]) {
 				count = count + 1;
 			}
 			}
 		}
 		percentage = ((float) count / ((float) ingredients.length)) * 100;
-        this.percentage = (int) percentage;
-		return;
+       		this.percentage = (int) percentage;
 
 	}
 }
+
