@@ -1,4 +1,5 @@
 
+
 public class Dish {
 	String name;
 	int percentage;
@@ -6,9 +7,10 @@ public class Dish {
 	String[] ingredients;
 	
 	public Dish(String namePassedIn, 
-			int percentagePassedIn, 
-			String linkPassedIn, 
-			String[] ingredientsPassedIn) {
+		int percentagePassedIn, 
+		String linkPassedIn, 
+		String[] ingredientsPassedIn) {
+		
 		this.name = namePassedIn;
 		this.percentage = percentagePassedIn;
 		this.link = linkPassedIn;
@@ -16,10 +18,30 @@ public class Dish {
 	}
 
 	public void displayAllInfo() {
-    	//to be completed
+    	System.out.println("Name: " + this.name);
+    	System.out.println("Percentage: " + this.percentage);
+    	System.out.println("Link: " + this.link);
+    	System.out.println("Ingredients: ");
+    	for (int i = 1; i < ingredients.length; i++) {
+	
+    	System.out.print(ingredients[i] + ", ");
+    	}
+    	
   }
 	
 	public void caculatePercentage(String[] keywords) {
-		  //to be completed
+	int count = 0;
+	float percentage = 0;
+	for (int i = 0; i < keywords.length; i++) {
+		for (int j = 0; j < ingredients.length; j++) {
+			if(keywords[i] == ingredients[j]) {
+				count = count + 1;
+			}
+			}
+		}
+		percentage = ((float) count / ((float) ingredients.length)) * 100;
+        this.percentage = (int) percentage;
+		return;
+
 	}
 }
