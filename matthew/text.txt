@@ -47,3 +47,18 @@ public class TeamsCode {
 	}
 
 }
+
+
+
+
+
+			for (int i = 2; i < inputArray.length; i++) {
+				String str = inputArray[i];
+				String[] strSplit = inputArray[1].split(" ");
+				int intNum1 = Integer.parseInt(str);
+				int sum = 0;
+				for (int j = 0; j < intNum1; j++) {
+					sum = sum + Integer.parseInt(strSplit[j]);
+				}
+				System.out.println(sum);
+			}
