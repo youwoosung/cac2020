@@ -73,10 +73,10 @@ public class TeamsCode {
 				String strNum2 = strSplit[1];
 				int intNum1 = Integer.parseInt(strNum1);
 				int intNum2 = Integer.parseInt(strNum2);
-				if (i % 2 = 1) {
-					System.out.println(intNum1*intNum2);
+				if (i % 2 == 1) {
+					System.out.println(intNum1 * intNum2);
 				} else {
-					System.out.println(intNum1+intNum2);
+					System.out.println(intNum1 + intNum2);
 				}
 			}
 		
