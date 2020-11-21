@@ -1,4 +1,4 @@
-public class program {
+public class Program {
 	public static void main(String[] args) {
 		System.out.println("    ______    ____ ");
 		System.out.println("   (      )  |  o |");
@@ -9,3 +9,45 @@ public class program {
 	}
 }
 
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class program {
+
+	public static void main(String[] args) {
+		try {
+			Scanner scanner = new Scanner(System.in);
+
+			System.out.printf("Please enter input:\n");
+
+			List<String> inputList = new ArrayList<>();
+			String line;
+
+			while (scanner.hasNext()) {
+				line = scanner.nextLine();
+				inputList.add(line);
+			}
+
+			scanner.close();
+
+			String[] inputArray = new String[inputList.size()];
+			inputArray = inputList.toArray(inputArray);
+
+			for (int i = 2; i < inputArray.length; i++) {
+				String str = inputArray[i];
+				String[] strSplit = inputArray[1].split(" ");
+				int intNum1 = Integer.parseInt(str);
+				int sum = 0;
+				for (int j = 0; j < intNum1; j++) {
+					sum = sum + Integer.parseInt(strSplit[j]);
+				}
+				System.out.println(sum);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
