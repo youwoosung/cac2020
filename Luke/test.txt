@@ -49,3 +49,27 @@ public class Sample {
 
 	}
 }
+
+//Practice:
+
+try {
+			Scanner scanner = new Scanner(System.in);
+			System.out.printf("Please enter input:\n");
+			String strInput = scanner.nextLine();
+			System.out.println("Input was: " + strInput);
+			
+			for(int i = 0; i < 1; i++) {
+				int intNum1 = Integer.parseInt(strInput);
+			}
+			if ( intNum1 % 5 ==0) {
+				System.out.println("This number is a multiple of 5");
+			} else {
+				System.out.println("This number is not a multiple of 5");
+			}
+		}
+	}
+	
+	cath(NumberFormatException e) {
+		
+		System.out.println("Invalid Input");
+	}
