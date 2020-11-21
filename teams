@@ -78,7 +78,7 @@ public class Program {
 			inputArray = inputList.toArray(inputArray);
 			
 			
-			
+			for (int i = 0; i < inputArray.length; i++) {
 			    
 			    String str = inputArray[1];
 			    String[] strSplit = str.split(" ");
@@ -104,7 +104,7 @@ public class Program {
 			    int intNum10 = Integer.parseInt(strNum10);
 			    System.out.println(intNum1 + intNum2 + intNum3 + intNum4 + intNum5 + intNum6 + intNum7 + intNum8 + intNum9 + intNum10);
 
-			
+			}
 				    }
 	    catch(Exception e) {
 	    	e.printStackTrace();
@@ -113,4 +113,14 @@ public class Program {
 	}
 }
 
+Easy #3
 
+public class program {
+String str = "adf ddfdkf dfak";
+int count = 0;
+for(int i = 0; i<str.length;i++) {
+char ch = str.cherAt(i);
+if(ch == "f") {
+count++;
+}
+}
