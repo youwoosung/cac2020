@@ -51,3 +51,65 @@ public class program {
 		}
 	}
 }
+
+Easy #2
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Program {
+	public static void main(String[] args) {
+		try{
+			Scanner scanner = new Scanner(System.in);
+
+			System.out.printf("Please enter input:\n");        
+			
+			List<String> inputList = new ArrayList<>();
+			String line;
+			
+			while (scanner.hasNext()) {
+				line = scanner.nextLine();
+				inputList.add(line);
+			}
+			
+			scanner.close();
+			
+			String[] inputArray = new String[inputList.size()]; 
+			inputArray = inputList.toArray(inputArray);
+			
+			
+			for (int i = 0; i < inputArray.length; i++) {
+			    
+			    String str = inputArray[1];
+			    String[] strSplit = str.split(" ");
+			    String strNum1 = strSplit[0];
+			    String strNum2 = strSplit[1];
+			    String strNum3 = strSplit[2];
+			    String strNum4 = strSplit[3];
+			    String strNum5 = strSplit[4];
+			    String strNum6 = strSplit[5];
+			    String strNum7 = strSplit[6];
+			    String strNum8 = strSplit[7];
+			    String strNum9 = strSplit[8];
+			    String strNum10 = strSplit[9];
+			    int intNum1 = Integer.parseInt(strNum1);
+			    int intNum2 = Integer.parseInt(strNum2);
+			    int intNum3 = Integer.parseInt(strNum3);
+			    int intNum4 = Integer.parseInt(strNum4);
+			    int intNum5 = Integer.parseInt(strNum5);
+			    int intNum6 = Integer.parseInt(strNum6);
+			    int intNum7 = Integer.parseInt(strNum7);
+			    int intNum8 = Integer.parseInt(strNum8);
+			    int intNum9 = Integer.parseInt(strNum9);
+			    int intNum10 = Integer.parseInt(strNum10);
+			    System.out.println(intNum1 + intNum2 + intNum3 + intNum4 + intNum5 + intNum6 + intNum7 + intNum8 + intNum9 + intNum10);
+
+			}
+				    }
+	    catch(Exception e) {
+	    	e.printStackTrace();
+	    }
+		
+	}
+}
+
