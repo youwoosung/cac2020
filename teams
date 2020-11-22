@@ -179,3 +179,53 @@ public class program {
 		}
 	}
 }
+
+
+
+
+
+Easy nyumber 2 correct one i am a god
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Program {
+	public static void main(String[] args) {
+		try{
+			Scanner scanner = new Scanner(System.in);
+
+			System.out.printf("Please enter input:\n");        
+			
+			List<String> inputList = new ArrayList<>();
+			String line;
+			
+			while (scanner.hasNext()) {
+				line = scanner.nextLine();
+				inputList.add(line);
+			}
+			
+			scanner.close();
+			
+			String[] inputArray = new String[inputList.size()]; 
+			inputArray = inputList.toArray(inputArray);
+			
+			
+			
+			
+			 
+			int sum = 0; 
+			String[] data = inputArray[1].split(" ");
+			for (int i = 0; i < data.length; i++) {
+				int intValue = Integer.parseInt(data[i]);
+					sum = sum + intValue;
+				}
+			System.out.println(sum);
+	    }
+	    catch(Exception e) {
+	    	e.printStackTrace();
+	    }
+		
+	
+}
+}
