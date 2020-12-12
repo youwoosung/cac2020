@@ -30,3 +30,75 @@ public class TeamsCode {
 		}
 	}
 }
+package dishes;
+
+public class DishTest {
+
+	public static void main(String[] args) {
+		String[] keywords = { "Eggs", "Cheese", "Garlic" };
+
+		Dish alfredo = new Dish("Alfredo", 0, "https://www.modernhoney.com/fettuccine-alfredo/",
+				new String[] { "Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese", "Black Pepper" });
+		Dish spaghetti = new Dish("Spaghetti", 0,
+				"https://www.foodnetwork.com/recipes/food-network-kitchen/simple-spaghetti-with-tomato-sauce-3362665",
+				new String[] { "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion",
+						"Ground Beef", "Black pepper", "Olive oil", "Salt" });
+
+		Dish friedRice = new Dish("Fried Rice", 0,
+				"https://www.allrecipes.com/recipe/79543/fried-rice-restaurant-style", new String[] { "Eggs", "Garlic",
+						"Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil", "Vegetable Oil" });
+
+		Dish grilledCheeseSandwich = new Dish("Grilled Cheese Sandwich", 0,
+				"https://www.allrecipes.com/recipe/23891/grilled-cheese-sandwich/",
+				new String[] { "Cheese", "Bread", "Butter" });
+
+		Dish omelette = new Dish("Omelette", 0,
+				"https://www.delish.com/cooking/recipe-ideas/a24892843/how-to-make-omelet/",
+				new String[] { "Cheese", "Butter", "Black Pepper", "Ham", "Milk", "Eggs", "Salt" });
+
+		// Dish[] arrayOfDishes = { alfredo, spaghetti, friedRice,
+		// grilledCheeseSandwich, omelette };
+		Dish[] arrayOfDishes = new Dish[5];
+		arrayOfDishes[0] = alfredo;
+		arrayOfDishes[1] = spaghetti;
+		arrayOfDishes[2] = friedRice;
+		arrayOfDishes[3] = grilledCheeseSandwich;
+		arrayOfDishes[4] = omelette;
+
+		for (int i = 0; i < arrayOfDishes.length - 1; i++) {
+			arrayOfDishes[i].caculatePercentage(keywords);
+
+		}
+
+		sort(arrayOfDishes);
+
+		for (int i = 0; i < arrayOfDishes.length - 1; i++) {
+			arrayOfDishes[i].displayNameAndPercentage();
+		}
+
+	}
+
+	private static void sort(Dish[] arrayOfDishes) {
+//		 int n = arrayOfDishes.length; 
+//	        for (int i = 0; i < 0; i++) 
+//	            for (int j = 1; j < n-i-2; j++) 
+//	                if (arrayOfDishes[i] > arrayOfDishes[i]) 
+//	                {
+//	                    int temp = arrayOfDishes[i]; 
+//	                    arrayOfDishes[j] = arrayOfDishes[j+1]; 
+//	                    arrayOfDishes[j+1] = temp; 
+		int leng = arrayOfDishes.length;
+		for (int i = 0; i < leng - 1; i++) {
+			for (int j = 0; j < leng - i - 1; j++) {
+				int x = arrayOfDishes[j][1];
+				int y = arrayOfDishes[j + 1][1];
+				if (x < y) {
+					Dish temp = arrayOfDishes[j];
+					arrayOfDishes[j] = arrayOfDishes[j + 1];
+					arrayOfDishes[j + 1] = temp;
+				}
+
+			}
+		}
+	}
+}
