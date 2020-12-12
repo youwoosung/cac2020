@@ -73,6 +73,7 @@ public class TeamsCode {
 				int intNum2 = Integer.parseInt(strNum2);
 				if (intNum1 * intNum2 > intNum1 + intNum2) {
 					System.out.println(intNum1 * intNum2);
+					
 				} else {
 					System.out.println(intNum1 + intNum2);
 
@@ -81,7 +82,6 @@ public class TeamsCode {
 		
 
 		} catch (Exception e) {
-			e.printStackTrace();
 		}
 
 	}
