@@ -236,6 +236,6 @@ public class teamscode {
 			
 	    }
 	    catch(Exception e) {
-	    	
+	    	e.printStackTrace();
 	    }
 	}
