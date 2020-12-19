@@ -1,9 +1,26 @@
+import java.util.List;
+import java.util.ArrayList;
+public class RainbowList {
+	public static void main(String[] args) {
+
+		List<String> colors = new ArrayList<String>();
+		colors.add("red");
+		colors.add("orange");
+		colors.add("yellow");
+		colors.add("green");
+		colors.add("blue");
+		colors.add("indigo");
+		colors.add("violet");
+		for (int i = 0; i < colors.size(); i++) {
+			System.out.println(colors.get(i));
+		}
+	}
+}
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-
-public class Easy2 {
+public class Easy3 {
 	public static void main(String[] args) {
 
 		try {
@@ -17,136 +34,24 @@ public class Easy2 {
 			scanner.close();
 			String[] inputArray = new String[inputList.size()];
 			inputArray = inputList.toArray(inputArray);
-
-			for (int i = 0; i < inputArray.length; i++) {
-				String str = inputArray[i];
-
-				int intNum1 = Integer.parseInt(str);
-				int sum = 0;
-				for (int j = 0; j < intNum1; j++) {
-					sum = sum + Integer.parseInt(strSplit[j]);
+			
+			
+			String[] strSplit = inputArray[1].split(" ");
+			
+			int total = 0;
+			char firstCh = inputArray[0].charAt(0);
+			System.out.println(firstCh);
+			for (int i = 0; i < strSplit.length; i++) {
+				if(firstCh == strSplit[0].charAt(i)) {
+				total = total + 1;
 				}
-				System.out.println(sum);
 			}
+			System.out.println(total);
+
+			
 
 		} catch (Exception e) {
-	
+			e.printStackTrace();
 		}
 	}
-}
-public class Dish {
-	String name;
-	float percentage;
-	String link;
-	String[] ingredients;
-
-	public Dish(String namePassedIn, int percentagePassedIn, String linkPassedIn, String[] ingredientsPassedIn) {
-		this.name = namePassedIn;
-		this.percentage = percentagePassedIn;
-		this.link = linkPassedIn;
-		this.ingredients = ingredientsPassedIn;
-	}
-
-	public void displayAllInfo() {
-		System.out.println("Name: " + this.name);
-		System.out.println("Percentage: " + this.percentage);
-		System.out.println("Link: " + this.link);
-		System.out.print("Ingredients: ");
-		for (int i = 1; i < ingredients.length; i++) {
-			System.out.print(ingredients[i] + ", ");
-		}
-
-		System.out.println("");
-		System.out.println("");
-	}
-	
-	public void displayNameAndPercentage() {
-		System.out.println(this.name + ": " + this.percentage);
-	}
-
-	public void caculatePercentage(String[] keywords) {
-		int count = 0;
-		float percentage = 0;
-		for (int i = 0; i < keywords.length; i++) {
-			for (int a = 0; a < ingredients.length; a++) {
-				if (keywords[i] == ingredients[a]) {
-					count = count + 1;
-				}
-			}
-		}
-
-		percentage = ((float) count / ((float) ingredients.length)) * 100;
-		this.percentage = (float) ((int) (percentage * 100)) / 100;
-	}
-}
-public class DishTest {
-
-public static void main(String[] args) {
-		
-	System.out.println("This is how to print special character with back slash. \n is the new line is for the tab, and \" is for displaying double quote, and \' is for displaying single quote, \\ is for backlash.");
-
-		
-		String[] keywords = { "Eggs", "Cheese", "Garlic" };
-		
-		Dish alfredo = new Dish("Alfredo", 
-				0, 
-				"https://www.modernhoney.com/fettuccine-alfredo/",
-				new String[]{ "Pasta noodles", "Butter", "Heavy Cream", "Garlic", "Parmesan Cheese", "Black Pepper" });
-		Dish spaghetti = new Dish("Spaghetti", 
-				0, 
-				"https://www.foodnetwork.com/recipes/food-network-kitchen/simple-spaghetti-with-tomato-sauce-3362665",
-				new String[]{ "Pasta noodles", "Tomatoes", "Tomato sauce", "Cheese", "Garlic", "Basil", "Onion", "Ground Beef", "Black pepper", "Olive oil", "Salt" });
-		
-		Dish friedRice = new Dish("Fried Rice", 
-				0, 
-				"https://www.allrecipes.com/recipe/79543/fried-rice-restaurant-style",
-				new String[]{ "Eggs", "Garlic", "Rice", "Scallion", "Onion", "Carrot", "Soy sauce", "Peas", "Sesame oil", "Vegetable Oil"  });
-		
-		Dish grilledCheeseSandwich = new Dish("Grilled Cheese Sandwich", 
-				0, 
-				"https://www.allrecipes.com/recipe/23891/grilled-cheese-sandwich/",
-				new String[]{ "Cheese", "Bread", "Butter" });
-		
-		Dish omelette = new Dish("Omelette", 
-				0, 
-				"https://www.delish.com/cooking/recipe-ideas/a24892843/how-to-make-omelet/",
-				new String[]{ "Cheese", "Butter", "Black Pepper", "Ham", "Milk",
-						"Eggs", "Salt" });
-		
-		
-		//Dish[] arrayOfDishes = { alfredo, spaghetti, friedRice, grilledCheeseSandwich, omelette };
-		Dish[] arrayOfDishes = new Dish[5];
-		arrayOfDishes[0] = alfredo;
-		arrayOfDishes[1] = spaghetti;
-		arrayOfDishes[2] = friedRice;
-		arrayOfDishes[3] = grilledCheeseSandwich;
-		arrayOfDishes[4] = omelette;
-		
-		for (int i = 0; i < arrayOfDishes.length ; i++) {
-			arrayOfDishes[i].caculatePercentage(keywords);
-		}
-		
-		sort(arrayOfDishes);
-		
-		for (int i = 0; i < arrayOfDishes.length ; i++) {
-			arrayOfDishes[i].displayNameAndPercentage();
-		}
-		
-	}
-	
-	private static void sort(Dish[] arrayOfDishes) {
-		float leng = arrayOfDishes.length;
-		for (int i = 0; i < leng - 1; i++) {
-			for (int j = 0; j < leng - i - 1; j++) {
-				int x = arrayOfDishes[j][1];
-				int y = arrayOfDishes[j + 1][1];
-				if (x > y) {
-					Dish temp = arrayOfDishes[j];
-					arrayOfDishes[j] = arrayOfDishes[j + 1];
-					arrayOfDishes[j + 1] = temp;
-				}
-			}
-		}
-	}
-
 }
