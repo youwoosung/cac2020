@@ -22,12 +22,12 @@ public class easythree {
 			String[] inputArray = new String[inputList.size()]; 
 			inputArray = inputList.toArray(inputArray);
 			
-			String[] strSplit = inputArray[1].split(" ");
+			String strSplit = inputList.get(1);
 			int sum = 0;
 			char firstCh = inputArray[0].charAt(0);
 			System.out.println(firstCh);
-			for(int i = 0; i < strSplit.length; i++) {
-				if(firstCh == strSplit[0].charAt(i));
+			for(int i = 0; i < strSplit.length(); i++) {
+				if(firstCh == strSplit.charAt(i));
 				sum = sum + 1;
 			}
 			System.out.println(sum);
