@@ -51,3 +51,42 @@ public static void main(String[] args) {
 }
 
 
+import java.util.Set;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+
+public class Hash {
+	public static void main(String[] args) {
+		Set<String> words = new HashSet<>();
+	words.add("disallow");
+	words.add("discourse");
+	words.add("fidelity");
+	words.add("muffler");
+	words.add("limn");
+	words.add("myriad");
+	words.add("disconcert");
+	words.add("judicious");
+	words.add("taut");
+	words.add("smolder");
+	
+		
+			System.out.println(words);
+		
+	
+	Map<String, String> dictionary = new HashMap<>();
+	dictionary.put("disallow", "refuse to allow or accept as a correct");
+	dictionary.put("discourse", "speech lecture");
+	dictionary.put("fidelity", "loyalty accuracy");
+	dictionary.put("muffler", "cloth worn round the neck/silencer");
+	dictionary.put("limn", "paint portray");
+	dictionary.put("myriad", "very great number");
+	dictionary.put("disconcert", "upset the self-possession of");
+	dictionary.put("judicious", "sound in judgment wise");
+	dictionary.put("taut", "tightly stretched");
+	dictionary.put("smolder", "burn slowly without flame");
+	
+		System.out.println(dictionary);
+	
+	}
+}
