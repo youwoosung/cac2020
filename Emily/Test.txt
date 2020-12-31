@@ -277,7 +277,7 @@ public class Hash {
 	}
 }
 
-public class Easy4 {
+public class teamscode {
 public static void main(String[] args) {
 
 		try {
