@@ -277,8 +277,52 @@ public class Hash {
 	}
 }
 
+Updated homework for 1/9/2021:
+
+public class Easy5 {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		List<String> inputList = new ArrayList<>();
+		String line;
+		while (scanner.hasNext()) {
+			line = scanner.nextLine();
+			inputList.add(line);
+		}
+		scanner.close();
+
+		String num1 = inputList.get(1);
+		String num2 = inputList.get(2);
+		String num3 = inputList.get(3);
+		int sum1 = 0;
+		int sum2 = 0;
+		int sum3 = 0;
+
+		for (int i = num1.length() - 1; i >= 0; i = i - 2) {
+
+			sum1 = sum1 + Character.getNumericValue(num1.charAt(i));
+
+		}
+		for (int i = num2.length() - 1; i >= 0; i = i - 2) {
+
+			sum2 = sum2 + Character.getNumericValue(num2.charAt(i));
+
+		}
+		for (int i = num3.length() - 1; i >= 0; i = i - 2) {
+
+			sum3 = sum3 + Character.getNumericValue(num3.charAt(i));
+
+		}
+		System.out.println(sum1);
+		System.out.println(sum2);
+		System.out.println(sum3);
+
+	}
+
+}
+
 public class teamscode {
-public static void main(String[] args) {
+	public static void main(String[] args) {
 
 		try {
 			Scanner scanner = new Scanner(System.in);
@@ -289,34 +333,22 @@ public static void main(String[] args) {
 				inputList.add(line);
 			}
 			scanner.close();
-			String[] inputArray = new String[inputList.size()];
-			inputArray = inputList.toArray(inputArray);
-			
-			System.out.println(inputArray[0]);
-			System.out.println(inputArray[1]);
-			
-			String[] strSplit = inputArray[0].split(":");
-			
-			
-			int addedNum = Integer.parseInt(inputArray[1]);
+
+			System.out.println(inputList.get(0));
+			System.out.println(inputList.get(1));
+
+			String[] strSplit = inputList.get(0).split(":");
+
+			int addedNum = Integer.parseInt(inputList.get(1));
 			int hours = Integer.parseInt(strSplit[0]);
 			int minutes = Integer.parseInt(strSplit[1]);
-                  if (addedNum < 60 & (addedNum + minutes) < 60) {
-	                 minutes = minutes + addedNum;
-                        } else if (addedNum >= 60 & (addedNum + minutes) < 60) {
-                        	minutes = minutes + (addedNum - (60 - minutes));
-                        	hours = hours + 1;
-                        } else if (addedNum < 60 & (addedNum + minutes) >= 60){
-                        	minutes = minutes + (addedNum - (60 - minutes));
-                        	hours = hours + 1;
-                        }
-                        else if (addedNum >= 60 & (addedNum + minutes) >= 60) {
-                        	minutes = minutes + (addedNum - (120 - minutes));
-                        	hours = hours + 2;
-                        }
+			if (addedNum < (60 - minutes)) {
+				minutes = minutes + addedNum;
+			} else if (addedNum > (60 - minutes)) {
+				hours = hours + (addedNum / 60);
+				minutes = minutes + addedNum % 60;
+			}
 			System.out.println(hours + ":" + minutes);
-
-			
 
 		} catch (Exception e) {
 			e.printStackTrace();
