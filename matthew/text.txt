@@ -53,6 +53,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+package dishes;
+import java.util.ArrayList;  
+import java.util.List;
+import java.util.Scanner;
+
 public class easy4 {
 
 	public static void main(String[] args) {
@@ -87,8 +92,12 @@ public class easy4 {
 					while (minutes > 60) {
 						minutes = minutes % 60;
 						hours = hours + 1;
+						
 					}
 					
+				}
+				if( adding < 60) {
+					minutes = adding + minutes;
 				}
 				if (minutes < 10) {
 					System.out.println(hours + ":" + "0" + minutes);
