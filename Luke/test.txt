@@ -1,46 +1,3 @@
-import java.util.Set;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-
-public class Hash {
-	public static void main(String[] args) {
-		Set<String> words = new HashSet<>();
-		words.add("disallow");
-		words.add("discourse");
-		words.add("fidelity");
-		words.add("muffler");
-		words.add("limn");
-		words.add("myriad");
-		words.add("disconcert");
-		words.add("judicious");
-		words.add("taut");
-		words.add("smolder");
-
-		System.out.println(words);
-
-		Map<String, String> dictionary = new HashMap<>();
-		dictionary.put("disallow", "refuse to allow or accept as a correct");
-		dictionary.put("discourse", "speech lecture");
-		dictionary.put("fidelity", "loyalty accuracy");
-		dictionary.put("muffler", "cloth worn round the neck/silencer");
-		dictionary.put("limn", "paint portray");
-		dictionary.put("myriad", "very great number");
-		dictionary.put("disconcert", "upset the self-possession of");
-		dictionary.put("judicious", "sound in judgment wise");
-		dictionary.put("taut", "tightly stretched");
-		dictionary.put("smolder", "burn slowly without flame");
-		dictionary.put("hefty", "of considerable weight and size");
-		dictionary.put("pelter", "a thrower of missles");
-
-		System.out.println(dictionary);
-
-	}
-}
-
-
-
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -66,12 +23,14 @@ public class Easy4 {
 			int addedNum = Integer.parseInt(inputList.get(1));
 			int hours = Integer.parseInt(strSplit[0]);
 			int minutes = Integer.parseInt(strSplit[1]);
-			if (addedNum < (60 - minutes)) {
+				
+			
 				minutes = minutes + addedNum;
-			} else if (addedNum > (60 - minutes)) {
-				hours = hours + (addedNum / 60);
-				minutes = minutes + addedNum % 60;
+			  if (minutes >= 60) {
+				hours = hours + (minutes / 60);
+				minutes = minutes % 60;
 			}
+			
 			System.out.println(hours + ":" + minutes);
 
 		} catch (Exception e) {
@@ -82,7 +41,6 @@ public class Easy4 {
 }
 
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -90,41 +48,46 @@ import java.util.Scanner;
 public class Easy5 {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		List<String> inputList = new ArrayList<>();
-		String line;
-		while (scanner.hasNext()) {
-			line = scanner.nextLine();
-			inputList.add(line);
+		try {
+			Scanner scanner = new Scanner(System.in);
+
+			List<String> inputList = new ArrayList<>();
+			String line;
+
+			while (scanner.hasNext()) {
+				line = scanner.nextLine();
+				inputList.add(line);
+			}
+
+			scanner.close();
+
+			String[] inputArray = new String[inputList.size()];
+			inputArray = inputList.toArray(inputArray);
+
+			for (int i = 1; i < inputArray.length; i++) {
+				int count = 0;
+				int sum = 0;
+				int num = Integer.parseInt(inputArray[i]);
+				while (num > 0) {
+					int digit = num % 10;
+					if (count % 2 == 0) {
+						sum += digit;
+						num = num / 10;
+						
+					}
+					count++;
+					System.out.println(num + ", " + sum);
+					
+					if (count == 10) {
+						break;
+					}
+					
+				}
+				System.out.println(sum);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		scanner.close();
-
-		String num1 = inputList.get(1);
-		String num2 = inputList.get(2);
-		String num3 = inputList.get(3);
-		int sum1 = 0;
-		int sum2 = 0;
-		int sum3 = 0;
-
-		for (int i = num1.length() - 1; i >= 0; i = i - 2) {
-
-			sum1 = sum1 + Character.getNumericValue(num1.charAt(i));
-
-		}
-		for (int i = num2.length() - 1; i >= 0; i = i - 2) {
-
-			sum2 = sum2 + Character.getNumericValue(num2.charAt(i));
-
-		}
-		for (int i = num3.length() - 1; i >= 0; i = i - 2) {
-
-			sum3 = sum3 + Character.getNumericValue(num3.charAt(i));
-
-		}
-		System.out.println(sum1);
-		System.out.println(sum2);
-		System.out.println(sum3);
-
 	}
 
 }
