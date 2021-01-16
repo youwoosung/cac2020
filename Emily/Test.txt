@@ -360,3 +360,10 @@ public class teamsCodeEasy5 {
 	}
 
 }
+
+Multiple Choice:
+B
+A
+C
+B
+C
