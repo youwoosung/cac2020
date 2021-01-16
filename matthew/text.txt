@@ -28,23 +28,19 @@ public class easy5 {
 				int num = Integer.parseInt(inputArray[i]);
 			while (num > 0) {
 				int digit = num % 10;
+				System.out.println(digit);
+				count++;
 				if (count % 2 == 0) {
 					sum += digit;
 					num /= 10;
-					count++;
+					
+				} else {
+					num /= 10;
 				}
 			}
 			System.out.println(sum);
 			}
-//			char firstCh = inputArray[0].charAt(0);
-//			System.out.println(firstCh);
-			
-//			for (int i = 0; i < inputArray.length; i++) {
-//				int sum = Integer.parseInt(inputArray[0]);
-//				count += sum % 10;
-//				sum /= 100;
-//				System.out.println(sum);
-//			}
+
 
 		} catch (Exception e) {
 
@@ -52,101 +48,6 @@ public class easy5 {
 
 	}
 }
-package dishes;
-
-import java.util.HashMap;
-import java.util.HashSet;
-
-public class Hash {
-
-	public static void main(String[] args) {
-
-		HashSet<String> words = new HashSet<>();
-		words.add("disallow");
-		words.add("discourse");
-		words.add("fidelity");
-		words.add("muffler");
-		words.add("limn");
-		words.add("myriad");
-		words.add("disconcert");
-		words.add("judicious");
-		words.add("taut");
-		words.add("smolder");
-		
-		words.forEach(System.out :: println);
-		
-		HashMap<String, String> dictionary = new HashMap<>();
-		dictionary.put("disallow", "refuse to allow or accept as a correct");
-		dictionary.put("discourse", "speech lecture");
-		dictionary.put("fidelity", "loyalty");
-		dictionary.put("muffler", "cloth worn round the neck/silencer");
-		dictionary.put("limn", "paint portray");
-		dictionary.put("myriad", "very great number");
-		dictionary.put("disconcert", "upset the self-possesion of");
-		dictionary.put("judicious", "sound in judgement wise");
-		dictionary.put("taut", "tightly stretched");
-		dictionary.put("smolder", "burn slowly without flame");
-		
-		
-		
-		System.out.println(dictionary);
-//		for(int i = 0; i < dictionary.size(); i++) {
-//			String key = dictionary.getKey();
-//			System.out.println()
-//		}
-	}
-	
-}
-
-package dishes;
-
-import java.util.HashMap;
-import java.util.HashSet;
-
-public class Hash {
-
-	public static void main(String[] args) {
-
-		HashSet<String> words = new HashSet<>();
-		words.add("disallow");
-		words.add("discourse");
-		words.add("fidelity");
-		words.add("muffler");
-		words.add("limn");
-		words.add("myriad");
-		words.add("disconcert");
-		words.add("judicious");
-		words.add("taut");
-		words.add("smolder");
-		words.add("awesome");
-		words.add("tall");
-		
-		words.forEach(System.out :: println);
-		
-		HashMap<String, String> dictionary = new HashMap<>();
-		dictionary.put("disallow", "refuse to allow or accept as a correct");
-		dictionary.put("discourse", "speech lecture");
-		dictionary.put("fidelity", "loyalty");
-		dictionary.put("muffler", "cloth worn round the neck/silencer");
-		dictionary.put("limn", "paint portray");
-		dictionary.put("myriad", "very great number");
-		dictionary.put("disconcert", "upset the self-possesion of");
-		dictionary.put("judicious", "sound in judgement wise");
-		dictionary.put("taut", "tightly stretched");
-		dictionary.put("smolder", "burn slowly without flame");
-		dictionary.put("awesome", "what luke is not");
-		dictionary.put("tall", "what luke definitely is not");
-		
-		
-		System.out.println(dictionary);
-//		for(int i = 0; i < dictionary.size(); i++) {
-//			String key = dictionary.getKey();
-//			System.out.println()
-//		}
-	}
-	
-}
-
 package dishes;
 import java.util.ArrayList;  
 import java.util.List;
@@ -176,23 +77,25 @@ public class easy4 {
 				String[] strSplit = str.split(":");
 				String strNum1 = strSplit[0];
 				String strNum2 = strSplit[1];
-				int intNum1 = Integer.parseInt(strNum1);
-				int intNum2 = Integer.parseInt(strNum2);
-				int intNum3 = Integer.parseInt(inputArray[1]);
-				if (intNum3 > 60) {
-					intNum3 = intNum3 - 60;
-					intNum1 = intNum1 + 1;
-					intNum2 = intNum2 + intNum3;
-					if (intNum2 > 60) {
-						intNum2 = intNum2 - 60;
-						intNum1 = intNum1 + 1;
+				int hours = Integer.parseInt(strNum1);
+				int minutes = Integer.parseInt(strNum2);
+				int adding = Integer.parseInt(inputArray[1]);
+				while (adding > 60) {
+					adding = adding % 60;
+					hours = hours + 1;
+					minutes = minutes + adding;
+					while (minutes > 60) {
+						minutes = minutes % 60;
+						hours = hours + 1;
 					}
-
+					
 				}
-				if (intNum2 < 10) {
-					System.out.println(intNum1 + ":" + "0" + intNum2);
+				if (minutes < 10) {
+					System.out.println(hours + ":" + "0" + minutes);
+					
 				} else {
-					System.out.println(intNum1 + ":" + intNum2);
+
+					System.out.println(hours + ":" + minutes);
 				}
 			}
 
