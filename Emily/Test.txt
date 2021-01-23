@@ -1,40 +1,27 @@
 HOMEWORK FOR 1/23/2021
-
+???
 public class Teamscode {
 	public static void main(String[] args) {
 		try {
-			Scanner scanner = new Scanner(System.in);
 
-			List<String> inputList = new ArrayList<>();
-			String line;
-
-			while (scanner.hasNext()) {
-				line = scanner.nextLine();
-				inputList.add(line);
-			}
-
-			scanner.close();
-			
-			String[] strSplit = inputList.get(0).split(" ");
-			int rows = Integer.parseInt(strSplit[0]);
-            int columns = Integer.parseInt(strSplit[1]);
-
-            String[][] all = new String[rows][columns];
-            for(int i = 0; i < rows; i++) {
-            	String[] strSplit2 = inputList.get(i+1).split(" ");	
-                  all[i] = strSplit2;
+        final int[][] original = new int[][] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } };
+        for (int i = 0; i < original.length; i++) {
+            for (int j = 0; j < original[i].length; j++) {
+                System.out.print(original[i][j] + " ");
             }
-			
-            for(int i = 0; i < rows; i++) {
-            	for(int j = 0; j < columns; j++) {
-            	System.out.print(all[j][i] + " ");	
-            	}
-            	System.out.println();
-            }		
-	    
-	    
-					
+            System.out.print("\n");
+        }
 
+        if (original.length > 0) {
+            for (int i = 0; i < original[0].length; i++) {
+                for (int j = 0; j < original.length; j++) {
+                    System.out.print(original[j][i] + " ");
+                }
+                System.out.print("\n");
+            }
+        }
+    }
+	    
 		} catch (Exception e) {
 	}		e.printStackTrace();
 }
