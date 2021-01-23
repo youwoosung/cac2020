@@ -41,22 +41,27 @@ public class Teamscode {
 }
 
 
-public class generateRandom{ 
-  
-    public static void main(String args[]) 
-    { 
-        Random rand = new Random(); 
-  
-        int rand_int1 = rand.nextInt(1000); 
-        int rand_int2 = rand.nextInt(1000); 
-  
-        System.out.println("Random Integers: "+rand_int1); 
-        System.out.println("Random Integers: "+rand_int2); 
-  
-        double rand_dub1 = rand.nextDouble(); 
-        double rand_dub2 = rand.nextDouble(); 
-  
-        System.out.println("Random num: "+rand_dub1); 
-        System.out.println("Random num: "+rand_dub2); 
-    } 
-} 
+public class randomNumber { 
+    public static void main(String[] args) { 
+
+        int n1 = Integer.parseInt(args[0]);
+        int n2 = Integer.parseInt(args[1]);
+        double Random;
+
+        if (n1 != n2)
+        {
+            if (n1 > n2)
+            {
+                Random = n2 + (Math.random() * (n1 - n2));
+                System.out.println("Your number is: " + Random);
+            }
+            else
+            {
+                Random = n1 + (Math.random() * (n2 - n1));   
+                System.out.println("Your number is: " +Random);
+            }
+        } else {
+            System.out.println("Please provide valid Range " +n1+ " " +n2+ " are equal numbers." );
+        }                     
+    }
+}
