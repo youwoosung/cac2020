@@ -19,8 +19,7 @@ public class Teamscode {
                 }
                 System.out.print("\n");
             }
-        }
-    }
+
 	    
 		} catch (Exception e) {
 	}		e.printStackTrace();
