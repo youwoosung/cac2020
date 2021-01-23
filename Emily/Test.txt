@@ -1,3 +1,5 @@
+HOMEWORK FOR 1/23/2021
+
 public class Teamscode {
 	public static void main(String[] args) {
 		try {
@@ -28,16 +30,12 @@ public class Teamscode {
             	System.out.print(all[j][i] + " ");	
             	}
             	System.out.println();
-            }
-			
-						
+            }		
 					
 
 		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		}
+	}		e.printStackTrace();
+}
 }
 
 
@@ -61,7 +59,7 @@ public class randomNumber {
                 System.out.println("Your number is: " +Random);
             }
         } else {
-            System.out.println("Please provide valid Range " +n1+ " " +n2+ " are equal numbers." );
+            System.out.println("Please provide valid range " +n1+ " " +n2+ " are equal numbers." );
         }                     
     }
 }
