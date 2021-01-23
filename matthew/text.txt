@@ -2,10 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class easy5 {
-
+public class randomizer {
 	public static void main(String[] args) {
-		try {
+	
 			Scanner scanner = new Scanner(System.in);
 
 			List<String> inputList = new ArrayList<>();
@@ -20,92 +19,56 @@ public class easy5 {
 
 			String[] inputArray = new String[inputList.size()];
 			inputArray = inputList.toArray(inputArray);
-			
-			
-			for (int i = 1; i < inputArray.length; i++) {
-				int count = 0;
-				int sum = 0;
-				int num = Integer.parseInt(inputArray[i]);
-			while (num > 0) {
-				int digit = num % 10;
-				System.out.println(digit);
-				count++;
-				if (count % 2 == 0) {
-					sum += digit;
-					num /= 10;
-					
-				} else {
-					num /= 10;
-				}
-			}
-			System.out.println(sum);
-			}
-
-
-		} catch (Exception e) {
-
-		}
-
-	}
-}
-package dishes;
-import java.util.ArrayList;  
-import java.util.List;
-import java.util.Scanner;
-
-package dishes;
-import java.util.ArrayList;  
-import java.util.List;
-import java.util.Scanner;
-
-public class easy4 {
-
-	public static void main(String[] args) {
-		try {
-			Scanner scanner = new Scanner(System.in);
-
-			List<String> inputList = new ArrayList<>();
-			String line;
-
-			while (scanner.hasNext()) {
-				line = scanner.nextLine();
-				inputList.add(line);
-			}
-
-			scanner.close();
-
-			String[] inputArray = new String[inputList.size()];
-			inputArray = inputList.toArray(inputArray);
-
 			for (int i = 0; i < inputArray.length; i++) {
 				String str = inputArray[i];
-				String[] strSplit = str.split(":");
-				String strNum1 = strSplit[0];
-				String strNum2 = strSplit[1];
-				int hours = Integer.parseInt(strNum1);
-				int minutes = Integer.parseInt(strNum2);
-				int adding = Integer.parseInt(inputArray[1]);
-				while (adding > 60) {
-					adding = adding % 60;
-					hours = hours + 1;
-					minutes = minutes + adding;
-					while (minutes > 60) {
-						minutes = minutes % 60;
-						hours = hours + 1;
-						
-					}
-					
-				}
-				if( adding < 60) {
-					minutes = adding + minutes;
-				}
-				if (minutes < 10) {
-					System.out.println(hours + ":" + "0" + minutes);
-					
-				} else {
+				String[] strSplit = str.split(" ");
+			int min =  Integer.parseInt(strSplit[0]);
+			int max =  Integer.parseInt(strSplit[1]);
+			
+			int randomNumber = (int) (Math.random() * (max-min+1) + min);
+			System.out.println(randomNumber);
+		
+	}
+}
+}
 
-					System.out.println(hours + ":" + minutes);
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class medium1 {  i couldnt figure it out
+	public static void main(String[] args) {
+		try {
+			Scanner scanner = new Scanner(System.in);
+
+			List<String> inputList = new ArrayList<>();
+			String line;
+
+			while (scanner.hasNext()) {
+				line = scanner.nextLine();
+				inputList.add(line);
+			}
+
+			scanner.close();
+
+			String[][] inputArray = new String[inputList.size()][inputList.size()];
+			inputArray = inputList.toArray(inputArray);
+
+			int rows = Integer.parseInt(inputArray[0][0]);
+			int columns = Integer.parseInt(inputArray[1][0]);
+			int[][] newArray = new int[rows][columns];
+
+			String[] array = new String[inputList.size()];
+
+			for (int i = 1; i < inputArray.length; i++) {
+				for (int j = 1; j < inputArray.length; j++) {
+					String str = (inputArray[i][0]);
+					String str1 = (inputArray[0][i]);
+					String[] strSplit = str.split(" ");
+					String[] strSplit1 = str1.split(" ");
+					System.out.println(strSplit);
 				}
+				
 			}
 
 		} catch (Exception e) {
