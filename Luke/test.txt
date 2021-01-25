@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-public class Medium1 {
+public class Medium2 {
 	public static void main(String[] args) {
 		try {
 			Scanner scanner = new Scanner(System.in);
@@ -17,24 +17,21 @@ public class Medium1 {
 			scanner.close();
 			
 			String[] strSplit = inputList.get(0).split(" ");
-			int rows = Integer.parseInt(strSplit[0]);
-            int columns = Integer.parseInt(strSplit[1]);
-
-            String[][] all = new String[rows][columns];
-            for(int i = 0; i < rows; i++) {
-            	String[] strSplit2 = inputList.get(i+1).split(" ");	
-                  all[i] = strSplit2;
-            }
+	
+			int index = Integer.parseInt(strSplit[0]);
 			
-            for(int i = 0; i < rows; i++) {
-            	for(int j = 0; j < columns; j++) {
-            	System.out.print(all[j][i] + " ");	
-            	}
-            	System.out.println();
-            }
 			
-						
-					
+			Integer [] numbers = new Integer[index];
+			int location = 0;
+			int addedNum = 0;
+			
+			for (int i=0; i < index;i++) {
+				String[] strSplit2 = inputList.get(i+1).split(" ");
+				location = Integer.parseInt(strSplit2[0]);
+				addedNum = Integer.parseInt(strSplit2[1]);
+				numbers[location] = numbers[location] + addedNum;  
+			}
+			System.out.println(numbers);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -42,47 +39,3 @@ public class Medium1 {
 
 		}
 }
-
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
-public class randomNumber {
-	public static void main(String[] args) {
-	try {
-		Scanner scanner = new Scanner(System.in);
-
-		List<String> inputList = new ArrayList<>();
-		String line;
-
-		while (scanner.hasNext()) {
-			line = scanner.nextLine();
-			inputList.add(line);
-		}
-
-		scanner.close();
-		
-		String[] strSplit = inputList.get(0).split(",");
-		
-		int upperLimit = Integer.parseInt(strSplit[1]);
-		int lowerLimit = Integer.parseInt(strSplit[0]);
-		
-		double randomNumber = lowerLimit + (Math.random()*upperLimit);
-
-		String[] inputArray = new String[inputList.size()];
-		inputArray = inputList.toArray(inputArray);
-
-		System.out.println(lowerLimit);
-		System.out.println(upperLimit);
-		System.out.println(randomNumber);
-					
-				
-
-	} catch (Exception e) {
-		e.printStackTrace();
-	}
-
-	}
-}
-
