@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-public class Medium2 {
+
+public class Medium3 {
 	public static void main(String[] args) {
 		try {
 			Scanner scanner = new Scanner(System.in);
@@ -16,22 +17,21 @@ public class Medium2 {
 
 			scanner.close();
 			
-			String[] strSplit = inputList.get(0).split(" ");
-	
-			int index = Integer.parseInt(strSplit[0]);
-			
-			
-			Integer [] numbers = new Integer[index];
-			int location = 0;
-			int addedNum = 0;
-			
-			for (int i=0; i < index;i++) {
-				String[] strSplit2 = inputList.get(i+1).split(" ");
-				location = Integer.parseInt(strSplit2[0]);
-				addedNum = Integer.parseInt(strSplit2[1]);
-				numbers[location] = numbers[location] + addedNum;  
+			for (int i = 0; i < 12;i=i+3) {
+			String letters = inputList.get(0).substring(i, i+3);
+			if (letters == "LLL") {
+				letters = "A";
+			} else if (letters == "SSL") {
+				letters = "T";
+			} else if(letters == "SLL") {
+				letters = "G";
+			} else if (letters == "SLS"){
+				letters = "C";
 			}
-			System.out.println(numbers);
+			System.out.print(letters);
+			}
+			
+
 
 		} catch (Exception e) {
 			e.printStackTrace();
