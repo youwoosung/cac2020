@@ -2,77 +2,51 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class randomizer {
+public class medium3 {
+
 	public static void main(String[] args) {
-	
-			Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
+		List<String> inputList = new ArrayList<>();
+		String line;
+		while (scanner.hasNext()) {
+			line = scanner.nextLine();
+			inputList.add(line);
+		}
+		scanner.close();
 
-			List<String> inputList = new ArrayList<>();
-			String line;
+		char[] a = { 'L', 'L', 'L' };
+		char[] t = { 'S', 'S', 'L' };
+		char[] g = { 'S', 'L', 'L' };
+		char[] c = { 'S', 'L', 'S' };
 
-			while (scanner.hasNext()) {
-				line = scanner.nextLine();
-				inputList.add(line);
+		char[] letterArray = new char[inputList.size()];
+		char[] splitLetterArray = new char[inputList.size()];
+
+		for (int f = 0; f < inputList.size(); f++) {
+			letterArray[f] = inputList.get(f).charAt(f);
+		}
+
+		List<String> finalResult = new ArrayList<>();
+
+		for (int i = 0; i < inputList.size(); i++) {
+			if (i % 3 != 0) {
+				splitLetterArray[i] = letterArray[i];
+			}
+			if (splitLetterArray == a) {
+				finalResult.add("a");
+			} else if (splitLetterArray == t) {
+				finalResult.add("t");
+			} else if (splitLetterArray == g) {
+				finalResult.add("g");
+			} else if (splitLetterArray == c) {
+				finalResult.add("c");
 			}
 
-			scanner.close();
+		}
 
-			String[] inputArray = new String[inputList.size()];
-			inputArray = inputList.toArray(inputArray);
-			for (int i = 0; i < inputArray.length; i++) {
-				String str = inputArray[i];
-				String[] strSplit = str.split(" ");
-			int min =  Integer.parseInt(strSplit[0]);
-			int max =  Integer.parseInt(strSplit[1]);
-			
-			int randomNumber = (int) (Math.random() * (max-min+1) + min);
-			System.out.println(randomNumber);
-		
-	}
-}
-}
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
-public class medium1 {  i couldnt figure it out
-	public static void main(String[] args) {
-		try {
-			Scanner scanner = new Scanner(System.in);
-
-			List<String> inputList = new ArrayList<>();
-			String line;
-
-			while (scanner.hasNext()) {
-				line = scanner.nextLine();
-				inputList.add(line);
-			}
-
-			scanner.close();
-
-			String[][] inputArray = new String[inputList.size()][inputList.size()];
-			inputArray = inputList.toArray(inputArray);
-
-			int rows = Integer.parseInt(inputArray[0][0]);
-			int columns = Integer.parseInt(inputArray[1][0]);
-			int[][] newArray = new int[rows][columns];
-
-			String[] array = new String[inputList.size()];
-
-			for (int i = 1; i < inputArray.length; i++) {
-				for (int j = 1; j < inputArray.length; j++) {
-					String str = (inputArray[i][0]);
-					String str1 = (inputArray[0][i]);
-					String[] strSplit = str.split(" ");
-					String[] strSplit1 = str1.split(" ");
-					System.out.println(strSplit);
-				}
-				
-			}
-
-		} catch (Exception e) {
+		for (int p = 0; p < inputList.size(); p++) {
 
 		}
 	}
+
 }
