@@ -17,7 +17,7 @@ public class Medium3 {
 
 			scanner.close();
 			
-			for (int i = 0; i < 12;i=i+3) {
+			for (int i = 0; i < inputList.length();i=i+3) {
 			String letters = inputList.get(0).substring(i, i+3);
 			if (letters == "LLL") {
 				letters = "A";
