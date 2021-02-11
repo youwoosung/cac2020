@@ -17,7 +17,7 @@ public class 3medium {
 			
 			scanner.close();
 			
-			for (int i = 0; i < inputList.length(); i = i + 3) {
+			for (int i = 0; i < inputList.size(); i = i + 3) {
 			String code = inputList.get(0).substring(i, i + 3);
 				if (code == "LLL") {
 				code = "A";
