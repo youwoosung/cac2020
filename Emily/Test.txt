@@ -1,3 +1,46 @@
 HOMEWORK FOR 2/8/2021
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
+public class TeamsCode {
+
+	public static void main(String[] args) {
+		try{
+			Scanner scanner = new Scanner(System.in);
+
+			System.out.printf("Please enter input:\n");        
+			
+			List<String> inputList = new ArrayList<>();
+			String line;
+
+			while (scanner.hasNext()) {
+				line = scanner.nextLine();
+				inputList.add(line);
+			}
+
+			scanner.close();
+			
+			for (int i = 0; i < inputList.length();i=i+3) {
+			String dna = inputList.get(0).substring(i, i+3);
+			if (dna == "LLL") {
+				dna = "A";
+			} else if (dna == "SSL") {
+				dna = "T";
+			} else if(dna == "SLL") {
+				dna = "G";
+			} else if (dna == "SLS"){
+				dna = "C";
+			}
+			System.out.print(dna);
+			}
+			
+
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		}
+}
