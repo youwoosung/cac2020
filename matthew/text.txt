@@ -19,13 +19,13 @@ public class 3medium {
 			
 			for (int i = 0; i < inputList.length(); i = i + 3) {
 			String code = inputList.get(0).substring(i, i + 3);
-				if (code == "LLL") {
+				if (code.equals("LLL")) {
 				code = "A";
-			} else if (code == "SSL"){
+			} else if (code.equals("SSL")){
 				code = "T";
-			} else if(code == "SLL"){
+			} else if(code.equals("SLL")){
 				code = "G";
-			} else if (code == "SLS"){
+			} else if (code.equals("SLS")){
 				code = "C";
 			}
 				System.out.print(code);
