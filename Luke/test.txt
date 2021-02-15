@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Medium3 {
+public class Medium4 {
 	public static void main(String[] args) {
 		try {
 			Scanner scanner = new Scanner(System.in);
@@ -17,21 +17,27 @@ public class Medium3 {
 
 			scanner.close();
 			
-			for (int i = 0; i < inputList.length();i=i+3) {
-			String letters = inputList.get(0).substring(i, i+3);
-			if (letters == "LLL") {
-				letters = "A";
-			} else if (letters == "SSL") {
-				letters = "T";
-			} else if(letters == "SLL") {
-				letters = "G";
-			} else if (letters == "SLS"){
-				letters = "C";
-			}
-			System.out.print(letters);
-			}
-			
+			String[] strSplit = inputList.get(0).split(" ");
+			String[] strSplit2 = inputList.get(1).split(" ");
+			String[] strSplit3 = inputList.get(2).split(" ");
 
+			int verticalSum1 = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit2[0]) + Integer.parseInt(strSplit3[0]);
+			int verticalSum2 = Integer.parseInt(strSplit[1]) + Integer.parseInt(strSplit2[1]) + Integer.parseInt(strSplit3[1]);
+			int verticalSum3 = Integer.parseInt(strSplit[2]) + Integer.parseInt(strSplit2[2]) + Integer.parseInt(strSplit3[2]);
+			
+			int horizontalSum1 = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit[1]) + Integer.parseInt(strSplit[2]);
+			int horizontalSum2 = Integer.parseInt(strSplit2[0]) + Integer.parseInt(strSplit2[1]) + Integer.parseInt(strSplit2[2]);
+			int horizontalSum3 = Integer.parseInt(strSplit3[0]) + Integer.parseInt(strSplit3[1]) + Integer.parseInt(strSplit3[2]);
+			
+			int diagnolSum1 = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit2[1]) + Integer.parseInt(strSplit3[2]);
+			int diagnolSum2 = Integer.parseInt(strSplit[2]) + Integer.parseInt(strSplit2[1]) + Integer.parseInt(strSplit3[0]);
+			
+			if (verticalSum1 == verticalSum2 && verticalSum2 == verticalSum3 && verticalSum3 == horizontalSum1 && horizontalSum1 == horizontalSum2 && horizontalSum2 == horizontalSum3
+					&& horizontalSum3 == diagnolSum1 && diagnolSum1 == diagnolSum2) {
+				System.out.println(1);
+			} else {
+				System.out.println(0);
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -39,3 +45,4 @@ public class Medium3 {
 
 		}
 }
+
