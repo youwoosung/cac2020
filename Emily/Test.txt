@@ -1,17 +1,14 @@
-HOMEWORK FOR 2/8/2021
+HOMEWORK FOR 2/15/2021
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class TeamsCode {
-
+public class teamsCode {
 	public static void main(String[] args) {
-		try{
+		try {
 			Scanner scanner = new Scanner(System.in);
 
-			System.out.printf("Please enter input:\n");        
-			
 			List<String> inputList = new ArrayList<>();
 			String line;
 
@@ -20,27 +17,43 @@ public class TeamsCode {
 				inputList.add(line);
 			}
 
-			scanner.close();
-			
-			for (int i = 0; i < inputList.length();i=i+3) {
-			String dna = inputList.get(0).substring(i, i+3);
-			if (dna == "LLL") {
-				dna = "A";
-			} else if (dna == "SSL") {
-				dna = "T";
-			} else if(dna == "SLL") {
-				dna = "G";
-			} else if (dna == "SLS"){
-				dna = "C";
-			}
-			System.out.print(dna);
-			}
-			
 
+
+			scanner.close();
+
+			String[] strSplit = inputList.get(0).split(" ");
+			String[] strSplit2 = inputList.get(1).split(" ");
+			String[] strSplit3 = inputList.get(2).split(" ");
+
+			int leftToRight1 = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit[1])
+					+ Integer.parseInt(strSplit[2]);
+			int leftToRight2 = Integer.parseInt(strSplit2[0]) + Integer.parseInt(strSplit2[1])
+					+ Integer.parseInt(strSplit2[2]);
+			int leftToRight3 = Integer.parseInt(strSplit3[0]) + Integer.parseInt(strSplit3[1])
+					+ Integer.parseInt(strSplit3[2]);
+
+			int diagonals = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit2[1])
+					+ Integer.parseInt(strSplit3[2]);
+			int diagonals2 = Integer.parseInt(strSplit[2]) + Integer.parseInt(strSplit2[1])
+					+ Integer.parseInt(strSplit3[0]);
+
+			int upAndDown = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit2[0])
+					+ Integer.parseInt(strSplit3[0]);
+			int upAndDown2 = Integer.parseInt(strSplit[1]) + Integer.parseInt(strSplit2[1])
+					+ Integer.parseInt(strSplit3[1]);
+			int upAndDown3 = Integer.parseInt(strSplit[2]) + Integer.parseInt(strSplit2[2])
+					+ Integer.parseInt(strSplit3[2]);
+
+			if (verticalSum1 == verticalSum2 && verticalSum2 == verticalSum3 && verticalSum3 == horizontalSum1 && horizontalSum1 == horizontalSum2 && 	horizontalSum2 == horizontalSum3
+					&& horizontalSum3 == diagnolSum1 && diagnolSum1 == diagnolSum2) {
+				System.out.println(1);
+			} else {
+				System.out.println(0);
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		}
+	}
 }
