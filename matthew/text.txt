@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class 3medium {
+public class medium3 {
 	public static void main(String[] args) {
 		try {
 			Scanner scanner = new Scanner(System.in);
@@ -14,28 +14,43 @@ public class 3medium {
 				line = scanner.nextLine();
 				inputList.add(line);
 			}
-			
-			scanner.close();
-			
-			for (int i = 0; i < inputList.length(); i = i + 3) {
-			String code = inputList.get(0).substring(i, i + 3);
-				if (code.equals("LLL")) {
-				code = "A";
-			} else if (code.equals("SSL")){
-				code = "T";
-			} else if(code.equals("SLL")){
-				code = "G";
-			} else if (code.equals("SLS")){
-				code = "C";
-			}
-				System.out.print(code);
-			}
-			
 
+			scanner.close();
+
+			String[] strSplit = inputList.get(0).split(" ");
+			String[] strSplit2 = inputList.get(1).split(" ");
+			String[] strSplit3 = inputList.get(2).split(" ");
+
+			int leftToRight1 = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit[1])
+					+ Integer.parseInt(strSplit[2]);
+			int leftToRight2 = Integer.parseInt(strSplit2[0]) + Integer.parseInt(strSplit2[1])
+					+ Integer.parseInt(strSplit2[2]);
+			int leftToRight3 = Integer.parseInt(strSplit3[0]) + Integer.parseInt(strSplit3[1])
+					+ Integer.parseInt(strSplit3[2]);
+
+			int diagonals = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit2[1])
+					+ Integer.parseInt(strSplit3[2]);
+			int diagonals2 = Integer.parseInt(strSplit[2]) + Integer.parseInt(strSplit2[1])
+					+ Integer.parseInt(strSplit3[0]);
+
+			int upAndDown = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit2[0])
+					+ Integer.parseInt(strSplit3[0]);
+			int upAndDown2 = Integer.parseInt(strSplit[1]) + Integer.parseInt(strSplit2[1])
+					+ Integer.parseInt(strSplit3[1]);
+			int upAndDown3 = Integer.parseInt(strSplit[2]) + Integer.parseInt(strSplit2[2])
+					+ Integer.parseInt(strSplit3[2]);
+
+			if (upAndDown == upAndDown2 && upAndDown2 == upAndDown3 && upAndDown3 == leftToRight1
+					&& leftToRight1 == leftToRight2 && leftToRight2 == leftToRight3 && leftToRight3 == diagonals
+					&& diagonals == diagonals2) {
+				System.out.println(1);
+			} else {
+				System.out.println(0);
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
-	}
+		}
 
-}
+	}
 }
