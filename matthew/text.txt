@@ -1,3 +1,57 @@
+
+/* import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class medium3 {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		List<String> inputList = new ArrayList<>();
+		String line;
+		while (scanner.hasNext()) {
+			line = scanner.nextLine();
+			inputList.add(line);
+		}
+		scanner.close();
+
+		char[] a = { 'L', 'L', 'L' };
+		char[] t = { 'S', 'S', 'L' };
+		char[] g = { 'S', 'L', 'L' };
+		char[] c = { 'S', 'L', 'S' };
+
+		char[] letterArray = new char[inputList.size()];
+		char[] splitLetterArray = new char[inputList.size()];
+
+		for (int f = 0; f < inputList.size(); f++) {
+			letterArray[f] = inputList.get(f).charAt(f);
+		}
+
+		List<String> finalResult = new ArrayList<>();
+
+		for (int i = 0; i < inputList.size(); i++) {
+			if (i % 3 != 0) {
+				splitLetterArray[i] = letterArray[i];
+			}
+			if (splitLetterArray == a) {
+				finalResult.add("a");
+			} else if (splitLetterArray == t) {
+				finalResult.add("t");
+			} else if (splitLetterArray == g) {
+				finalResult.add("g");
+			} else if (splitLetterArray == c) {
+				finalResult.add("c");
+			}
+
+		}
+
+		for (int p = 0; p < inputList.size(); p++) {
+
+		}
+	}
+
+}
+*/
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -21,31 +75,37 @@ public class medium3 {
 			String[] strSplit2 = inputList.get(1).split(" ");
 			String[] strSplit3 = inputList.get(2).split(" ");
 
-			int leftToRight1 = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit[1])
-					+ Integer.parseInt(strSplit[2]);
-			int leftToRight2 = Integer.parseInt(strSplit2[0]) + Integer.parseInt(strSplit2[1])
-					+ Integer.parseInt(strSplit2[2]);
-			int leftToRight3 = Integer.parseInt(strSplit3[0]) + Integer.parseInt(strSplit3[1])
-					+ Integer.parseInt(strSplit3[2]);
+			int[] upAndDowns = new int[3];
+			int[] diagonalValues = new int[3];
+			int[] leftToRights = new int[3];
 
-			int diagonals = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit2[1])
-					+ Integer.parseInt(strSplit3[2]);
-			int diagonals2 = Integer.parseInt(strSplit[2]) + Integer.parseInt(strSplit2[1])
-					+ Integer.parseInt(strSplit3[0]);
+			for (int i = 0; i < inputList.size(); i++) {
+				upAndDowns[i] = Integer.parseInt(strSplit[i]) + Integer.parseInt(strSplit2[i])
+						+ Integer.parseInt(strSplit3[i]);
+				if (i == 3) {
+					if (upAndDowns[0] == upAndDowns[1] && upAndDowns[0] == upAndDowns[2]) {
+						for (int j = 0; j < 1; j++) {
+							for (int y = 0; y < 3; y++) {
+								diagonalValues[y] = Integer.parseInt(strSplit[j]) + Integer.parseInt(strSplit2[j + 1])
+										+ Integer.parseInt(strSplit3[j + 2]);
+							}
+							if (diagonalValues[0] == diagonalValues[1] && diagonalValues[0] == diagonalValues[2]) {
+								for (int x = 0; x < 3; x++) {
+									for (int b = 0; b < 1; b++) {
+										leftToRights[x] = Integer.parseInt(strSplit[b])
+												+ Integer.parseInt(strSplit[b + 1]) + Integer.parseInt(strSplit[b + 2]);
+									}
+									if (leftToRights[0] == leftToRights[1] && leftToRights[0] == leftToRights[2]) {
+										System.out.println(0);
+									} else {
+										System.out.println(1);
+									}
 
-			int upAndDown = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit2[0])
-					+ Integer.parseInt(strSplit3[0]);
-			int upAndDown2 = Integer.parseInt(strSplit[1]) + Integer.parseInt(strSplit2[1])
-					+ Integer.parseInt(strSplit3[1]);
-			int upAndDown3 = Integer.parseInt(strSplit[2]) + Integer.parseInt(strSplit2[2])
-					+ Integer.parseInt(strSplit3[2]);
-
-			if (upAndDown == upAndDown2 && upAndDown2 == upAndDown3 && upAndDown3 == leftToRight1
-					&& leftToRight1 == leftToRight2 && leftToRight2 == leftToRight3 && leftToRight3 == diagonals
-					&& diagonals == diagonals2) {
-				System.out.println(1);
-			} else {
-				System.out.println(0);
+								}
+							}
+						}
+					}
+				}
 			}
 
 		} catch (Exception e) {
@@ -53,4 +113,5 @@ public class medium3 {
 		}
 
 	}
+
 }
