@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -17,23 +18,31 @@ public class Medium4 {
 
 			scanner.close();
 			
+			int verticalSum[] = new int[3];
+			int horizontalSum[] = new int[3];
+			
+			
 			String[] strSplit = inputList.get(0).split(" ");
 			String[] strSplit2 = inputList.get(1).split(" ");
 			String[] strSplit3 = inputList.get(2).split(" ");
-
-			int verticalSum1 = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit2[0]) + Integer.parseInt(strSplit3[0]);
-			int verticalSum2 = Integer.parseInt(strSplit[1]) + Integer.parseInt(strSplit2[1]) + Integer.parseInt(strSplit3[1]);
-			int verticalSum3 = Integer.parseInt(strSplit[2]) + Integer.parseInt(strSplit2[2]) + Integer.parseInt(strSplit3[2]);
 			
-			int horizontalSum1 = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit[1]) + Integer.parseInt(strSplit[2]);
-			int horizontalSum2 = Integer.parseInt(strSplit2[0]) + Integer.parseInt(strSplit2[1]) + Integer.parseInt(strSplit2[2]);
-			int horizontalSum3 = Integer.parseInt(strSplit3[0]) + Integer.parseInt(strSplit3[1]) + Integer.parseInt(strSplit3[2]);
+			for (int i = 0; i<3; i++) {
+				 verticalSum[i] = Integer.parseInt(strSplit[i]) + Integer.parseInt(strSplit2[i]) + Integer.parseInt(strSplit3[i]);
+			}
+
+			for (int i = 0; i<3; i++) {
+				String[] strSplit4 = inputList.get(i).split(" ");
+				horizontalSum[i] = Integer.parseInt(strSplit4[0]) + Integer.parseInt(strSplit4[1]) + Integer.parseInt(strSplit4[2]);
+			}
+			
+			
+			
 			
 			int diagnolSum1 = Integer.parseInt(strSplit[0]) + Integer.parseInt(strSplit2[1]) + Integer.parseInt(strSplit3[2]);
 			int diagnolSum2 = Integer.parseInt(strSplit[2]) + Integer.parseInt(strSplit2[1]) + Integer.parseInt(strSplit3[0]);
 			
-			if (verticalSum1 == verticalSum2 && verticalSum2 == verticalSum3 && verticalSum3 == horizontalSum1 && horizontalSum1 == horizontalSum2 && horizontalSum2 == horizontalSum3
-					&& horizontalSum3 == diagnolSum1 && diagnolSum1 == diagnolSum2) {
+			if (verticalSum[0] == verticalSum[1] && verticalSum[1] == verticalSum[2] && verticalSum[2] == horizontalSum[0] && horizontalSum[0] == horizontalSum[1] && horizontalSum[1] == horizontalSum[2]
+					&& horizontalSum[2] == diagnolSum1 && diagnolSum1 == diagnolSum2) {
 				System.out.println(1);
 			} else {
 				System.out.println(0);
